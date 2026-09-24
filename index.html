@@ -289,8 +289,8 @@
             <!-- Cat Photo inside Timeline Item 5 -->
             <div class="relative overflow-hidden rounded-xl border-2 border-sage-100 shadow-sm bg-sage-50/50 flex items-center justify-center p-1.5">
               <img 
-                src="cats-photo.jpg" 
-                alt="Our Cats" 
+                src="IMG_2138.jpeg" 
+                alt="Our partyhard cats" 
                 class="w-full h-auto max-h-[280px] object-contain rounded-lg"
                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=1000&q=80';"
               />
@@ -346,7 +346,7 @@
           </a>
         </div>
 
-        <!-- Friethuis & Home Card -->
+        <!-- Friethuis & Home -->
         <div class="bg-white rounded-3xl p-8 border border-sage-200 shadow-sm flex flex-col justify-between">
           <div>
             <div class="w-12 h-12 rounded-2xl bg-sage-100 flex items-center justify-center text-sage-700 text-xl mb-6">
@@ -396,7 +396,7 @@
           </button>
           <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-sage-700 leading-relaxed">
             <div class="pb-5">
-              It’s a very short distance. Depending on the weather and what you prefer, you can easily drive, ride a bicycle (Dutch style!), or we can coordinate a stroll together. There is ample parking at both locations.
+              It’s some distance between the venue and our house. Depending on the weather and what you prefer, you can easily drive, ride a bicycle (Dutch style!), or we can coordinate a stroll together. There is ample parking at both locations.
             </div>
           </div>
         </div>
@@ -422,7 +422,7 @@
           </button>
           <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-sage-700 leading-relaxed">
             <div class="pb-5">
-              Yes, absolutely! They will be greeting everyone during the house party. If you are allergic, let us know in advance—we will keep a designated allergy-safe room and antihistamines on hand.
+              Yes, absolutely! Stitch will be greeting everyone during the house party. If you are allergic, take your medicine before coming to our place.
             </div>
           </div>
         </div>
@@ -435,14 +435,13 @@
           </button>
           <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-sage-700 leading-relaxed">
             <div class="pb-5">
-              Your presence to celebrate our 6 years together is honestly the greatest gift. If you’d like to contribute something extra, a small contribution towards our honeymoon and future home adventures is warmly appreciated.
+              Your presence to celebrate our wedding is honestly the greatest gift. If you’d like to contribute something extra, a small contribution towards our honeymoon you can reach out to us.
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
   <!-- RSVP SECTION -->
   <section id="rsvp" class="py-24 px-6 bg-botanical-sand/60 border-t border-sage-200/50">
     <div class="max-w-2xl mx-auto">
@@ -453,13 +452,18 @@
       </div>
 
       <div class="bg-white rounded-3xl p-8 sm:p-10 border border-sage-200 shadow-md">
-        <form id="rsvpForm" class="space-y-6">
+        <form id="rsvpForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
           
+          <!-- Web3Forms Access Key -->
+          <input type="hidden" name="access_key" value="87dd05f4-c7a7-4c46-9880-f5dc478156c0">
+          <input type="hidden" name="subject" value="New Wedding RSVP Submission!">
+
           <!-- Full Name -->
           <div>
             <label for="fullName" class="block text-xs uppercase tracking-wider font-semibold text-sage-800 mb-2">Your Name(s) *</label>
             <input 
               type="text" 
+              name="Name"
               id="fullName" 
               required 
               placeholder="e.g., Sarah &amp; Mark" 
@@ -472,28 +476,41 @@
             <label class="block text-xs uppercase tracking-wider font-semibold text-sage-800 mb-2">Will you be attending? *</label>
             <div class="grid grid-cols-2 gap-4">
               <label class="flex items-center gap-3 p-3.5 rounded-xl border border-sage-300 bg-botanical-cream/30 cursor-pointer hover:bg-sage-50 transition">
-                <input type="radio" name="attending" value="yes" checked class="text-sage-600 focus:ring-sage-500">
+                <input type="radio" name="Attending" value="Joyfully Accepts" checked class="text-sage-600 focus:ring-sage-500">
                 <span class="text-sm font-medium text-sage-900">Joyfully Accepts!</span>
               </label>
               <label class="flex items-center gap-3 p-3.5 rounded-xl border border-sage-300 bg-botanical-cream/30 cursor-pointer hover:bg-sage-50 transition">
-                <input type="radio" name="attending" value="no" class="text-sage-600 focus:ring-sage-500">
+                <input type="radio" name="Attending" value="Regretfully Declines" class="text-sage-600 focus:ring-sage-500">
                 <span class="text-sm font-medium text-sage-900">Regretfully Declines</span>
               </label>
             </div>
           </div>
 
-          <!-- Number of Guests -->
-          <div id="guestCountContainer">
-            <label for="guestCount" class="block text-xs uppercase tracking-wider font-semibold text-sage-800 mb-2">Total Number of Guests</label>
-            <select 
-              id="guestCount" 
+          <!-- Plus One Question -->
+          <div>
+            <label class="block text-xs uppercase tracking-wider font-semibold text-sage-800 mb-2">Do you have a plus one? *</label>
+            <div class="grid grid-cols-2 gap-4 mb-3">
+              <label class="flex items-center gap-3 p-3.5 rounded-xl border border-sage-300 bg-botanical-cream/30 cursor-pointer hover:bg-sage-50 transition">
+                <input type="radio" name="Has_Plus_One" value="Yes" id="plusOneYes" class="text-sage-600 focus:ring-sage-500">
+                <span class="text-sm font-medium text-sage-900">Yes</span>
+              </label>
+              <label class="flex items-center gap-3 p-3.5 rounded-xl border border-sage-300 bg-botanical-cream/30 cursor-pointer hover:bg-sage-50 transition">
+                <input type="radio" name="Has_Plus_One" value="No" id="plusOneNo" checked class="text-sage-600 focus:ring-sage-500">
+                <span class="text-sm font-medium text-sage-900">No</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Plus One Name (Hidden by default) -->
+          <div id="plusOneNameContainer" class="hidden transition-all duration-300">
+            <label for="plusOneName" class="block text-xs uppercase tracking-wider font-semibold text-sage-800 mb-2">Name of your Plus One *</label>
+            <input 
+              type="text" 
+              name="Plus_One_Name"
+              id="plusOneName" 
+              placeholder="e.g., Alex Johnson" 
               class="w-full px-4 py-3 rounded-xl border border-sage-300 bg-botanical-cream/40 focus:outline-none focus:border-sage-600 focus:ring-1 focus:ring-sage-600 text-sm"
             >
-              <option value="1">1 Person</option>
-              <option value="2" selected>2 People</option>
-              <option value="3">3 People</option>
-              <option value="4">4 People</option>
-            </select>
           </div>
 
           <!-- Party Song Request -->
@@ -501,6 +518,7 @@
             <label for="songRequest" class="block text-xs uppercase tracking-wider font-semibold text-sage-800 mb-2">House Party Song Request</label>
             <input 
               type="text" 
+              name="Song_Request"
               id="songRequest" 
               placeholder="A song that will get you moving..." 
               class="w-full px-4 py-3 rounded-xl border border-sage-300 bg-botanical-cream/40 focus:outline-none focus:border-sage-600 focus:ring-1 focus:ring-sage-600 text-sm"
@@ -511,6 +529,7 @@
           <div>
             <label for="message" class="block text-xs uppercase tracking-wider font-semibold text-sage-800 mb-2">A Note for the Couple</label>
             <textarea 
+              name="Message"
               id="message" 
               rows="3" 
               placeholder="Leave some love or advice..." 
@@ -531,12 +550,182 @@
             <i class="fa-solid fa-heart"></i>
           </div>
           <h3 class="font-serif text-3xl text-sage-900 font-semibold mb-2">Thank you!</h3>
-          <p class="text-sage-700 text-sm">We've saved your RSVP and can't wait to celebrate together!</p>
+          <p class="text-sage-700 text-sm">We've received your RSVP and can't wait to celebrate together!</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Plus One Toggle Logic
+    const plusOneYes = document.getElementById('plusOneYes');
+    const plusOneNo = document.getElementById('plusOneNo');
+    const plusOneContainer = document.getElementById('plusOneNameContainer');
+    const plusOneInput = document.getElementById('plusOneName');
+
+    plusOneYes.addEventListener('change', () => {
+      if (plusOneYes.checked) {
+        plusOneContainer.classList.remove('hidden');
+        plusOneInput.required = true;
+      }
+    });
+
+    plusOneNo.addEventListener('change', () => {
+      if (plusOneNo.checked) {
+        plusOneContainer.classList.add('hidden');
+        plusOneInput.required = false;
+        plusOneInput.value = '';
+      }
+    });
+
+    // RSVP Form Submission via Web3Forms API
+    const rsvpForm = document.getElementById('rsvpForm');
+    const rsvpSuccess = document.getElementById('rsvpSuccess');
+
+    rsvpForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(rsvpForm);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: json
+        });
+        
+        const result = await response.json();
+        if (result.success) {
+          rsvpForm.classList.add('hidden');
+          rsvpSuccess.classList.remove('hidden');
+        } else {
+          alert('Something went wrong. Please try again!');
+        }
+      } catch (error) {
+        alert('Submission failed. Please check your connection.');
+      }
+    });
+  </script>
+  <!-- RSVP SECTION -->
+  <section id="rsvp" class="py-24 px-6 bg-botanical-sand/60 border-t border-sage-200/50">
+    <div class="max-w-2xl mx-auto">
+      <div class="text-center mb-12">
+        <span class="text-xs uppercase tracking-[0.25em] text-botanical-gold font-semibold">Join The Celebration</span>
+        <h2 class="font-display text-4xl text-sage-900 mt-2 font-normal">RSVP</h2>
+        <p class="text-sage-700 text-sm mt-2">Let us know if you can make it by 1 June 2027 so we can order enough champagne &amp; fries!</p>
+      </div>
+
+      <div class="bg-white rounded-3xl p-8 sm:p-10 border border-sage-200 shadow-md">
+        <form id="rsvpForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+          
+          <!-- Web3Forms Access Key -->
+          <input type="hidden" name="access_key" value="87dd05f4-c7a7-4c46-9880-f5dc478156c0">
+          <input type="hidden" name="subject" value="New Wedding RSVP Submission!">
+
+          <!-- Full Name -->
+          <div>
+            <label for="fullName" class="block text-xs uppercase tracking-wider font-semibold text-sage-800 mb-2">Your Name(s) *</label>
+            <input 
+              type="text" 
+              name="Name"
+              id="fullName" 
+              required 
+              placeholder="e.g., Sarah &amp; Mark" 
+              class="w-full px-4 py-3 rounded-xl border border-sage-300 bg-botanical-cream/40 focus:outline-none focus:border-sage-600 focus:ring-1 focus:ring-sage-600 text-sm"
+            >
+          </div>
+
+          <!-- Attendance Selection -->
+          <div>
+            <label class="block text-xs uppercase tracking-wider font-semibold text-sage-800 mb-2">Will you be attending? *</label>
+            <div class="grid grid-cols-2 gap-4">
+              <label class="flex items-center gap-3 p-3.5 rounded-xl border border-sage-300 bg-botanical-cream/30 cursor-pointer hover:bg-sage-50 transition">
+                <input type="radio" name="Attending" value="Joyfully Accepts" checked class="text-sage-600 focus:ring-sage-500">
+                <span class="text-sm font-medium text-sage-900">Joyfully Accepts!</span>
+              </label>
+              <label class="flex items-center gap-3 p-3.5 rounded-xl border border-sage-300 bg-botanical-cream/30 cursor-pointer hover:bg-sage-50 transition">
+                <input type="radio" name="Attending" value="Regretfully Declines" class="text-sage-600 focus:ring-sage-500">
+                <span class="text-sm font-medium text-sage-900">Regretfully Declines</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Plus One Question -->
+          <div>
+            <label class="block text-xs uppercase tracking-wider font-semibold text-sage-800 mb-2">Do you have a plus one? *</label>
+            <div class="grid grid-cols-2 gap-4 mb-3">
+              <label class="flex items-center gap-3 p-3.5 rounded-xl border border-sage-300 bg-botanical-cream/30 cursor-pointer hover:bg-sage-50 transition">
+                <input type="radio" name="Has_Plus_One" value="Yes" id="plusOneYes" class="text-sage-600 focus:ring-sage-500">
+                <span class="text-sm font-medium text-sage-900">Yes</span>
+              </label>
+              <label class="flex items-center gap-3 p-3.5 rounded-xl border border-sage-300 bg-botanical-cream/30 cursor-pointer hover:bg-sage-50 transition">
+                <input type="radio" name="Has_Plus_One" value="No" id="plusOneNo" checked class="text-sage-600 focus:ring-sage-500">
+                <span class="text-sm font-medium text-sage-900">No</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Plus One Name (Hidden by default) -->
+          <div id="plusOneNameContainer" class="hidden transition-all duration-300">
+            <label for="plusOneName" class="block text-xs uppercase tracking-wider font-semibold text-sage-800 mb-2">Name of your Plus One *</label>
+            <input 
+              type="text" 
+              name="Plus_One_Name"
+              id="plusOneName" 
+              placeholder="e.g., Alex Johnson" 
+              class="w-full px-4 py-3 rounded-xl border border-sage-300 bg-botanical-cream/40 focus:outline-none focus:border-sage-600 focus:ring-1 focus:ring-sage-600 text-sm"
+            >
+          </div>
+
+          <!-- Party Song Request -->
+          <div>
+            <label for="songRequest" class="block text-xs uppercase tracking-wider font-semibold text-sage-800 mb-2">House Party Song Request</label>
+            <input 
+              type="text" 
+              name="Song_Request"
+              id="songRequest" 
+              placeholder="A song that will get you moving..." 
+              class="w-full px-4 py-3 rounded-xl border border-sage-300 bg-botanical-cream/40 focus:outline-none focus:border-sage-600 focus:ring-1 focus:ring-sage-600 text-sm"
+            >
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label for="message" class="block text-xs uppercase tracking-wider font-semibold text-sage-800 mb-2">A Note for the Couple</label>
+            <textarea 
+              name="Message"
+              id="message" 
+              rows="3" 
+              placeholder="Leave some love or advice..." 
+              class="w-full px-4 py-3 rounded-xl border border-sage-300 bg-botanical-cream/40 focus:outline-none focus:border-sage-600 focus:ring-1 focus:ring-sage-600 text-sm"
+            ></textarea>
+          </div>
+
+          <button 
+            type="submit" 
+            class="w-full py-4 rounded-xl bg-sage-600 text-white font-medium hover:bg-sage-700 transition shadow-md text-sm uppercase tracking-wider"
+          >
+            Send RSVP
+          </button>
+        </form>
+
+        <div id="rsvpSuccess" class="hidden text-center py-8">
+          <div class="w-16 h-16 bg-sage-100 text-sage-700 rounded-full flex items-center justify-center mx-auto text-2xl mb-4">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h3 class="font-serif text-3xl text-sage-900 font-semibold mb-2">Thank you!</h3>
+          <p class="text-sage-700 text-sm">We've received your RSVP and can't wait to celebrate together!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
   <!-- FOOTER -->
   <footer class="py-12 px-6 text-center text-xs text-sage-600 uppercase tracking-widest border-t border-sage-200">
     <p class="font-script text-2xl text-sage-700 lowercase mb-2">Damlanur &amp; Luka</p>
@@ -602,28 +791,59 @@
     });
 
     // 4. RSVP Form Submission
+            // Plus One Toggle Logic
+    const plusOneYes = document.getElementById('plusOneYes');
+    const plusOneNo = document.getElementById('plusOneNo');
+    const plusOneContainer = document.getElementById('plusOneNameContainer');
+    const plusOneInput = document.getElementById('plusOneName');
+
+    plusOneYes.addEventListener('change', () => {
+      if (plusOneYes.checked) {
+        plusOneContainer.classList.remove('hidden');
+        plusOneInput.required = true;
+      }
+    });
+
+    plusOneNo.addEventListener('change', () => {
+      if (plusOneNo.checked) {
+        plusOneContainer.classList.add('hidden');
+        plusOneInput.required = false;
+        plusOneInput.value = '';
+      }
+    });
+
+    // RSVP Form Submission via Web3Forms API
     const rsvpForm = document.getElementById('rsvpForm');
     const rsvpSuccess = document.getElementById('rsvpSuccess');
 
-    rsvpForm.addEventListener('submit', (e) => {
+    rsvpForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       
-      const guestData = {
-        name: document.getElementById('fullName').value,
-        attending: document.querySelector('input[name="attending"]:checked').value,
-        guests: document.getElementById('guestCount').value,
-        song: document.getElementById('songRequest').value,
-        message: document.getElementById('message').value,
-        date: new Date().toISOString()
-      };
+      const formData = new FormData(rsvpForm);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
 
-      // Save locally
-      localStorage.setItem('rsvp_' + Date.now(), JSON.stringify(guestData));
-
-      // Show confirmation
-      rsvpForm.classList.add('hidden');
-      rsvpSuccess.classList.remove('hidden');
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: json
+        });
+        
+        const result = await response.json();
+        if (result.success) {
+          rsvpForm.classList.add('hidden');
+          rsvpSuccess.classList.remove('hidden');
+        } else {
+          alert('Something went wrong. Please try again!');
+        }
+      } catch (error) {
+        alert('Submission failed. Please check your connection.');
+      }
     });
-  </script>
+
 </body>
 </html>
