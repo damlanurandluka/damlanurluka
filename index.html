@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Damlanur &amp; Luka — 27 August 2027</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: {
+              50: '#f4f6f4',
+              100: '#e5ece5',
+              200: '#cbdacb',
+              300: '#a6c1a6',
+              400: '#7ea47e',
+              500: '#60725c',
+              600: '#4c6c4c',
+              700: '#3e563e',
+              800: '#344634',
+              900: '#2c3b2c',
+            },
+            botanical: {
+              cream: '#fcfbf7',
+              sand: '#f3efe6',
+              olive: '#475344',
+              gold: '#c5a880',
+              clay: '#d9825b',
+              dark: '#222923',
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            display: ['"Playfair Display"', 'serif'],
+            script: ['"Alex Brush"', 'cursive'],
+            sans: ['"Outfit"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    ::selection {
+      background-color: #cbdacb;
+      color: #222923;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background-color: #cbdacb;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-botanical-cream text-botanical-dark font-sans antialiased selection:bg-sage-200">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#fcfbf7]/90 backdrop-blur-md border-b border-sage-200/50 transition-all duration-300" id="mainHeader">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#hero" class="text-2xl sm:text-3xl font-script text-sage-700 hover:text-sage-800 transition tracking-wide">
+        Damlanur &amp; Luka
+      </a>
+      
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-widest font-medium text-sage-800">
+        <a href="#celebration" class="hover:text-botanical-gold transition-colors">Our Milestone</a>
+        <a href="#timeline" class="hover:text-botanical-gold transition-colors">Schedule</a>
+        <a href="#venue" class="hover:text-botanical-gold transition-colors">The Park &amp; Home</a>
+        <a href="#qa" class="hover:text-botanical-gold transition-colors">Q&amp;A</a>
+        <a href="#rsvp" class="px-5 py-2 rounded-full bg-sage-500 text-white hover:bg-sage-700 transition shadow-sm hover:shadow">RSVP</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" aria-label="Toggle navigation menu" class="md:hidden p-2 text-sage-800 focus:outline-none">
+        <i class="fa-solid fa-bars-staggered text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-botanical-cream/95 backdrop-blur-lg border-b border-sage-200 px-6 py-6 transition-all duration-300">
+      <div class="flex flex-col space-y-4 text-center text-sm font-medium uppercase tracking-wider text-sage-800">
+        <a href="#celebration" class="mobile-nav-link py-2">Our Milestone</a>
+        <a href="#timeline" class="mobile-nav-link py-2">Schedule</a>
+        <a href="#venue" class="mobile-nav-link py-2">The Park &amp; Home</a>
+        <a href="#qa" class="mobile-nav-link py-2">Q&amp;A</a>
+        <a href="#rsvp" class="mobile-nav-link py-3 rounded-full bg-sage-500 text-white font-semibold">RSVP Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="relative min-h-[90vh] flex items-center justify-center pt-24 pb-16 px-6 overflow-hidden">
+    <!-- Subtle Botanical Leaf Backdrop -->
+    <div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#60725c_1px,transparent_1px)] [background-size:24px_24px]"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
+      <span class="text-sm sm:text-base tracking-[0.3em] uppercase text-sage-600 font-medium mb-3">
+        We're getting married!
+      </span>
+      
+      <h1 class="font-display text-5xl sm:text-7xl lg:text-8xl text-botanical-dark font-normal tracking-tight mb-2">
+        Damlanur <span class="font-script text-5xl sm:text-7xl text-botanical-gold lowercase">&amp;</span> Luka
+      </h1>
+      
+      <p class="font-serif italic text-2xl sm:text-3xl text-sage-700 font-normal mb-8">
+        Friday, 27 August 2027 · 14:00
+      </p>
+
+      <!-- Details Pills -->
+      <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-10 text-xs sm:text-sm tracking-wider uppercase">
+        <span class="inline-flex items-center gap-2 bg-sage-100/80 text-sage-800 px-4 py-2 rounded-full border border-sage-200">
+          <i class="fa-solid fa-tree text-sage-600"></i> Odapark Theehuis, Venray
+        </span>
+        <span class="inline-flex items-center gap-2 bg-sage-100/80 text-sage-800 px-4 py-2 rounded-full border border-sage-200">
+          <i class="fa-solid fa-utensils text-sage-600"></i> Friethuis &amp; House Party
+        </span>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center gap-4 mb-14">
+        <a href="#rsvp" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-sage-600 text-white font-medium hover:bg-sage-700 transition shadow-md hover:shadow-lg text-sm tracking-wider uppercase text-center">
+          Confirm Your Attendance
+        </a>
+        <a href="#timeline" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white text-sage-700 border border-sage-300 font-medium hover:bg-sage-50 transition text-sm tracking-wider uppercase text-center">
+          View The Plan
+        </a>
+      </div>
+
+      <!-- Countdown -->
+      <div class="w-full max-w-xl bg-white/70 backdrop-blur-sm border border-sage-200/80 rounded-2xl p-6 shadow-sm">
+        <p class="text-xs uppercase tracking-widest text-sage-600 font-semibold mb-4 text-center">Counting down the days</p>
+        <div class="grid grid-cols-4 gap-2 sm:gap-4 text-center" id="countdownGrid">
+          <div class="bg-sage-50/80 rounded-xl py-3 px-1 border border-sage-200/60">
+            <span id="days" class="block font-display text-2xl sm:text-4xl text-sage-800 font-medium">---</span>
+            <span class="text-[10px] sm:text-xs uppercase tracking-wider text-sage-600">Days</span>
+          </div>
+          <div class="bg-sage-50/80 rounded-xl py-3 px-1 border border-sage-200/60">
+            <span id="hours" class="block font-display text-2xl sm:text-4xl text-sage-800 font-medium">--</span>
+            <span class="text-[10px] sm:text-xs uppercase tracking-wider text-sage-600">Hours</span>
+          </div>
+          <div class="bg-sage-50/80 rounded-xl py-3 px-1 border border-sage-200/60">
+            <span id="minutes" class="block font-display text-2xl sm:text-4xl text-sage-800 font-medium">--</span>
+            <span class="text-[10px] sm:text-xs uppercase tracking-wider text-sage-600">Mins</span>
+          </div>
+          <div class="bg-sage-50/80 rounded-xl py-3 px-1 border border-sage-200/60">
+            <span id="seconds" class="block font-display text-2xl sm:text-4xl text-sage-800 font-medium">--</span>
+            <span class="text-[10px] sm:text-xs uppercase tracking-wider text-sage-600">Secs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MILESTONE & PHOTO SECTION -->
+  <section id="celebration" class="py-20 px-6 bg-botanical-sand/50 border-y border-sage-200/40">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-xs uppercase tracking-[0.25em] text-botanical-gold font-semibold">6 Years &amp; Counting</span>
+      <h2 class="font-display text-3xl sm:text-4xl text-sage-900 mt-2 mb-8 font-normal">A New Title for Us</h2>
+
+      <!-- Picture of the couple -->
+      <div class="relative max-w-md mx-auto mb-10 group">
+        <div class="absolute -inset-2 bg-gradient-to-r from-sage-200 to-botanical-gold rounded-3xl blur-md opacity-40 group-hover:opacity-70 transition duration-500"></div>
+        <div class="relative overflow-hidden rounded-2xl border-4 border-white shadow-lg aspect-[3/4]">
+          <img 
+            id="couplePhoto"
+            src="us-photo.jpg" 
+            alt="Damlanur &amp; Luka" 
+            class="w-full h-full object-cover object-center"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80';"
+          />
+        </div>
+        <p class="text-xs text-sage-600 mt-3 italic">Damlanur &amp; Luka</p>
+      </div>
+
+      <!-- Casual Announcement Text -->
+      <div class="max-w-2xl mx-auto space-y-5 text-base sm:text-lg text-sage-800 leading-relaxed font-normal">
+        <p>
+          Everyone coming already knows our story. After 6 wonderful, laughter-filled years together, we’ve decided to officially upgrade our status and give our relationship a brand-new title!
+        </p>
+        <p class="font-serif italic text-xl sm:text-2xl text-sage-700">
+          No stiff speeches, no overly formal traditions — just saying “we do” under the summer canopy, sweet bites, fries, and heading back home to celebrate with our favorite people (and our cats).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="timeline" class="py-24 px-6 bg-botanical-cream">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-xs uppercase tracking-[0.25em] text-botanical-gold font-semibold">The Schedule</span>
+        <h2 class="font-display text-3xl sm:text-4xl text-sage-900 mt-2 font-normal">How the Day Unfolds</h2>
+        <p class="text-sage-600 text-sm mt-2">Times are casual and relaxed, but here is what we have planned:</p>
+      </div>
+
+      <div class="relative border-l-2 border-sage-300 ml-4 md:ml-32 space-y-12">
+        
+        <!-- Timeline Item 1 -->
+        <div class="relative pl-8 sm:pl-10">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-sage-500 border-4 border-botanical-cream"></div>
+          <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-sm font-semibold tracking-wider text-sage-600 block uppercase">14:00</span>
+          <div class="bg-white p-6 rounded-2xl border border-sage-200 shadow-sm">
+            <h3 class="font-serif text-2xl text-sage-900 font-semibold flex items-center gap-2">
+              <i class="fa-solid fa-leaf text-sage-500 text-lg"></i> Under the Trees Ceremony
+            </h3>
+            <p class="text-xs text-botanical-gold font-medium uppercase tracking-wider mt-1 mb-2">Odapark Theehuis, Venray</p>
+            <p class="text-sage-700 text-sm leading-relaxed">
+              We gather outdoors beneath the lush trees of Odapark for an intimate, relaxed ceremony as we exchange our vows.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="relative pl-8 sm:pl-10">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-botanical-gold border-4 border-botanical-cream"></div>
+          <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-sm font-semibold tracking-wider text-sage-600 block uppercase">15:00</span>
+          <div class="bg-white p-6 rounded-2xl border border-sage-200 shadow-sm">
+            <h3 class="font-serif text-2xl text-sage-900 font-semibold flex items-center gap-2">
+              <i class="fa-solid fa-champagne-glasses text-botanical-gold text-lg"></i> Sweet Bites &amp; Bubbles
+            </h3>
+            <p class="text-xs text-botanical-gold font-medium uppercase tracking-wider mt-1 mb-2">Theehuis Terrace</p>
+            <p class="text-sage-700 text-sm leading-relaxed">
+              A light, delicious reception. We'll pour chilled champagne and treat everyone to a spread of our all-time favorite inclusive desserts (thoughtfully prepared for all diets).
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3 -->
+        <div class="relative pl-8 sm:pl-10">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-sage-500 border-4 border-botanical-cream"></div>
+          <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-sm font-semibold tracking-wider text-sage-600 block uppercase">16:00</span>
+          <div class="bg-white p-6 rounded-2xl border border-sage-200 shadow-sm">
+            <h3 class="font-serif text-2xl text-sage-900 font-semibold flex items-center gap-2">
+              <i class="fa-solid fa-camera text-sage-500 text-lg"></i> Forest Walk &amp; Photos
+            </h3>
+            <p class="text-xs text-botanical-gold font-medium uppercase tracking-wider mt-1 mb-2">Sculpture Garden &amp; Woods</p>
+            <p class="text-sage-700 text-sm leading-relaxed">
+              A stroll through the sculpture trails of Odapark to snap relaxed photos with all of you among the woods.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 4 -->
+        <div class="relative pl-8 sm:pl-10">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-clay border-4 border-botanical-cream"></div>
+          <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-sm font-semibold tracking-wider text-sage-600 block uppercase">17:00</span>
+          <div class="bg-white p-6 rounded-2xl border border-sage-200 shadow-sm">
+            <h3 class="font-serif text-2xl text-sage-900 font-semibold flex items-center gap-2">
+              <i class="fa-solid fa-bowl-food text-clay text-lg"></i> The Friethuis Run
+            </h3>
+            <p class="text-xs text-botanical-gold font-medium uppercase tracking-wider mt-1 mb-2">Local Friethuis near our house</p>
+            <p class="text-sage-700 text-sm leading-relaxed">
+              The best kind of wedding dinner! We make our way over to the local snackbar for piping hot fries and classic bites together.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 5 -->
+        <div class="relative pl-8 sm:pl-10">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-sage-700 border-4 border-botanical-cream"></div>
+          <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-sm font-semibold tracking-wider text-sage-600 block uppercase">18:30+</span>
+          <div class="bg-white p-6 rounded-2xl border border-sage-200 shadow-sm">
+            <h3 class="font-serif text-2xl text-sage-900 font-semibold flex items-center gap-2">
+              <i class="fa-solid fa-cat text-sage-700 text-lg"></i> House Party &amp; Cat Cuddles
+            </h3>
+            <p class="text-xs text-botanical-gold font-medium uppercase tracking-wider mt-1 mb-2">Our Place</p>
+            <p class="text-sage-700 text-sm leading-relaxed">
+              We stroll, bike, or drive back to our place. Drinks, music, backyard hanging, and introducing you to our cats.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Add to Calendar Button -->
+      <div class="mt-12 text-center">
+        <a 
+          href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Damlanur+%26+Luka%27s+Wedding&dates=20270827T120000Z/20270827T220000Z&details=Wedding+ceremony+at+Odapark+Theehuis,+followed+by+desserts,+friethuis+run,+and+house+party+with+cats!&location=Odapark+Theehuis,+Merseloseweg+117,+5801+CC+Venray"
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-sage-700 bg-white border border-sage-300 hover:bg-sage-50 px-5 py-2.5 rounded-full transition shadow-sm"
+        >
+          <i class="fa-regular fa-calendar-plus"></i> Add to Google Calendar
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VENUE & LOCATIONS -->
+  <section id="venue" class="py-20 px-6 bg-botanical-sand/40 border-t border-sage-200/50">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-xs uppercase tracking-[0.25em] text-botanical-gold font-semibold">The Places</span>
+        <h2 class="font-display text-3xl sm:text-4xl text-sage-900 mt-2 font-normal">Where To Go</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 items-stretch">
+        <!-- Odapark Card -->
+        <div class="bg-white rounded-3xl p-8 border border-sage-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-sage-100 flex items-center justify-center text-sage-700 text-xl mb-6">
+              <i class="fa-solid fa-tree"></i>
+            </div>
+            <h3 class="font-serif text-2xl text-sage-900 font-semibold mb-2">Odapark Theehuis</h3>
+            <p class="text-xs uppercase tracking-wider text-botanical-gold font-medium mb-4">Ceremony &amp; Sweet Bites (14:00)</p>
+            <p class="text-sage-700 text-sm leading-relaxed mb-6">
+              Merseloseweg 117, 5801 CC Venray<br>
+              A historic teahouse set inside an open wooded sculpture park. Free parking is available at the park entrance.
+            </p>
+          </div>
+          <a 
+            href="https://maps.google.com/?q=Odapark+Theehuis+Venray" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 text-xs uppercase tracking-wider font-semibold text-sage-800 bg-sage-100 hover:bg-sage-200 py-3 px-6 rounded-full transition w-full"
+          >
+            <i class="fa-solid fa-map-location-dot"></i> Open in Google Maps
+          </a>
+        </div>
+
+        <!-- Friethuis & Home Card -->
+        <div class="bg-white rounded-3xl p-8 border border-sage-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-sage-100 flex items-center justify-center text-sage-700 text-xl mb-6">
+              <i class="fa-solid fa-house-chimney-window"></i>
+            </div>
+            <h3 class="font-serif text-2xl text-sage-900 font-semibold mb-2">Friethuis &amp; Our House</h3>
+            <p class="text-xs uppercase tracking-wider text-botanical-gold font-medium mb-4">Snacks &amp; Party (17:00 onwards)</p>
+            <p class="text-sage-700 text-sm leading-relaxed mb-6">
+              After Odapark, we'll head towards our neighborhood friethuis for fresh fries and snacks, then walk/bike/drive over to our house for the evening with our cats!
+            </p>
+          </div>
+          <div class="p-3 bg-sage-50 rounded-xl text-center border border-sage-200/60">
+            <span class="text-xs text-sage-600 italic">Address &amp; parking tips will be texted prior to the date!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Q&A SECTION -->
+  <section id="qa" class="py-20 px-6 bg-botanical-cream">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-14">
+        <span class="text-xs uppercase tracking-[0.25em] text-botanical-gold font-semibold">Good to Know</span>
+        <h2 class="font-display text-3xl sm:text-4xl text-sage-900 mt-2 font-normal">Questions &amp; Answers</h2>
+      </div>
+
+      <div class="space-y-4">
+        <!-- QA Item 1 -->
+        <div class="bg-white rounded-2xl border border-sage-200 overflow-hidden transition shadow-sm">
+          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-sage-900 font-semibold flex items-center justify-between focus:outline-none">
+            <span>What should I wear?</span>
+            <i class="fa-solid fa-chevron-down text-sm text-sage-500 transition-transform duration-300"></i>
+          </button>
+          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-sage-700 leading-relaxed">
+            <div class="pb-5">
+              Wear whatever makes you feel nice and comfortable! Summer garden chic, casual elegance, or soft botanical tones fit right in. Note: we will be walking through forest paths at Odapark, so comfortable shoes, flats, or block heels are strongly recommended over needle stilettos.
+            </div>
+          </div>
+        </div>
+
+        <!-- QA Item 2 -->
+        <div class="bg-white rounded-2xl border border-sage-200 overflow-hidden transition shadow-sm">
+          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-sage-900 font-semibold flex items-center justify-between focus:outline-none">
+            <span>How do we get between the park and your place?</span>
+            <i class="fa-solid fa-chevron-down text-sm text-sage-500 transition-transform duration-300"></i>
+          </button>
+          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-sage-700 leading-relaxed">
+            <div class="pb-5">
+              It’s a very short distance. Depending on the weather and what you prefer, you can easily drive, ride a bicycle (Dutch style!), or we can coordinate a stroll together. There is ample parking at both locations.
+            </div>
+          </div>
+        </div>
+
+        <!-- QA Item 3 -->
+        <div class="bg-white rounded-2xl border border-sage-200 overflow-hidden transition shadow-sm">
+          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-sage-900 font-semibold flex items-center justify-between focus:outline-none">
+            <span>What if it rains?</span>
+            <i class="fa-solid fa-chevron-down text-sm text-sage-500 transition-transform duration-300"></i>
+          </button>
+          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-sage-700 leading-relaxed">
+            <div class="pb-5">
+              Dutch weather can always surprise us! If it showers, we will move the ceremony seamlessly under the covered veranda and cozy indoor rooms of Odapark Theehuis.
+            </div>
+          </div>
+        </div>
+
+        <!-- QA Item 4 -->
+        <div class="bg-white rounded-2xl border border-sage-200 overflow-hidden transition shadow-sm">
+          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-sage-900 font-semibold flex items-center justify-between focus:outline-none">
+            <span>Can I cuddle the cats?</span>
+            <i class="fa-solid fa-chevron-down text-sm text-sage-500 transition-transform duration-300"></i>
+          </button>
+          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-sage-700 leading-relaxed">
+            <div class="pb-5">
+              Yes, absolutely! They will be greeting everyone during the house party. If you are allergic, let us know in advance—we will keep a designated allergy-safe room and antihistamines on hand.
+            </div>
+          </div>
+        </div>
+
+        <!-- QA Item 5 -->
+        <div class="bg-white rounded-2xl border border-sage-200 overflow-hidden transition shadow-sm">
+          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-sage-900 font-semibold flex items-center justify-between focus:outline-none">
+            <span>What about gifts?</span>
+            <i class="fa-solid fa-chevron-down text-sm text-sage-500 transition-transform duration-300"></i>
+          </button>
+          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-sage-700 leading-relaxed">
+            <div class="pb-5">
+              Your presence to celebrate our 6 years together is honestly the greatest gift. If you’d like to contribute something extra, a small contribution towards our honeymoon and future home adventures is warmly appreciated.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP SECTION -->
+  <section id="rsvp" class="py-24 px-6 bg-botanical-sand/60 border-t border-sage-200/50">
+    <div class="max-w-2xl mx-auto">
+      <div class="text-center mb-12">
+        <span class="text-xs uppercase tracking-[0.25em] text-botanical-gold font-semibold">Join The Celebration</span>
+        <h2 class="font-display text-4xl text-sage-900 mt-2 font-normal">RSVP</h2>
+        <p class="text-sage-700 text-sm mt-2">Let us know if you can make it by 1 June 2027 so we can order enough champagne &amp; fries!</p>
+      </div>
+
+      <div class="bg-white rounded-3xl p-8 sm:p-10 border border-sage-200 shadow-md">
+        <form id="rsvpForm" class="space-y-6">
+          
+          <!-- Full Name -->
+          <div>
+            <label for="fullName" class="block text-xs uppercase tracking-wider font-semibold text-sage-800 mb-2">Your Name(s) *</label>
+            <input 
+              type="text" 
+              id="fullName" 
+              required 
+              placeholder="e.g., Sarah &amp; Mark" 
+              class="w-full px-4 py-3 rounded-xl border border-sage-300 bg-botanical-cream/40 focus:outline-none focus:border-sage-600 focus:ring-1 focus:ring-sage-600 text-sm"
+            >
+          </div>
+
+          <!-- Attendance Selection -->
+          <div>
+            <label class="block text-xs uppercase tracking-wider font-semibold text-sage-800 mb-2">Will you be attending? *</label>
+            <div class="grid grid-cols-2 gap-4">
+              <label class="flex items-center gap-3 p-3.5 rounded-xl border border-sage-300 bg-botanical-cream/30 cursor-pointer hover:bg-sage-50 transition">
+                <input type="radio" name="attending" value="yes" checked class="text-sage-600 focus:ring-sage-500">
+                <span class="text-sm font-medium text-sage-900">Joyfully Accepts!</span>
+              </label>
+              <label class="flex items-center gap-3 p-3.5 rounded-xl border border-sage-300 bg-botanical-cream/30 cursor-pointer hover:bg-sage-50 transition">
+                <input type="radio" name="attending" value="no" class="text-sage-600 focus:ring-sage-500">
+                <span class="text-sm font-medium text-sage-900">Regretfully Declines</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Number of Guests -->
+          <div id="guestCountContainer">
+            <label for="guestCount" class="block text-xs uppercase tracking-wider font-semibold text-sage-800 mb-2">Total Number of Guests</label>
+            <select 
+              id="guestCount" 
+              class="w-full px-4 py-3 rounded-xl border border-sage-300 bg-botanical-cream/40 focus:outline-none focus:border-sage-600 focus:ring-1 focus:ring-sage-600 text-sm"
+            >
+              <option value="1">1 Person</option>
+              <option value="2" selected>2 People</option>
+              <option value="3">3 People</option>
+              <option value="4">4 People</option>
+            </select>
+          </div>
+
+          <!-- Party Song Request -->
+          <div>
+            <label for="songRequest" class="block text-xs uppercase tracking-wider font-semibold text-sage-800 mb-2">House Party Song Request</label>
+            <input 
+              type="text" 
+              id="songRequest" 
+              placeholder="A song that will get you moving..." 
+              class="w-full px-4 py-3 rounded-xl border border-sage-300 bg-botanical-cream/40 focus:outline-none focus:border-sage-600 focus:ring-1 focus:ring-sage-600 text-sm"
+            >
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label for="message" class="block text-xs uppercase tracking-wider font-semibold text-sage-800 mb-2">A Note for the Couple</label>
+            <textarea 
+              id="message" 
+              rows="3" 
+              placeholder="Leave some love or advice..." 
+              class="w-full px-4 py-3 rounded-xl border border-sage-300 bg-botanical-cream/40 focus:outline-none focus:border-sage-600 focus:ring-1 focus:ring-sage-600 text-sm"
+            ></textarea>
+          </div>
+
+          <button 
+            type="submit" 
+            class="w-full py-4 rounded-xl bg-sage-600 text-white font-medium hover:bg-sage-700 transition shadow-md text-sm uppercase tracking-wider"
+          >
+            Send RSVP
+          </button>
+        </form>
+
+        <div id="rsvpSuccess" class="hidden text-center py-8">
+          <div class="w-16 h-16 bg-sage-100 text-sage-700 rounded-full flex items-center justify-center mx-auto text-2xl mb-4">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h3 class="font-serif text-3xl text-sage-900 font-semibold mb-2">Thank you!</h3>
+          <p class="text-sage-700 text-sm">We've saved your RSVP and can't wait to celebrate together!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-12 px-6 text-center text-xs text-sage-600 uppercase tracking-widest border-t border-sage-200">
+    <p class="font-script text-2xl text-sage-700 lowercase mb-2">Damlanur &amp; Luka</p>
+    <p>27 August 2027 · Venray</p>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // 1. Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // 2. Countdown Timer
+    const weddingDate = new Date('2027-08-27T14:00:00+02:00').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const diff = weddingDate - now;
+
+      if (diff <= 0) {
+        document.getElementById('countdownGrid').innerHTML = '<div class="col-span-4 text-center font-serif text-2xl text-sage-800">Today is the day! 💍</div>';
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('days').textContent = days;
+      document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+      document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+      document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // 3. Q&A Accordion Toggle
+    document.querySelectorAll('.qa-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+        // Close all others
+        document.querySelectorAll('.qa-content').forEach(c => c.style.maxHeight = null);
+        document.querySelectorAll('.qa-toggle i').forEach(ic => ic.style.transform = 'rotate(0deg)');
+
+        if (!isOpen) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+
+    // 4. RSVP Form Submission
+    const rsvpForm = document.getElementById('rsvpForm');
+    const rsvpSuccess = document.getElementById('rsvpSuccess');
+
+    rsvpForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const guestData = {
+        name: document.getElementById('fullName').value,
+        attending: document.querySelector('input[name="attending"]:checked').value,
+        guests: document.getElementById('guestCount').value,
+        song: document.getElementById('songRequest').value,
+        message: document.getElementById('message').value,
+        date: new Date().toISOString()
+      };
+
+      // Save locally
+      localStorage.setItem('rsvp_' + Date.now(), JSON.stringify(guestData));
+
+      // Show confirmation
+      rsvpForm.classList.add('hidden');
+      rsvpSuccess.classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
