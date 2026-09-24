@@ -24,7 +24,8 @@
             customBg: '#fffaf2',
             olivePrimary: '#818263',
             oliveSoft: '#c2c395',
-            oliveDark: '#6b6c50',
+            cardBg: '#7e8772',
+            oliveDark: '#5e6553',
           },
           fontFamily: {
             serif: ['"Noto Serif"', 'serif'],
@@ -45,12 +46,12 @@
       color: #c2c395;
     }
     ::selection {
-      background-color: #c2c395;
+      background-color: #7e8772;
       color: #fffaf2;
     }
   </style>
 </head>
-<body class="bg-customBg text-oliveSoft font-sans antialiased selection:bg-oliveSoft selection:text-customBg">
+<body class="bg-customBg text-oliveSoft font-sans antialiased selection:bg-cardBg selection:text-customBg">
 
   <!-- NAVBAR -->
   <header class="fixed top-0 left-0 right-0 z-50 bg-[#fffaf2]/90 backdrop-blur-md border-b border-oliveSoft/40 transition-all duration-300" id="mainHeader">
@@ -65,7 +66,7 @@
         <a href="#timeline" class="hover:text-olivePrimary transition-colors">Schedule</a>
         <a href="#venue" class="hover:text-olivePrimary transition-colors">The Park &amp; Home</a>
         <a href="#qa" class="hover:text-olivePrimary transition-colors">Q&amp;A</a>
-        <a href="#rsvp" class="px-5 py-2 rounded-full bg-olivePrimary text-[#fffaf2] hover:bg-oliveDark transition shadow-sm hover:shadow">RSVP</a>
+        <a href="#rsvp" class="px-5 py-2 rounded-full bg-cardBg text-[#fffaf2] hover:bg-oliveDark transition shadow-sm hover:shadow">RSVP</a>
       </nav>
 
       <!-- Mobile Menu Button -->
@@ -81,7 +82,7 @@
         <a href="#timeline" class="mobile-nav-link py-2 hover:text-olivePrimary">Schedule</a>
         <a href="#venue" class="mobile-nav-link py-2 hover:text-olivePrimary">The Park &amp; Home</a>
         <a href="#qa" class="mobile-nav-link py-2 hover:text-olivePrimary">Q&amp;A</a>
-        <a href="#rsvp" class="mobile-nav-link py-3 rounded-full bg-olivePrimary text-[#fffaf2] font-semibold">RSVP Now</a>
+        <a href="#rsvp" class="mobile-nav-link py-3 rounded-full bg-cardBg text-[#fffaf2] font-semibold">RSVP Now</a>
       </div>
     </div>
   </header>
@@ -105,42 +106,42 @@
 
       <!-- Details Pills -->
       <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-10 text-xs sm:text-sm tracking-wider uppercase">
-        <span class="inline-flex items-center gap-2 bg-[#c2c395]/15 text-oliveSoft px-4 py-2 rounded-full border border-oliveSoft/40">
-          <i class="fa-solid fa-tree text-olivePrimary"></i> Odapark Theehuis, Venray
+        <span class="inline-flex items-center gap-2 bg-[#7e8772] text-[#fffaf2] px-4 py-2 rounded-full border border-oliveSoft/40 shadow-sm">
+          <i class="fa-solid fa-tree text-oliveSoft"></i> Odapark Theehuis, Venray
         </span>
-        <span class="inline-flex items-center gap-2 bg-[#c2c395]/15 text-oliveSoft px-4 py-2 rounded-full border border-oliveSoft/40">
-          <i class="fa-solid fa-utensils text-olivePrimary"></i> Friethuis &amp; House Party
+        <span class="inline-flex items-center gap-2 bg-[#7e8772] text-[#fffaf2] px-4 py-2 rounded-full border border-oliveSoft/40 shadow-sm">
+          <i class="fa-solid fa-utensils text-oliveSoft"></i> Friethuis &amp; House Party
         </span>
       </div>
 
       <!-- Action Buttons -->
       <div class="flex flex-col sm:flex-row items-center gap-4 mb-12">
-        <a href="#rsvp" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-olivePrimary text-[#fffaf2] font-medium hover:bg-oliveDark transition shadow-md hover:shadow-lg text-sm tracking-wider uppercase text-center">
+        <a href="#rsvp" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-cardBg text-[#fffaf2] font-medium hover:bg-oliveDark transition shadow-md hover:shadow-lg text-sm tracking-wider uppercase text-center">
           Confirm Your Attendance
         </a>
-        <a href="#timeline" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white text-olivePrimary border border-oliveSoft hover:bg-[#fffaf2] transition text-sm tracking-wider uppercase text-center font-medium">
+        <a href="#timeline" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#fffaf2] text-olivePrimary border border-cardBg hover:bg-[#7e8772] hover:text-[#fffaf2] transition text-sm tracking-wider uppercase text-center font-medium shadow-sm">
           View The Plan
         </a>
       </div>
 
-      <!-- Clean Countdown -->
-      <div class="w-full max-w-md bg-white/80 backdrop-blur-md border border-oliveSoft/60 rounded-3xl p-6 shadow-sm">
-        <p class="text-xs uppercase tracking-[0.2em] text-olivePrimary font-semibold mb-4 text-center">Counting down to the day</p>
+      <!-- Clean Countdown Card -->
+      <div class="w-full max-w-md bg-cardBg text-[#fffaf2] border border-oliveSoft/40 rounded-3xl p-6 shadow-md">
+        <p class="text-xs uppercase tracking-[0.2em] text-[#fffaf2] font-semibold mb-4 text-center">Counting down to the day</p>
         <div class="grid grid-cols-4 gap-3 text-center" id="countdownGrid">
-          <div class="flex flex-col items-center justify-center p-2 rounded-2xl bg-[#fffaf2] border border-oliveSoft/40">
-            <span id="days" class="font-serif text-3xl sm:text-4xl text-olivePrimary font-semibold">--</span>
+          <div class="flex flex-col items-center justify-center p-2 rounded-2xl bg-[#5e6553]/70 border border-oliveSoft/30">
+            <span id="days" class="font-serif text-3xl sm:text-4xl text-[#fffaf2] font-semibold">--</span>
             <span class="text-[10px] uppercase tracking-wider text-oliveSoft mt-1">Days</span>
           </div>
-          <div class="flex flex-col items-center justify-center p-2 rounded-2xl bg-[#fffaf2] border border-oliveSoft/40">
-            <span id="hours" class="font-serif text-3xl sm:text-4xl text-olivePrimary font-semibold">--</span>
+          <div class="flex flex-col items-center justify-center p-2 rounded-2xl bg-[#5e6553]/70 border border-oliveSoft/30">
+            <span id="hours" class="font-serif text-3xl sm:text-4xl text-[#fffaf2] font-semibold">--</span>
             <span class="text-[10px] uppercase tracking-wider text-oliveSoft mt-1">Hours</span>
           </div>
-          <div class="flex flex-col items-center justify-center p-2 rounded-2xl bg-[#fffaf2] border border-oliveSoft/40">
-            <span id="minutes" class="font-serif text-3xl sm:text-4xl text-olivePrimary font-semibold">--</span>
+          <div class="flex flex-col items-center justify-center p-2 rounded-2xl bg-[#5e6553]/70 border border-oliveSoft/30">
+            <span id="minutes" class="font-serif text-3xl sm:text-4xl text-[#fffaf2] font-semibold">--</span>
             <span class="text-[10px] uppercase tracking-wider text-oliveSoft mt-1">Mins</span>
           </div>
-          <div class="flex flex-col items-center justify-center p-2 rounded-2xl bg-[#fffaf2] border border-oliveSoft/40">
-            <span id="seconds" class="font-serif text-3xl sm:text-4xl text-olivePrimary font-semibold">--</span>
+          <div class="flex flex-col items-center justify-center p-2 rounded-2xl bg-[#5e6553]/70 border border-oliveSoft/30">
+            <span id="seconds" class="font-serif text-3xl sm:text-4xl text-[#fffaf2] font-semibold">--</span>
             <span class="text-[10px] uppercase tracking-wider text-oliveSoft mt-1">Secs</span>
           </div>
         </div>
@@ -151,13 +152,13 @@
   <!-- MILESTONE & PHOTO SECTION -->
   <section id="celebration" class="py-20 px-6 bg-[#fffaf2] border-y border-oliveSoft/30">
     <div class="max-w-4xl mx-auto text-center">
-      <span class="text-xs uppercase tracking-[0.25em] text-oliveSoft font-bold">6 Years &amp; Counting</span>
+      <span class="text-xs uppercase tracking-[0.25em] text-olivePrimary font-bold">6 Years &amp; Counting</span>
       <h2 class="font-serif text-3xl sm:text-4xl text-olivePrimary mt-2 mb-8 font-semibold">A New Title for Us</h2>
 
       <!-- Picture of the couple -->
       <div class="relative max-w-lg mx-auto mb-10 group">
-        <div class="absolute -inset-2 bg-gradient-to-r from-oliveSoft to-olivePrimary rounded-3xl blur-md opacity-30 group-hover:opacity-60 transition duration-500"></div>
-        <div class="relative overflow-hidden rounded-2xl border-4 border-white shadow-lg bg-[#fffaf2] flex items-center justify-center p-2">
+        <div class="absolute -inset-2 bg-cardBg rounded-3xl blur-md opacity-30 group-hover:opacity-50 transition duration-500"></div>
+        <div class="relative overflow-hidden rounded-2xl border-4 border-cardBg shadow-lg bg-cardBg flex items-center justify-center p-2">
           <img 
             id="couplePhoto"
             src="IMG_5867.jpeg" 
@@ -169,12 +170,12 @@
         <p class="text-xs text-olivePrimary mt-3 italic">Damlanur &amp; Luka</p>
       </div>
       
-      <!-- Casual Announcement Text -->
-      <div class="max-w-2xl mx-auto space-y-5 text-base sm:text-lg leading-relaxed font-normal">
-        <p class="text-oliveSoft">
+      <!-- Unified Story Typography (Single Noto Serif font throughout) -->
+      <div class="max-w-2xl mx-auto space-y-6 text-base sm:text-lg leading-relaxed font-serif text-olivePrimary text-center">
+        <p>
           From meeting in Växjö in 2021 to building our cosy life in Malmö, we eventually made the leap to the Netherlands with our cats. Even though we like everything to be perfectly planned (well, mostly Damla), our 6 years together have been full of unexpected turns in where we’d go and what would happen next.
         </p>
-        <p class="font-serif italic text-xl sm:text-2xl text-olivePrimary">
+        <p class="text-lg sm:text-xl font-normal text-olivePrimary/90">
           We’ve decided to clear away the uncertainties and bring our families and friends together for our next chapter. We do not like the conservative traditions, we just want to say “we do”, celebrate our love, eat fries, and party all night.
         </p>
       </div>
@@ -185,23 +186,23 @@
   <section id="timeline" class="py-24 px-6 bg-[#fffaf2]">
     <div class="max-w-3xl mx-auto">
       <div class="text-center mb-16">
-        <span class="text-xs uppercase tracking-[0.25em] text-oliveSoft font-bold">The Schedule</span>
+        <span class="text-xs uppercase tracking-[0.25em] text-olivePrimary font-bold">The Schedule</span>
         <h2 class="font-serif text-3xl sm:text-4xl text-olivePrimary mt-2 font-semibold">How the Day Unfolds</h2>
         <p class="text-oliveSoft text-sm mt-2">Times are casual and relaxed, but here is what we have planned:</p>
       </div>
 
-      <div class="relative border-l-2 border-oliveSoft/60 ml-4 md:ml-32 space-y-12">
+      <div class="relative border-l-2 border-cardBg/60 ml-4 md:ml-32 space-y-12">
         
         <!-- Timeline Item 1 -->
         <div class="relative pl-8 sm:pl-10">
-          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-olivePrimary border-4 border-[#fffaf2]"></div>
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cardBg border-4 border-[#fffaf2]"></div>
           <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-sm font-semibold tracking-wider text-olivePrimary block uppercase">14:00</span>
-          <div class="bg-white p-6 rounded-2xl border border-oliveSoft/40 shadow-sm">
-            <h3 class="font-serif text-2xl text-olivePrimary font-semibold flex items-center gap-2">
+          <div class="bg-cardBg p-6 rounded-2xl border border-oliveSoft/40 shadow-sm text-[#fffaf2]">
+            <h3 class="font-serif text-2xl text-[#fffaf2] font-semibold flex items-center gap-2">
               <i class="fa-solid fa-heart text-oliveSoft text-base"></i> Ceremony
             </h3>
             <p class="text-xs text-oliveSoft font-bold uppercase tracking-wider mt-1 mb-2">Odapark Theehuis, Venray</p>
-            <p class="text-oliveSoft text-sm leading-relaxed">
+            <p class="text-[#fffaf2]/90 text-sm leading-relaxed">
               We gather outdoors beneath the trees of Odapark for an intimate, relaxed ceremony as we exchange our vows.
             </p>
           </div>
@@ -209,14 +210,14 @@
 
         <!-- Timeline Item 2 -->
         <div class="relative pl-8 sm:pl-10">
-          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-olivePrimary border-4 border-[#fffaf2]"></div>
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cardBg border-4 border-[#fffaf2]"></div>
           <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-sm font-semibold tracking-wider text-olivePrimary block uppercase">15:00</span>
-          <div class="bg-white p-6 rounded-2xl border border-oliveSoft/40 shadow-sm">
-            <h3 class="font-serif text-2xl text-olivePrimary font-semibold flex items-center gap-2">
+          <div class="bg-cardBg p-6 rounded-2xl border border-oliveSoft/40 shadow-sm text-[#fffaf2]">
+            <h3 class="font-serif text-2xl text-[#fffaf2] font-semibold flex items-center gap-2">
               <i class="fa-solid fa-heart text-oliveSoft text-base"></i> Reception 
             </h3>
             <p class="text-xs text-oliveSoft font-bold uppercase tracking-wider mt-1 mb-2">Theehuis Terrace</p>
-            <p class="text-oliveSoft text-sm leading-relaxed">
+            <p class="text-[#fffaf2]/90 text-sm leading-relaxed">
               A light reception to enjoy our favourite desserts and drinks. 
             </p>
           </div>
@@ -224,14 +225,14 @@
 
         <!-- Timeline Item 3 -->
         <div class="relative pl-8 sm:pl-10">
-          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-olivePrimary border-4 border-[#fffaf2]"></div>
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cardBg border-4 border-[#fffaf2]"></div>
           <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-sm font-semibold tracking-wider text-olivePrimary block uppercase">16:00</span>
-          <div class="bg-white p-6 rounded-2xl border border-oliveSoft/40 shadow-sm">
-            <h3 class="font-serif text-2xl text-olivePrimary font-semibold flex items-center gap-2">
+          <div class="bg-cardBg p-6 rounded-2xl border border-oliveSoft/40 shadow-sm text-[#fffaf2]">
+            <h3 class="font-serif text-2xl text-[#fffaf2] font-semibold flex items-center gap-2">
               <i class="fa-solid fa-heart text-oliveSoft text-base"></i> Photoshoot  
             </h3>
             <p class="text-xs text-oliveSoft font-bold uppercase tracking-wider mt-1 mb-2">Sculpture Garden &amp; Woods</p>
-            <p class="text-oliveSoft text-sm leading-relaxed">
+            <p class="text-[#fffaf2]/90 text-sm leading-relaxed">
               A stroll through the sculpture trails of Odapark to snap photos with all of you among the woods.
             </p>
           </div>
@@ -239,14 +240,14 @@
 
         <!-- Timeline Item 4 -->
         <div class="relative pl-8 sm:pl-10">
-          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-olivePrimary border-4 border-[#fffaf2]"></div>
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cardBg border-4 border-[#fffaf2]"></div>
           <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-sm font-semibold tracking-wider text-olivePrimary block uppercase">17:00</span>
-          <div class="bg-white p-6 rounded-2xl border border-oliveSoft/40 shadow-sm">
-            <h3 class="font-serif text-2xl text-olivePrimary font-semibold flex items-center gap-2">
+          <div class="bg-cardBg p-6 rounded-2xl border border-oliveSoft/40 shadow-sm text-[#fffaf2]">
+            <h3 class="font-serif text-2xl text-[#fffaf2] font-semibold flex items-center gap-2">
               <i class="fa-solid fa-heart text-oliveSoft text-base"></i> Friethuis 
             </h3>
             <p class="text-xs text-oliveSoft font-bold uppercase tracking-wider mt-1 mb-2">Local Friethuis near our house</p>
-            <p class="text-oliveSoft text-sm leading-relaxed">
+            <p class="text-[#fffaf2]/90 text-sm leading-relaxed">
               The best kind of wedding dinner! We make our way over to the local snackbar for special fries and some frikandell, biterballen or maybe bami bites together.
             </p>
           </div>
@@ -254,19 +255,19 @@
 
         <!-- Timeline Item 5 -->
         <div class="relative pl-8 sm:pl-10">
-          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-olivePrimary border-4 border-[#fffaf2]"></div>
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cardBg border-4 border-[#fffaf2]"></div>
           <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-sm font-semibold tracking-wider text-olivePrimary block uppercase">18:30+</span>
-          <div class="bg-white p-6 rounded-2xl border border-oliveSoft/40 shadow-sm">
-            <h3 class="font-serif text-2xl text-olivePrimary font-semibold flex items-center gap-2 mb-2">
+          <div class="bg-cardBg p-6 rounded-2xl border border-oliveSoft/40 shadow-sm text-[#fffaf2]">
+            <h3 class="font-serif text-2xl text-[#fffaf2] font-semibold flex items-center gap-2 mb-2">
               <i class="fa-solid fa-heart text-oliveSoft text-base"></i> House Party With Our Cats
             </h3>
             <p class="text-xs text-oliveSoft font-bold uppercase tracking-wider mb-4">Our Place</p>
-            <p class="text-oliveSoft text-sm leading-relaxed mb-5">
+            <p class="text-[#fffaf2]/90 text-sm leading-relaxed mb-5">
               We stroll, bike, or drive back to our place. Drinks, music, backyard hanging, and partying with our cats.
             </p>
             
             <!-- Cat Photo inside Timeline Item 5 -->
-            <div class="relative overflow-hidden rounded-xl border-2 border-oliveSoft/40 shadow-sm bg-[#fffaf2] flex items-center justify-center p-1.5">
+            <div class="relative overflow-hidden rounded-xl border border-oliveSoft/40 shadow-sm bg-[#5e6553]/50 flex items-center justify-center p-1.5">
               <img 
                 src="IMG_2138.jpeg" 
                 alt="Our partyhard cats" 
@@ -283,14 +284,14 @@
           href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Damlanur+%26+Luka%27s+Wedding&dates=20270827T120000Z/20270827T220000Z&details=Wedding+ceremony+at+Odapark+Theehuis,+followed+by+desserts,+friethuis+run,+and+house+party+with+cats!&location=Odapark+Theehuis,+Merseloseweg+117,+5801+CC+Venray"
           target="_blank" 
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-olivePrimary bg-white border border-oliveSoft hover:bg-[#fffaf2] px-6 py-3 rounded-full transition shadow-sm w-full sm:w-auto justify-center"
+          class="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-[#fffaf2] bg-cardBg border border-oliveSoft hover:bg-oliveDark px-6 py-3 rounded-full transition shadow-sm w-full sm:w-auto justify-center"
         >
           <i class="fa-brands fa-google text-oliveSoft"></i> Add to Google Calendar
         </a>
         <a 
           href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:Damlanur%20%26%20Luka's%20Wedding%0ADESCRIPTION:Wedding%20ceremony%20at%20Odapark%20Theehuis%2C%20followed%20by%20desserts%2C%20friethuis%20run%2C%20and%20house%20party%20with%20cats!%0ALOCATION:Odapark%20Theehuis%2C%20Merseloseweg%20117%2C%205801%20CC%20Venray%0ADTSTART:20270827T120000Z%0ADTEND:20270827T220000Z%0AEND:VEVENT%0AEND:VCALENDAR"
           download="wedding-damlanur-luka.ics"
-          class="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-olivePrimary bg-white border border-oliveSoft hover:bg-[#fffaf2] px-6 py-3 rounded-full transition shadow-sm w-full sm:w-auto justify-center"
+          class="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-[#fffaf2] bg-cardBg border border-oliveSoft hover:bg-oliveDark px-6 py-3 rounded-full transition shadow-sm w-full sm:w-auto justify-center"
         >
           <i class="fa-brands fa-apple text-oliveSoft"></i> Add to Apple / iCloud Calendar
         </a>
@@ -302,20 +303,20 @@
   <section id="venue" class="py-20 px-6 bg-[#fffaf2] border-t border-oliveSoft/30">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-16">
-        <span class="text-xs uppercase tracking-[0.25em] text-oliveSoft font-bold">The Places</span>
+        <span class="text-xs uppercase tracking-[0.25em] text-olivePrimary font-bold">The Places</span>
         <h2 class="font-serif text-3xl sm:text-4xl text-olivePrimary mt-2 font-semibold">Where To Go</h2>
       </div>
 
       <div class="grid md:grid-cols-2 gap-8 items-stretch">
         <!-- Odapark Card -->
-        <div class="bg-white rounded-3xl p-8 border border-oliveSoft/40 shadow-sm flex flex-col justify-between">
+        <div class="bg-cardBg rounded-3xl p-8 border border-oliveSoft/40 shadow-sm flex flex-col justify-between text-[#fffaf2]">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-[#c2c395]/20 flex items-center justify-center text-olivePrimary text-xl mb-6">
+            <div class="w-12 h-12 rounded-2xl bg-[#5e6553]/70 flex items-center justify-center text-oliveSoft text-xl mb-6 border border-oliveSoft/30">
               <i class="fa-solid fa-tree"></i>
             </div>
-            <h3 class="font-serif text-2xl text-olivePrimary font-semibold mb-2">Odapark Theehuis</h3>
+            <h3 class="font-serif text-2xl text-[#fffaf2] font-semibold mb-2">Odapark Theehuis</h3>
             <p class="text-xs uppercase tracking-wider text-oliveSoft font-bold mb-4">Ceremony &amp; Sweet Bites (14:00)</p>
-            <p class="text-oliveSoft text-sm leading-relaxed mb-6">
+            <p class="text-[#fffaf2]/90 text-sm leading-relaxed mb-6">
               Merseloseweg 117, 5801 CC Venray<br>
               A historic teahouse set inside an open wooded sculpture park. Free parking is available at the park entrance.
             </p>
@@ -324,72 +325,72 @@
             href="https://maps.google.com/?q=Odapark+Theehuis+Venray" 
             target="_blank" 
             rel="noopener noreferrer"
-            class="inline-flex items-center justify-center gap-2 text-xs uppercase tracking-wider font-semibold text-olivePrimary bg-[#c2c395]/20 hover:bg-[#c2c395]/40 py-3 px-6 rounded-full transition w-full"
+            class="inline-flex items-center justify-center gap-2 text-xs uppercase tracking-wider font-semibold text-[#fffaf2] bg-[#5e6553] hover:bg-oliveDark py-3 px-6 rounded-full transition w-full border border-oliveSoft/40"
           >
-            <i class="fa-solid fa-map-location-dot"></i> Open in Google Maps
+            <i class="fa-solid fa-map-location-dot text-oliveSoft"></i> Open in Google Maps
           </a>
         </div>
 
         <!-- Friethuis & Home -->
-        <div class="bg-white rounded-3xl p-8 border border-oliveSoft/40 shadow-sm flex flex-col justify-between">
+        <div class="bg-cardBg rounded-3xl p-8 border border-oliveSoft/40 shadow-sm flex flex-col justify-between text-[#fffaf2]">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-[#c2c395]/20 flex items-center justify-center text-olivePrimary text-xl mb-6">
+            <div class="w-12 h-12 rounded-2xl bg-[#5e6553]/70 flex items-center justify-center text-oliveSoft text-xl mb-6 border border-oliveSoft/30">
               <i class="fa-solid fa-house-chimney-window"></i>
             </div>
-            <h3 class="font-serif text-2xl text-olivePrimary font-semibold mb-2">Friethuis &amp; Our House</h3>
+            <h3 class="font-serif text-2xl text-[#fffaf2] font-semibold mb-2">Friethuis &amp; Our House</h3>
             <p class="text-xs uppercase tracking-wider text-oliveSoft font-bold mb-4">Snacks &amp; Party (17:00 onwards)</p>
-            <p class="text-oliveSoft text-sm leading-relaxed mb-6">
+            <p class="text-[#fffaf2]/90 text-sm leading-relaxed mb-6">
               After Odapark, we'll head towards our neighborhood friethuis for fresh fries and snacks, then walk/bike/drive over to our house for the evening with our cats!
             </p>
           </div>
-          <div class="p-3 bg-[#fffaf2] rounded-xl text-center border border-oliveSoft/40">
-            <span class="text-xs text-olivePrimary italic">Address &amp; parking tips will be texted prior to the date!</span>
+          <div class="p-3 bg-[#5e6553]/60 rounded-xl text-center border border-oliveSoft/30">
+            <span class="text-xs text-oliveSoft italic">Address &amp; parking tips will be texted prior to the date!</span>
           </div>
         </div>
       </div>
 
       <!-- Traveling from Abroad Card -->
-      <div class="mt-8 bg-white rounded-3xl p-8 border border-oliveSoft/40 shadow-sm text-left">
+      <div class="mt-8 bg-cardBg rounded-3xl p-8 border border-oliveSoft/40 shadow-sm text-left text-[#fffaf2]">
         <div class="flex items-center gap-3 mb-6">
-          <div class="w-12 h-12 rounded-2xl bg-[#c2c395]/20 flex items-center justify-center text-olivePrimary text-xl">
+          <div class="w-12 h-12 rounded-2xl bg-[#5e6553]/70 flex items-center justify-center text-oliveSoft text-xl border border-oliveSoft/30">
             <i class="fa-solid fa-plane-departure"></i>
           </div>
           <div>
-            <h3 class="font-serif text-2xl text-olivePrimary font-semibold">Traveling from Abroad</h3>
+            <h3 class="font-serif text-2xl text-[#fffaf2] font-semibold">Traveling from Abroad</h3>
             <p class="text-xs uppercase tracking-wider text-oliveSoft font-bold">Helpful notes for our guests traveling from abroad</p>
           </div>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6 text-sm text-oliveSoft leading-relaxed">
+        <div class="grid md:grid-cols-3 gap-6 text-sm text-[#fffaf2]/90 leading-relaxed">
           <!-- Flights -->
-          <div class="p-4 rounded-2xl bg-[#fffaf2] border border-oliveSoft/30">
-            <h4 class="font-serif text-base font-semibold text-olivePrimary mb-2 flex items-center gap-2">
+          <div class="p-4 rounded-2xl bg-[#5e6553]/50 border border-oliveSoft/30">
+            <h4 class="font-serif text-base font-semibold text-[#fffaf2] mb-2 flex items-center gap-2">
               <i class="fa-solid fa-plane text-oliveSoft"></i> Recommended Airports
             </h4>
-            <p class="text-xs sm:text-sm text-oliveSoft">
-              <strong class="text-olivePrimary">Amsterdam Schiphol (AMS)</strong> offers the most direct flights from Sweden &amp; Turkey, with frequent intercity trains to Venray (~1.5–2 hrs). 
+            <p class="text-xs sm:text-sm">
+              <strong class="text-oliveSoft">Amsterdam Schiphol (AMS)</strong> offers the most direct flights from Sweden &amp; Turkey, with frequent intercity trains to Venray (~1.5–2 hrs). 
               <br><br>
-              <strong class="text-olivePrimary">Düsseldorf (DUS)</strong> in Germany is also very close (~1 hr drive / train).
+              <strong class="text-oliveSoft">Düsseldorf (DUS)</strong> in Germany is also very close (~1 hr drive / train).
             </p>
           </div>
 
           <!-- Getting to Venray -->
-          <div class="p-4 rounded-2xl bg-[#fffaf2] border border-oliveSoft/30">
-            <h4 class="font-serif text-base font-semibold text-olivePrimary mb-2 flex items-center gap-2">
+          <div class="p-4 rounded-2xl bg-[#5e6553]/50 border border-oliveSoft/30">
+            <h4 class="font-serif text-base font-semibold text-[#fffaf2] mb-2 flex items-center gap-2">
               <i class="fa-solid fa-train text-oliveSoft"></i> Trains &amp; Transport
             </h4>
-            <p class="text-xs sm:text-sm text-oliveSoft">
-              The Dutch rail network (NS.nl) is very easy to use. You can tap in and out with your contactless debit/credit card. Trains run regularly to <strong class="text-olivePrimary">Venray Station</strong>. Taxis and local buses connect directly to the town center.
+            <p class="text-xs sm:text-sm">
+              The Dutch rail network (NS.nl) is very easy to use. You can tap in and out with your contactless debit/credit card. Trains run regularly to <strong class="text-oliveSoft">Venray Station</strong>. Taxis and local buses connect directly to the town center.
             </p>
           </div>
 
           <!-- Where to Stay -->
-          <div class="p-4 rounded-2xl bg-[#fffaf2] border border-oliveSoft/30">
-            <h4 class="font-serif text-base font-semibold text-olivePrimary mb-2 flex items-center gap-2">
+          <div class="p-4 rounded-2xl bg-[#5e6553]/50 border border-oliveSoft/30">
+            <h4 class="font-serif text-base font-semibold text-[#fffaf2] mb-2 flex items-center gap-2">
               <i class="fa-solid fa-hotel text-oliveSoft"></i> Where to Stay
             </h4>
-            <p class="text-xs sm:text-sm text-oliveSoft">
-              We recommend booking in or near <strong class="text-olivePrimary">Venray</strong> (e.g. <em>Hotel Asteria</em> or cozy local B&amp;Bs). 
+            <p class="text-xs sm:text-sm">
+              We recommend booking in or near <strong class="text-oliveSoft">Venray</strong> (e.g. <em>Hotel Asteria</em> or cozy local B&amp;Bs). 
               <br><br>
               If you’d like recommendations or help coordinating rides with other guests, just let us know!
             </p>
@@ -404,12 +405,12 @@
   <section id="rsvp" class="py-24 px-6 bg-[#fffaf2] border-t border-oliveSoft/30">
     <div class="max-w-2xl mx-auto">
       <div class="text-center mb-12">
-        <span class="text-xs uppercase tracking-[0.25em] text-oliveSoft font-bold">Join The Celebration</span>
+        <span class="text-xs uppercase tracking-[0.25em] text-olivePrimary font-bold">Join The Celebration</span>
         <h2 class="font-serif text-4xl text-olivePrimary mt-2 font-semibold">RSVP</h2>
         <p class="text-oliveSoft text-sm mt-2">Let us know if you can make it by 1 June 2027 so we can order enough champagne &amp; fries!</p>
       </div>
 
-      <div class="bg-white rounded-3xl p-8 sm:p-10 border border-oliveSoft/50 shadow-md">
+      <div class="bg-cardBg rounded-3xl p-8 sm:p-10 border border-oliveSoft/40 shadow-lg text-[#fffaf2]">
         <form id="rsvpForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
           
           <!-- Web3Forms Access Key -->
@@ -418,96 +419,96 @@
 
           <!-- Full Name -->
           <div>
-            <label for="fullName" class="block text-xs uppercase tracking-wider font-semibold text-olivePrimary mb-2">Your Name(s) *</label>
+            <label for="fullName" class="block text-xs uppercase tracking-wider font-semibold text-[#fffaf2] mb-2">Your Name(s) *</label>
             <input 
               type="text" 
               name="Name"
               id="fullName" 
               required 
               placeholder="e.g., Sarah &amp; Mark" 
-              class="w-full px-4 py-3 rounded-xl border border-oliveSoft/60 bg-[#fffaf2] focus:outline-none focus:border-olivePrimary focus:ring-1 focus:ring-olivePrimary text-sm text-oliveSoft placeholder-oliveSoft/60"
+              class="w-full px-4 py-3 rounded-xl border border-oliveSoft/40 bg-[#5e6553]/70 focus:outline-none focus:border-oliveSoft focus:ring-1 focus:ring-oliveSoft text-sm text-[#fffaf2] placeholder-oliveSoft/60"
             >
           </div>
 
           <!-- Attendance Selection -->
           <div>
-            <label class="block text-xs uppercase tracking-wider font-semibold text-olivePrimary mb-2">Will you be attending? *</label>
+            <label class="block text-xs uppercase tracking-wider font-semibold text-[#fffaf2] mb-2">Will you be attending? *</label>
             <div class="grid grid-cols-2 gap-4">
-              <label class="flex items-center gap-3 p-3.5 rounded-xl border border-oliveSoft/60 bg-[#fffaf2] cursor-pointer hover:bg-[#c2c395]/20 transition">
-                <input type="radio" name="Attending" value="Joyfully Accepts" checked class="text-olivePrimary focus:ring-olivePrimary">
-                <span class="text-sm font-medium text-oliveSoft">Joyfully Accepts!</span>
+              <label class="flex items-center gap-3 p-3.5 rounded-xl border border-oliveSoft/40 bg-[#5e6553]/60 cursor-pointer hover:bg-[#5e6553] transition">
+                <input type="radio" name="Attending" value="Joyfully Accepts" checked class="text-oliveSoft focus:ring-oliveSoft">
+                <span class="text-sm font-medium text-[#fffaf2]">Joyfully Accepts!</span>
               </label>
-              <label class="flex items-center gap-3 p-3.5 rounded-xl border border-oliveSoft/60 bg-[#fffaf2] cursor-pointer hover:bg-[#c2c395]/20 transition">
-                <input type="radio" name="Attending" value="Regretfully Declines" class="text-olivePrimary focus:ring-olivePrimary">
-                <span class="text-sm font-medium text-oliveSoft">Regretfully Declines</span>
+              <label class="flex items-center gap-3 p-3.5 rounded-xl border border-oliveSoft/40 bg-[#5e6553]/60 cursor-pointer hover:bg-[#5e6553] transition">
+                <input type="radio" name="Attending" value="Regretfully Declines" class="text-oliveSoft focus:ring-oliveSoft">
+                <span class="text-sm font-medium text-[#fffaf2]">Regretfully Declines</span>
               </label>
             </div>
           </div>
 
           <!-- Plus One Question -->
           <div>
-            <label class="block text-xs uppercase tracking-wider font-semibold text-olivePrimary mb-2">Do you have a plus one? *</label>
+            <label class="block text-xs uppercase tracking-wider font-semibold text-[#fffaf2] mb-2">Do you have a plus one? *</label>
             <div class="grid grid-cols-2 gap-4 mb-3">
-              <label class="flex items-center gap-3 p-3.5 rounded-xl border border-oliveSoft/60 bg-[#fffaf2] cursor-pointer hover:bg-[#c2c395]/20 transition">
-                <input type="radio" name="Has_Plus_One" value="Yes" id="plusOneYes" class="text-olivePrimary focus:ring-olivePrimary">
-                <span class="text-sm font-medium text-oliveSoft">Yes</span>
+              <label class="flex items-center gap-3 p-3.5 rounded-xl border border-oliveSoft/40 bg-[#5e6553]/60 cursor-pointer hover:bg-[#5e6553] transition">
+                <input type="radio" name="Has_Plus_One" value="Yes" id="plusOneYes" class="text-oliveSoft focus:ring-oliveSoft">
+                <span class="text-sm font-medium text-[#fffaf2]">Yes</span>
               </label>
-              <label class="flex items-center gap-3 p-3.5 rounded-xl border border-oliveSoft/60 bg-[#fffaf2] cursor-pointer hover:bg-[#c2c395]/20 transition">
-                <input type="radio" name="Has_Plus_One" value="No" id="plusOneNo" checked class="text-olivePrimary focus:ring-olivePrimary">
-                <span class="text-sm font-medium text-oliveSoft">No</span>
+              <label class="flex items-center gap-3 p-3.5 rounded-xl border border-oliveSoft/40 bg-[#5e6553]/60 cursor-pointer hover:bg-[#5e6553] transition">
+                <input type="radio" name="Has_Plus_One" value="No" id="plusOneNo" checked class="text-oliveSoft focus:ring-oliveSoft">
+                <span class="text-sm font-medium text-[#fffaf2]">No</span>
               </label>
             </div>
           </div>
 
           <!-- Plus One Name (Hidden by default) -->
           <div id="plusOneNameContainer" class="hidden transition-all duration-300">
-            <label for="plusOneName" class="block text-xs uppercase tracking-wider font-semibold text-olivePrimary mb-2">Name of your Plus One *</label>
+            <label for="plusOneName" class="block text-xs uppercase tracking-wider font-semibold text-[#fffaf2] mb-2">Name of your Plus One *</label>
             <input 
               type="text" 
               name="Plus_One_Name"
               id="plusOneName" 
               placeholder="e.g., Alex Johnson" 
-              class="w-full px-4 py-3 rounded-xl border border-oliveSoft/60 bg-[#fffaf2] focus:outline-none focus:border-olivePrimary focus:ring-1 focus:ring-olivePrimary text-sm text-oliveSoft placeholder-oliveSoft/60"
+              class="w-full px-4 py-3 rounded-xl border border-oliveSoft/40 bg-[#5e6553]/70 focus:outline-none focus:border-oliveSoft focus:ring-1 focus:ring-oliveSoft text-sm text-[#fffaf2] placeholder-oliveSoft/60"
             >
           </div>
 
           <!-- Party Song Request -->
           <div>
-            <label for="songRequest" class="block text-xs uppercase tracking-wider font-semibold text-olivePrimary mb-2">House Party Song Request</label>
+            <label for="songRequest" class="block text-xs uppercase tracking-wider font-semibold text-[#fffaf2] mb-2">House Party Song Request</label>
             <input 
               type="text" 
               name="Song_Request"
               id="songRequest" 
               placeholder="A song that will get you moving..." 
-              class="w-full px-4 py-3 rounded-xl border border-oliveSoft/60 bg-[#fffaf2] focus:outline-none focus:border-olivePrimary focus:ring-1 focus:ring-olivePrimary text-sm text-oliveSoft placeholder-oliveSoft/60"
+              class="w-full px-4 py-3 rounded-xl border border-oliveSoft/40 bg-[#5e6553]/70 focus:outline-none focus:border-oliveSoft focus:ring-1 focus:ring-oliveSoft text-sm text-[#fffaf2] placeholder-oliveSoft/60"
             >
           </div>
 
           <!-- Message -->
           <div>
-            <label for="message" class="block text-xs uppercase tracking-wider font-semibold text-olivePrimary mb-2">A Note for the Couple</label>
+            <label for="message" class="block text-xs uppercase tracking-wider font-semibold text-[#fffaf2] mb-2">A Note for the Couple</label>
             <textarea 
               name="Message"
               id="message" 
               rows="3" 
               placeholder="Leave some love or advice..." 
-              class="w-full px-4 py-3 rounded-xl border border-oliveSoft/60 bg-[#fffaf2] focus:outline-none focus:border-olivePrimary focus:ring-1 focus:ring-olivePrimary text-sm text-oliveSoft placeholder-oliveSoft/60"
+              class="w-full px-4 py-3 rounded-xl border border-oliveSoft/40 bg-[#5e6553]/70 focus:outline-none focus:border-oliveSoft focus:ring-1 focus:ring-oliveSoft text-sm text-[#fffaf2] placeholder-oliveSoft/60"
             ></textarea>
           </div>
 
           <button 
             type="submit" 
-            class="w-full py-4 rounded-xl bg-olivePrimary text-[#fffaf2] font-semibold hover:bg-oliveDark transition shadow-md text-sm uppercase tracking-wider"
+            class="w-full py-4 rounded-xl bg-[#5e6553] text-[#fffaf2] font-semibold hover:bg-oliveDark transition shadow-md text-sm uppercase tracking-wider border border-oliveSoft/40"
           >
             Send RSVP
           </button>
         </form>
 
         <div id="rsvpSuccess" class="hidden text-center py-8">
-          <div class="w-16 h-16 bg-[#c2c395]/20 text-olivePrimary rounded-full flex items-center justify-center mx-auto text-2xl mb-4">
-            <i class="fa-solid fa-heart"></i>
+          <div class="w-16 h-16 bg-[#5e6553] text-[#fffaf2] rounded-full flex items-center justify-center mx-auto text-2xl mb-4 border border-oliveSoft/40">
+            <i class="fa-solid fa-heart text-oliveSoft"></i>
           </div>
-          <h3 class="font-serif text-3xl text-olivePrimary font-semibold mb-2">Thank you!</h3>
+          <h3 class="font-serif text-3xl text-[#fffaf2] font-semibold mb-2">Thank you!</h3>
           <p class="text-oliveSoft text-sm">We've received your RSVP and can't wait to celebrate together!</p>
         </div>
       </div>
@@ -518,18 +519,18 @@
   <section id="qa" class="py-20 px-6 bg-[#fffaf2] border-t border-oliveSoft/30">
     <div class="max-w-3xl mx-auto">
       <div class="text-center mb-14">
-        <span class="text-xs uppercase tracking-[0.25em] text-oliveSoft font-bold">Good to Know</span>
+        <span class="text-xs uppercase tracking-[0.25em] text-olivePrimary font-bold">Good to Know</span>
         <h2 class="font-serif text-3xl sm:text-4xl text-olivePrimary mt-2 font-semibold">Questions &amp; Answers</h2>
       </div>
 
       <div class="space-y-4">
         <!-- QA Item 1 -->
-        <div class="bg-white rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm">
-          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-olivePrimary font-semibold flex items-center justify-between focus:outline-none">
+        <div class="bg-cardBg rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm text-[#fffaf2]">
+          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-[#fffaf2] font-semibold flex items-center justify-between focus:outline-none">
             <span>What should I wear?</span>
-            <i class="fa-solid fa-chevron-down text-sm text-olivePrimary transition-transform duration-300"></i>
+            <i class="fa-solid fa-chevron-down text-sm text-oliveSoft transition-transform duration-300"></i>
           </button>
-          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-oliveSoft leading-relaxed">
+          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-[#fffaf2]/90 leading-relaxed">
             <div class="pb-5">
               Wear whatever makes you feel nice and comfortable! Summer garden chic, casual elegance, or soft botanical tones fit right in. Note: we will be walking through forest paths at Odapark, so comfortable shoes, flats, or block heels are strongly recommended over needle stilettos.
             </div>
@@ -537,12 +538,12 @@
         </div>
 
         <!-- QA Item 2 -->
-        <div class="bg-white rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm">
-          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-olivePrimary font-semibold flex items-center justify-between focus:outline-none">
+        <div class="bg-cardBg rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm text-[#fffaf2]">
+          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-[#fffaf2] font-semibold flex items-center justify-between focus:outline-none">
             <span>How do we get between the park and your place?</span>
-            <i class="fa-solid fa-chevron-down text-sm text-olivePrimary transition-transform duration-300"></i>
+            <i class="fa-solid fa-chevron-down text-sm text-oliveSoft transition-transform duration-300"></i>
           </button>
-          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-oliveSoft leading-relaxed">
+          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-[#fffaf2]/90 leading-relaxed">
             <div class="pb-5">
               It’s some distance between the venue and our house. Depending on the weather and what you prefer, you can easily drive, ride a bicycle (Dutch style!), or we can coordinate a stroll together. There is ample parking at both locations.
             </div>
@@ -550,12 +551,12 @@
         </div>
 
         <!-- QA Item 3 -->
-        <div class="bg-white rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm">
-          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-olivePrimary font-semibold flex items-center justify-between focus:outline-none">
+        <div class="bg-cardBg rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm text-[#fffaf2]">
+          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-[#fffaf2] font-semibold flex items-center justify-between focus:outline-none">
             <span>What if it rains?</span>
-            <i class="fa-solid fa-chevron-down text-sm text-olivePrimary transition-transform duration-300"></i>
+            <i class="fa-solid fa-chevron-down text-sm text-oliveSoft transition-transform duration-300"></i>
           </button>
-          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-oliveSoft leading-relaxed">
+          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-[#fffaf2]/90 leading-relaxed">
             <div class="pb-5">
               Dutch weather can always surprise us! If it showers, we will move the ceremony seamlessly under the covered veranda and cozy indoor rooms of Odapark Theehuis.
             </div>
@@ -563,12 +564,12 @@
         </div>
 
         <!-- QA Item 4 -->
-        <div class="bg-white rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm">
-          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-olivePrimary font-semibold flex items-center justify-between focus:outline-none">
+        <div class="bg-cardBg rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm text-[#fffaf2]">
+          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-[#fffaf2] font-semibold flex items-center justify-between focus:outline-none">
             <span>Can I cuddle the cats?</span>
-            <i class="fa-solid fa-chevron-down text-sm text-olivePrimary transition-transform duration-300"></i>
+            <i class="fa-solid fa-chevron-down text-sm text-oliveSoft transition-transform duration-300"></i>
           </button>
-          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-oliveSoft leading-relaxed">
+          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-[#fffaf2]/90 leading-relaxed">
             <div class="pb-5">
               Yes, absolutely! Stitch will be greeting everyone during the house party. If you are allergic, take your medicine before coming to our place.
             </div>
@@ -576,12 +577,12 @@
         </div>
 
         <!-- QA Item 5 -->
-        <div class="bg-white rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm">
-          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-olivePrimary font-semibold flex items-center justify-between focus:outline-none">
+        <div class="bg-cardBg rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm text-[#fffaf2]">
+          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-[#fffaf2] font-semibold flex items-center justify-between focus:outline-none">
             <span>What about gifts?</span>
-            <i class="fa-solid fa-chevron-down text-sm text-olivePrimary transition-transform duration-300"></i>
+            <i class="fa-solid fa-chevron-down text-sm text-oliveSoft transition-transform duration-300"></i>
           </button>
-          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-oliveSoft leading-relaxed">
+          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-[#fffaf2]/90 leading-relaxed">
             <div class="pb-5">
               Your presence to celebrate our wedding is honestly the greatest gift. If you’d like to contribute something extra, a small contribution towards our honeymoon you can reach out to us.
             </div>
