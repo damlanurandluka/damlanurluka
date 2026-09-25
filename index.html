@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Damlanur &amp; Luka</title>
   
-  <!-- Google Fonts: Noto Serif, Noto Sans & Alex Brush -->
+  <!-- Fonts: Cinzel Decorative (Names), Noto Serif, Noto Sans, Alex Brush & Star Jedi -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel+Decorative:wght@400;700&family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/star-jedi" rel="stylesheet">
   
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -21,16 +22,17 @@
       theme: {
         extend: {
           colors: {
-            customBg: '#fffaf2',
-            olivePrimary: '#818263',
-            oliveSoft: '#c2c395',
-            cardBg: '#7e8772',
-            oliveDark: '#5e6553',
+            softSage: '#DCE5D6',   /* 01 Soft Sage: Page Background */
+            sageGreen: '#A6B89A',  /* 04 Sage Green: Accents / Borders */
+            darkSage: '#3E5236',   /* 09 Dark Sage: Subtitles & Buttons */
+            richSage: '#2C3E2A',   /* 10 Rich Sage: Titles & Card Backgrounds */
           },
           fontFamily: {
-            serif: ['"Noto Serif"', 'serif'],
-            sans: ['"Noto Sans"', 'sans-serif'],
-            script: ['"Alex Brush"', 'cursive'],
+            wildflower: ['"Cinzel Decorative"', 'serif'], /* Reserved for Damlanur & Luka */
+            serif: ['"Noto Serif"', 'serif'],             /* Used for all other titles & stories */
+            sans: ['"Noto Sans"', 'sans-serif'],           /* Clean UI font */
+            script: ['"Alex Brush"', 'cursive'],           /* Romantic & connector */
+            starwars: ['"Star Jedi"', 'sans-serif'],       /* Star Wars crawl tagline only */
           }
         }
       }
@@ -42,68 +44,80 @@
       scroll-behavior: smooth;
     }
     body {
-      background-color: #fffaf2;
-      color: #c2c395;
+      background-color: #DCE5D6;
+      color: #3E5236;
     }
     ::selection {
-      background-color: #7e8772;
-      color: #fffaf2;
+      background-color: #2C3E2A;
+      color: #DCE5D6;
+    }
+
+    /* Smooth Scroll Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
-<body class="bg-customBg text-oliveSoft font-sans antialiased selection:bg-cardBg selection:text-customBg">
+<body class="bg-softSage text-darkSage font-sans antialiased selection:bg-richSage selection:text-softSage">
 
   <!-- NAVBAR -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-[#fffaf2]/90 backdrop-blur-md border-b border-oliveSoft/40 transition-all duration-300" id="mainHeader">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-softSage/90 backdrop-blur-md border-b border-sageGreen/40 transition-all duration-300" id="mainHeader">
     <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="#hero" class="text-2xl sm:text-3xl font-script text-olivePrimary hover:opacity-80 transition tracking-wide">
+      <a href="#hero" class="text-2xl sm:text-3xl font-script text-richSage hover:opacity-80 transition tracking-wide">
         Damlanur &amp; Luka
       </a>
       
       <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center space-x-7 text-sm uppercase tracking-widest font-medium text-oliveSoft">
-        <a href="#celebration" class="hover:text-olivePrimary transition-colors">Our History</a>
-        <a href="#timeline" class="hover:text-olivePrimary transition-colors">Master Plan</a>
-        <a href="#venue" class="hover:text-olivePrimary transition-colors">Locations</a>
-        <a href="#qa" class="hover:text-olivePrimary transition-colors">FAQ</a>
-        <a href="#gallery" class="hover:text-olivePrimary transition-colors">Shared Album</a>
-        <a href="#rsvp" class="px-5 py-2 rounded-full bg-cardBg text-[#fffaf2] hover:bg-oliveDark transition shadow-sm hover:shadow">RSVP</a>
+      <nav class="hidden md:flex items-center space-x-7 text-sm uppercase tracking-widest font-semibold text-darkSage">
+        <a href="#celebration" class="hover:text-richSage transition-colors">Our History</a>
+        <a href="#timeline" class="hover:text-richSage transition-colors">Master Plan</a>
+        <a href="#venue" class="hover:text-richSage transition-colors">Locations</a>
+        <a href="#qa" class="hover:text-richSage transition-colors">FAQ</a>
+        <a href="#gallery" class="hover:text-richSage transition-colors">Shared Album</a>
+        <a href="#rsvp" class="px-5 py-2 rounded-full bg-richSage text-softSage hover:bg-darkSage transition shadow-sm hover:shadow">RSVP</a>
       </nav>
 
       <!-- Mobile Menu Button -->
-      <button id="mobileMenuBtn" aria-label="Toggle navigation menu" class="md:hidden p-2 text-olivePrimary focus:outline-none">
+      <button id="mobileMenuBtn" aria-label="Toggle navigation menu" class="md:hidden p-2 text-richSage focus:outline-none">
         <i class="fa-solid fa-bars-staggered text-xl"></i>
       </button>
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-[#fffaf2]/98 backdrop-blur-lg border-b border-oliveSoft/50 px-6 py-6 transition-all duration-300">
-      <div class="flex flex-col space-y-4 text-center text-sm font-medium uppercase tracking-wider text-oliveSoft">
-        <a href="#celebration" class="mobile-nav-link py-2 hover:text-olivePrimary">Our History</a>
-        <a href="#timeline" class="mobile-nav-link py-2 hover:text-olivePrimary">Master Plan</a>
-        <a href="#venue" class="mobile-nav-link py-2 hover:text-olivePrimary">Locations</a>
-        <a href="#qa" class="mobile-nav-link py-2 hover:text-olivePrimary">FAQ</a>
-        <a href="#gallery" class="mobile-nav-link py-2 hover:text-olivePrimary">Shared Album</a>
-        <a href="#rsvp" class="mobile-nav-link py-3 rounded-full bg-cardBg text-[#fffaf2] font-semibold hover:bg-oliveDark transition shadow-sm">RSVP</a>
+    <div id="mobileMenu" class="hidden md:hidden bg-softSage/98 backdrop-blur-lg border-b border-sageGreen/50 px-6 py-6 transition-all duration-300">
+      <div class="flex flex-col space-y-4 text-center text-sm font-semibold uppercase tracking-wider text-darkSage">
+        <a href="#celebration" class="mobile-nav-link py-2 hover:text-richSage">Our History</a>
+        <a href="#timeline" class="mobile-nav-link py-2 hover:text-richSage">Master Plan</a>
+        <a href="#venue" class="mobile-nav-link py-2 hover:text-richSage">Locations</a>
+        <a href="#qa" class="mobile-nav-link py-2 hover:text-richSage">FAQ</a>
+        <a href="#gallery" class="mobile-nav-link py-2 hover:text-richSage">Shared Album</a>
+        <a href="#rsvp" class="mobile-nav-link py-3 rounded-full bg-richSage text-softSage font-semibold hover:bg-darkSage transition shadow-sm">RSVP</a>
       </div>
     </div>
   </header>
 
   <!-- HERO & OUR STORY SECTION -->
   <section id="hero" class="relative min-h-screen flex items-center justify-center pt-28 pb-20 px-6 overflow-hidden">
-    <div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#818263_1px,transparent_1px)] [background-size:24px_24px]"></div>
+    <div class="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#3E5236_1px,transparent_1px)] [background-size:24px_24px]"></div>
 
     <div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
       
-      <!-- 1. Star Wars Tagline -->
-      <span class="text-sm sm:text-base tracking-[0.3em] uppercase text-olivePrimary font-semibold mb-6">
-        A long time ago in a galaxy far, far away...
+      <!-- 1. Star Wars Tagline (Star Wars Font Only) -->
+      <span class="font-starwars text-xs sm:text-sm tracking-[0.2em] lowercase text-darkSage mb-6 block">
+        a long time ago in a galaxy far, far away...
       </span>
 
       <!-- 2. Picture of the Couple -->
       <div class="relative max-w-md mx-auto mb-4 group">
-        <div class="absolute -inset-2 bg-cardBg rounded-3xl blur-md opacity-30 group-hover:opacity-50 transition duration-500"></div>
-        <div class="relative overflow-hidden rounded-2xl border-4 border-cardBg shadow-lg bg-cardBg flex items-center justify-center p-2">
+        <div class="absolute -inset-2 bg-richSage rounded-3xl blur-md opacity-30 group-hover:opacity-50 transition duration-500"></div>
+        <div class="relative overflow-hidden rounded-2xl border-4 border-richSage shadow-lg bg-richSage flex items-center justify-center p-2">
           <img 
             id="couplePhoto"
             src="IMG_5867.jpeg" 
@@ -115,52 +129,52 @@
       </div>
 
       <!-- 3. Rebel Subtitle -->
-      <p class="text-xs sm:text-sm text-olivePrimary font-serif italic mb-8 max-w-lg">
+      <p class="text-xs sm:text-sm text-darkSage font-serif italic mb-8 max-w-lg">
         Two wandering rebels whose paths crossed and decided to build a life together across galaxies.
       </p>
 
-      <!-- 4. Our Story -->
-      <div id="celebration" class="max-w-2xl mx-auto space-y-6 text-base sm:text-lg leading-relaxed font-serif text-olivePrimary text-center mb-12">
+      <!-- 4. Our Story (Noto Serif) -->
+      <div id="celebration" class="max-w-2xl mx-auto space-y-6 text-base sm:text-lg leading-relaxed font-serif text-darkSage text-center mb-12">
         <p>
           Our story began in Växjö back in 2021, where we met while studying political science and ended up negotiating our favorite treaty yet: falling in love. We later built a cozy base in Malmö before making the big leap across borders to the Netherlands with our cats. While Damlanur still prefers every mission planned with strict precision, our 6 years together have been an adventure full of fun and unexpected detours.
         </p>
-        <p class="text-lg sm:text-xl font-normal text-olivePrimary/90">
-          Now, we’re ready to officially lock in our alliance and bring our  friends and families together to celebrate the next chapter. We're skipping stuffy, conservative traditions like big engagement party and Henna night. We just want to say “we do”, feast on hot Dutch fries, and celebrate with everyone until the stars come out.
+        <p class="text-lg sm:text-xl font-normal text-richSage">
+          Now, we’re ready to officially lock in our alliance and bring our friends and families together to celebrate the next chapter. We're skipping stuffy, conservative traditions like big engagement party and Henna night. We just want to say “we do”, feast on hot Dutch fries, and celebrate with everyone until the stars come out.
         </p>
       </div>
 
-      <!-- Big Names Heading with Palette Colors -->
-      <div class="pt-8 border-t border-oliveSoft/40 w-full max-w-2xl">
-        <h1 class="font-serif text-5xl sm:text-7xl lg:text-8xl font-normal tracking-tight mb-3 flex items-center justify-center flex-wrap gap-x-4">
-          <span class="text-olivePrimary">Damlanur</span>
-          <span class="font-script text-6xl sm:text-8xl text-oliveSoft lowercase -mt-2">&amp;</span>
-          <span class="text-olivePrimary">Luka</span>
+      <!-- 5. Main Names Heading (Wildflower Bloom Font: Cinzel Decorative) -->
+      <div class="pt-8 border-t border-sageGreen/50 w-full max-w-2xl">
+        <h1 class="font-wildflower text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-3 flex items-center justify-center flex-wrap gap-x-4">
+          <span class="text-richSage">Damlanur</span>
+          <span class="font-script text-5xl sm:text-7xl text-darkSage lowercase font-normal -mt-2">&amp;</span>
+          <span class="text-richSage">Luka</span>
         </h1>
         
-        <p class="font-serif italic text-2xl sm:text-3xl text-olivePrimary font-normal mb-3">
+        <p class="font-serif italic text-2xl sm:text-3xl text-richSage font-normal mb-2">
           Friday, 27 August 2027 · 14:00
         </p>
         
-        <p class="text-xs sm:text-sm tracking-[0.25em] uppercase text-olivePrimary font-semibold mb-8">
+        <p class="text-xs sm:text-sm tracking-[0.25em] uppercase text-darkSage font-semibold mb-8">
           Bringing our forces together
         </p>
 
         <!-- Location Badges -->
-        <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-10 text-xs sm:text-sm tracking-wider uppercase">
-          <span class="inline-flex items-center gap-2 bg-[#7e8772] text-[#fffaf2] px-4 py-2 rounded-full border border-oliveSoft/40 shadow-sm">
-            <i class="fa-solid fa-tree text-oliveSoft"></i> Odapark Theehuis, Venray
+        <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-10 text-xs sm:text-sm tracking-wider uppercase font-sans">
+          <span class="inline-flex items-center gap-2 bg-richSage text-softSage px-4 py-2 rounded-full border border-sageGreen/40 shadow-sm font-semibold">
+            <i class="fa-solid fa-tree text-sageGreen"></i> Odapark Theehuis, Venray
           </span>
-          <span class="inline-flex items-center gap-2 bg-[#7e8772] text-[#fffaf2] px-4 py-2 rounded-full border border-oliveSoft/40 shadow-sm">
-            <i class="fa-solid fa-utensils text-oliveSoft"></i> Friethuis &amp; House Party
+          <span class="inline-flex items-center gap-2 bg-richSage text-softSage px-4 py-2 rounded-full border border-sageGreen/40 shadow-sm font-semibold">
+            <i class="fa-solid fa-utensils text-sageGreen"></i> Friethuis &amp; House Party
           </span>
         </div>
 
         <!-- Action Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#rsvp" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-cardBg text-[#fffaf2] font-medium hover:bg-oliveDark transition shadow-md hover:shadow-lg text-sm tracking-wider uppercase text-center">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 font-sans">
+          <a href="#rsvp" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-richSage text-softSage font-semibold hover:bg-darkSage transition shadow-md hover:shadow-lg text-sm tracking-wider uppercase text-center border border-sageGreen/30">
             Confirm Your Attendance
           </a>
-          <a href="#timeline" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#fffaf2] text-olivePrimary border border-cardBg hover:bg-[#7e8772] hover:text-[#fffaf2] transition text-sm tracking-wider uppercase text-center font-medium shadow-sm">
+          <a href="#timeline" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-softSage text-richSage border-2 border-richSage hover:bg-richSage hover:text-softSage transition text-sm tracking-wider uppercase text-center font-semibold shadow-sm">
             View The Master Plan
           </a>
         </div>
@@ -169,27 +183,27 @@
     </div>
   </section>
 
-  <!-- TIMELINE -->
-  <section id="timeline" class="py-24 px-6 bg-[#fffaf2] border-t border-oliveSoft/30">
+  <!-- TIMELINE (Noto Serif Headings) -->
+  <section id="timeline" class="reveal py-24 px-6 bg-softSage border-t border-sageGreen/40">
     <div class="max-w-3xl mx-auto">
       <div class="text-center mb-16">
-        <span class="text-xs uppercase tracking-[0.25em] text-olivePrimary font-bold">The Master Plan</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-olivePrimary mt-2 font-semibold">From Vows to Fries</h2>
-        <p class="text-oliveSoft text-sm mt-2">May the odds (and Dutch weather) be ever in our favor.</p>
+        <span class="text-xs uppercase tracking-[0.25em] text-darkSage font-bold">The Master Plan</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-richSage mt-2 font-semibold">From Vows to Fries</h2>
+        <p class="text-darkSage text-sm mt-2 font-sans">May the odds (and Dutch weather) be ever in our favor.</p>
       </div>
 
-      <div class="relative border-l-2 border-cardBg/60 ml-4 md:ml-32 space-y-12">
+      <div class="relative border-l-2 border-darkSage/40 ml-4 md:ml-32 space-y-12">
         
         <!-- Timeline Item 1 -->
         <div class="relative pl-8 sm:pl-10">
-          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cardBg border-4 border-[#fffaf2]"></div>
-          <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-sm font-semibold tracking-wider text-olivePrimary block uppercase">14:00</span>
-          <div class="bg-cardBg p-6 rounded-2xl border border-oliveSoft/40 shadow-sm text-[#fffaf2]">
-            <h3 class="font-serif text-2xl text-[#fffaf2] font-semibold flex items-center gap-2">
-              <i class="fa-solid fa-heart text-oliveSoft text-base"></i> Ceremony &amp; Reception
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-richSage border-4 border-softSage"></div>
+          <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-sm font-semibold tracking-wider text-richSage block uppercase font-sans">14:00</span>
+          <div class="bg-richSage p-6 rounded-2xl border border-sageGreen/40 shadow-sm text-softSage">
+            <h3 class="font-serif text-2xl text-softSage font-semibold flex items-center gap-2">
+              <i class="fa-solid fa-heart text-sageGreen text-base"></i> Ceremony &amp; Reception
             </h3>
-            <p class="text-xs text-oliveSoft font-bold uppercase tracking-wider mt-1 mb-2">Odapark Theehuis, Venray</p>
-            <p class="text-[#fffaf2]/90 text-sm leading-relaxed">
+            <p class="text-xs text-sageGreen font-bold uppercase tracking-wider mt-1 mb-2 font-sans">Odapark Theehuis, Venray</p>
+            <p class="text-softSage/90 text-sm leading-relaxed font-serif">
               Silence your comlinks! We gather outdoors under the tall trees of Odapark for an intimate, relaxed ceremony as we sign our treaty and exchange vows. Afterwards, enjoy celebratory drinks and our favorite sweet desserts.
             </p>
           </div>
@@ -197,14 +211,14 @@
 
         <!-- Timeline Item 2 -->
         <div class="relative pl-8 sm:pl-10">
-          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cardBg border-4 border-[#fffaf2]"></div>
-          <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-sm font-semibold tracking-wider text-olivePrimary block uppercase">16:00</span>
-          <div class="bg-cardBg p-6 rounded-2xl border border-oliveSoft/40 shadow-sm text-[#fffaf2]">
-            <h3 class="font-serif text-2xl text-[#fffaf2] font-semibold flex items-center gap-2">
-              <i class="fa-solid fa-heart text-oliveSoft text-base"></i> Photoshoot
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-richSage border-4 border-softSage"></div>
+          <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-sm font-semibold tracking-wider text-richSage block uppercase font-sans">16:00</span>
+          <div class="bg-richSage p-6 rounded-2xl border border-sageGreen/40 shadow-sm text-softSage">
+            <h3 class="font-serif text-2xl text-softSage font-semibold flex items-center gap-2">
+              <i class="fa-solid fa-heart text-sageGreen text-base"></i> Photoshoot
             </h3>
-            <p class="text-xs text-oliveSoft font-bold uppercase tracking-wider mt-1 mb-2">The Woods, Venray</p>
-            <p class="text-[#fffaf2]/90 text-sm leading-relaxed">
+            <p class="text-xs text-sageGreen font-bold uppercase tracking-wider mt-1 mb-2 font-sans">The Woods, Venray</p>
+            <p class="text-softSage/90 text-sm leading-relaxed font-serif">
               A scenic patrol through the sculpture trails of Odapark to snap official photos with all of you among the woods (74th Hunger Games Arena vibes, but hopefully without tracker jackers).
             </p>
           </div>
@@ -212,102 +226,105 @@
 
         <!-- Timeline Item 3 -->
         <div class="relative pl-8 sm:pl-10">
-          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cardBg border-4 border-[#fffaf2]"></div>
-          <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-sm font-semibold tracking-wider text-olivePrimary block uppercase">17:00</span>
-          <div class="bg-cardBg p-6 rounded-2xl border border-oliveSoft/40 shadow-sm text-[#fffaf2]">
-            <h3 class="font-serif text-2xl text-[#fffaf2] font-semibold flex items-center gap-2">
-              <i class="fa-solid fa-heart text-oliveSoft text-base"></i> Dinner
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-richSage border-4 border-softSage"></div>
+          <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-sm font-semibold tracking-wider text-richSage block uppercase font-sans">17:00</span>
+          <div class="bg-richSage p-6 rounded-2xl border border-sageGreen/40 shadow-sm text-softSage">
+            <h3 class="font-serif text-2xl text-softSage font-semibold flex items-center gap-2">
+              <i class="fa-solid fa-heart text-sageGreen text-base"></i> Dinner
             </h3>
-            <p class="text-xs text-oliveSoft font-bold uppercase tracking-wider mt-1 mb-2">District Friethuis, Leunen</p>
-            <p class="text-[#fffaf2]/90 text-sm leading-relaxed">
+            <p class="text-xs text-sageGreen font-bold uppercase tracking-wider mt-1 mb-2 font-sans">District Friethuis, Leunen</p>
+            <p class="text-softSage/90 text-sm leading-relaxed font-serif">
               The ultimate feast! We ditch boring wedding catering and raid the local snackbar for piping hot fries, frikandellen, bitterballen, and bami bites together. Refuel yourselves with drinks, tonight we feast!
             </p>
           </div>
         </div>
 
-      <!-- Timeline Item 4: Party with Both Cats -->
+        <!-- Timeline Item 4 (Obi & Stitch) -->
         <div class="relative pl-8 sm:pl-10">
-          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cardBg border-4 border-[#fffaf2]"></div>
-          <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-sm font-semibold tracking-wider text-olivePrimary block uppercase">18:30+</span>
-          <div class="bg-cardBg p-6 rounded-2xl border border-oliveSoft/40 shadow-sm text-[#fffaf2]">
-            <h3 class="font-serif text-2xl text-[#fffaf2] font-semibold flex items-center gap-2 mb-2">
-              <i class="fa-solid fa-heart text-oliveSoft text-base"></i> Party
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-richSage border-4 border-softSage"></div>
+          <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-sm font-semibold tracking-wider text-richSage block uppercase font-sans">18:30+</span>
+          <div class="bg-richSage p-6 rounded-2xl border border-sageGreen/40 shadow-sm text-softSage">
+            <h3 class="font-serif text-2xl text-softSage font-semibold flex items-center gap-2 mb-2">
+              <i class="fa-solid fa-heart text-sageGreen text-base"></i> Party
             </h3>
-            <p class="text-xs text-oliveSoft font-bold uppercase tracking-wider mb-4">Our house, Leunen</p>
-            <p class="text-[#fffaf2]/90 text-sm leading-relaxed mb-6">
+            <p class="text-xs text-sageGreen font-bold uppercase tracking-wider mb-4 font-sans">Our house, Leunen</p>
+            <p class="text-softSage/90 text-sm leading-relaxed mb-6 font-serif">
               We stroll, bike, or pilot our way back to our Jedi-guarded house. Cold drinks, backyard unwinding, partying with our feline Jedis, and dancing until the stars come out.
             </p>
             
-         <!-- Dual Cat Photo Grid (Matched 1:1 Square Ratio) -->
+            <!-- Dual Cat Photo Grid (1:1 Ratio) -->
             <div class="grid grid-cols-2 gap-3 sm:gap-4 items-stretch">
               <!-- Obi -->
-              <div class="relative group overflow-hidden rounded-xl border border-oliveSoft/40 bg-[#5e6553]/60 p-2 flex flex-col items-center justify-between">
+              <div class="relative group overflow-hidden rounded-xl border border-sageGreen/40 bg-darkSage/60 p-2 flex flex-col items-center justify-between">
                 <img 
                   src="IMG_7811.jpeg" 
                   alt="Obi the Jedi Cat" 
                   class="w-full aspect-square object-cover rounded-lg shadow-sm group-hover:scale-105 transition-transform duration-300"
                   onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=400&q=80';"
                 />
-                <span class="mt-2 text-xs font-semibold text-oliveSoft tracking-wider uppercase flex items-center gap-1">
-                  <i class="fa-solid fa-paw text-[10px]"></i> Obi
+                <span class="mt-2 text-xs font-semibold text-softSage tracking-wider uppercase flex items-center gap-1 font-sans">
+                  <i class="fa-solid fa-paw text-[10px] text-sageGreen"></i> Obi
                 </span>
               </div>
 
               <!-- Stitch -->
-              <div class="relative group overflow-hidden rounded-xl border border-oliveSoft/40 bg-[#5e6553]/60 p-2 flex flex-col items-center justify-between">
+              <div class="relative group overflow-hidden rounded-xl border border-sageGreen/40 bg-darkSage/60 p-2 flex flex-col items-center justify-between">
                 <img 
                   src="stitch.jpeg" 
                   alt="Stitch the Jedi Cat" 
                   class="w-full aspect-square object-cover rounded-lg shadow-sm group-hover:scale-105 transition-transform duration-300"
                   onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=400&q=80';"
                 />
-                <span class="mt-2 text-xs font-semibold text-oliveSoft tracking-wider uppercase flex items-center gap-1">
-                  <i class="fa-solid fa-paw text-[10px]"></i> Stitch
+                <span class="mt-2 text-xs font-semibold text-softSage tracking-wider uppercase flex items-center gap-1 font-sans">
+                  <i class="fa-solid fa-paw text-[10px] text-sageGreen"></i> Stitch
                 </span>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
 
       <!-- Add to Calendar Buttons -->
-      <div class="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <div class="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4 font-sans">
         <a 
           href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Damlanur+%26+Luka%27s+Wedding&dates=20270827T120000Z/20270827T220000Z&details=Wedding+ceremony+at+Odapark+Theehuis,+followed+by+desserts,+friethuis+run,+and+house+party+with+cats!&location=Odapark+Theehuis,+Merseloseweg+117,+5801+CC+Venray"
           target="_blank" 
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-[#fffaf2] bg-cardBg border border-oliveSoft hover:bg-oliveDark px-6 py-3 rounded-full transition shadow-sm w-full sm:w-auto justify-center"
+          class="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-softSage bg-richSage border border-sageGreen/40 hover:bg-darkSage px-6 py-3 rounded-full transition shadow-sm w-full sm:w-auto justify-center"
         >
-          <i class="fa-brands fa-google text-oliveSoft"></i> Add to Google Calendar
+          <i class="fa-brands fa-google text-sageGreen"></i> Add to Google Calendar
         </a>
         <a 
           href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:Damlanur%20%26%20Luka's%20Wedding%0ADESCRIPTION:Wedding%20ceremony%20at%20Odapark%20Theehuis%2C%20followed%20by%20desserts%2C%20friethuis%20run%2C%20and%20house%20party%20with%20cats!%0ALOCATION:Odapark%20Theehuis%2C%20Merseloseweg%20117%2C%205801%20CC%20Venray%0ADTSTART:20270827T120000Z%0ADTEND:20270827T220000Z%0AEND:VEVENT%0AEND:VCALENDAR"
           download="wedding-damlanur-luka.ics"
-          class="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-[#fffaf2] bg-cardBg border border-oliveSoft hover:bg-oliveDark px-6 py-3 rounded-full transition shadow-sm w-full sm:w-auto justify-center"
+          class="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-softSage bg-richSage border border-sageGreen/40 hover:bg-darkSage px-6 py-3 rounded-full transition shadow-sm w-full sm:w-auto justify-center"
         >
-          <i class="fa-brands fa-apple text-oliveSoft"></i> Add to Apple / iCloud Calendar
+          <i class="fa-brands fa-apple text-sageGreen"></i> Add to Apple / iCloud Calendar
         </a>
       </div>
     </div>
   </section>
 
-  <!-- VENUE & LOCATIONS -->
-  <section id="venue" class="py-20 px-6 bg-[#fffaf2] border-t border-oliveSoft/30">
+  <!-- VENUE & LOCATIONS (Noto Serif Headings) -->
+  <section id="venue" class="reveal py-20 px-6 bg-softSage border-t border-sageGreen/40">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-16">
-        <span class="text-xs uppercase tracking-[0.25em] text-olivePrimary font-bold">Locations &amp; Travel</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-olivePrimary mt-2 font-semibold">The Coordinates</h2>
-        <p class="text-oliveSoft text-sm mt-2">Transmit these coordinates to your astromech droid (or Google Maps) to locate our bases.</p>
+        <span class="text-xs uppercase tracking-[0.25em] text-darkSage font-bold">Locations &amp; Travel</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-richSage mt-2 font-semibold">The Coordinates</h2>
+        <p class="text-darkSage text-sm mt-2 font-sans">Transmit these coordinates to your astromech droid (or Google Maps) to locate our bases.</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-8 items-stretch">
         <!-- Odapark Card -->
-        <div class="bg-cardBg rounded-3xl p-8 border border-oliveSoft/40 shadow-sm flex flex-col justify-between text-[#fffaf2]">
+        <div class="bg-richSage rounded-3xl p-8 border border-sageGreen/40 shadow-sm flex flex-col justify-between text-softSage">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-[#5e6553]/70 flex items-center justify-center text-oliveSoft text-xl mb-6 border border-oliveSoft/30">
+            <div class="w-12 h-12 rounded-2xl bg-darkSage flex items-center justify-center text-sageGreen text-xl mb-6 border border-sageGreen/30">
               <i class="fa-solid fa-compass"></i>
             </div>
-            <h3 class="font-serif text-2xl text-[#fffaf2] font-semibold mb-1">Odapark Theehuis</h3>
-            <p class="text-xs font-mono text-oliveSoft tracking-wider mb-2">51°31'31.9"N · 5°57'50.7"E</p>
-            <p class="text-xs uppercase tracking-wider text-oliveSoft font-bold mb-4">Stop 1 · Ceremony &amp; Reception (14:00)</p>
-            <p class="text-[#fffaf2]/90 text-sm leading-relaxed mb-6">
+            <h3 class="font-serif text-2xl text-softSage font-semibold mb-1">Odapark Theehuis</h3>
+            <p class="text-xs font-mono text-sageGreen tracking-wider mb-2">51°31'31.9"N · 5°57'50.7"E</p>
+            <p class="text-xs uppercase tracking-wider text-sageGreen font-bold mb-4 font-sans">Stop 1 · Ceremony &amp; Reception (14:00)</p>
+            <p class="text-softSage/90 text-sm leading-relaxed mb-6 font-serif">
               Merseloseweg 117, 5801 CC Venray<br>
               A historic teahouse set inside an open wooded sculpture park. Free landing pads for landspeeders and terrestrial vehicles are available right at the park entrance.
             </p>
@@ -316,92 +333,93 @@
             href="https://maps.google.com/?q=Odapark+Theehuis+Venray" 
             target="_blank" 
             rel="noopener noreferrer"
-            class="inline-flex items-center justify-center gap-2 text-xs uppercase tracking-wider font-semibold text-[#fffaf2] bg-[#5e6553] hover:bg-oliveDark py-3 px-6 rounded-full transition w-full border border-oliveSoft/40"
+            class="inline-flex items-center justify-center gap-2 text-xs uppercase tracking-wider font-semibold text-softSage bg-darkSage hover:bg-richSage py-3 px-6 rounded-full transition w-full border border-sageGreen/40 font-sans"
           >
-            <i class="fa-solid fa-location-crosshairs text-oliveSoft"></i> Plot Course on Google Maps
+            <i class="fa-solid fa-location-crosshairs text-sageGreen"></i> Plot Course on Google Maps
           </a>
         </div>
 
         <!-- Food & Party -->
-        <div class="bg-cardBg rounded-3xl p-8 border border-oliveSoft/40 shadow-sm flex flex-col justify-between text-[#fffaf2]">
+        <div class="bg-richSage rounded-3xl p-8 border border-sageGreen/40 shadow-sm flex flex-col justify-between text-softSage">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-[#5e6553]/70 flex items-center justify-center text-oliveSoft text-xl mb-6 border border-oliveSoft/30">
+            <div class="w-12 h-12 rounded-2xl bg-darkSage flex items-center justify-center text-sageGreen text-xl mb-6 border border-sageGreen/30">
               <i class="fa-solid fa-shield-halved"></i>
             </div>
-            <h3 class="font-serif text-2xl text-[#fffaf2] font-semibold mb-1">Friethuis Outpost &amp; Safehouse</h3>
-            <p class="text-xs font-mono text-oliveSoft tracking-wider mb-2">Encrypted Grid</p>
-            <p class="text-xs uppercase tracking-wider text-oliveSoft font-bold mb-4">Stop 2 · Dinner &amp; Party (16:00 Onward)</p>
-            <p class="text-[#fffaf2]/90 text-sm leading-relaxed mb-6">
+            <h3 class="font-serif text-2xl text-softSage font-semibold mb-1">Friethuis Outpost &amp; Safehouse</h3>
+            <p class="text-xs font-mono text-sageGreen tracking-wider mb-2">Encrypted Grid</p>
+            <p class="text-xs uppercase tracking-wider text-sageGreen font-bold mb-4 font-sans">Stop 2 · Dinner &amp; Party (16:00 Onward)</p>
+            <p class="text-softSage/90 text-sm leading-relaxed mb-6 font-serif">
               After Odapark, we head to our neighborhood friethuis for fresh Dutch fry rations, then navigate by foot, bike, or car to our Jedi-guarded base for drinks and party!
             </p>
           </div>
-          <div class="p-3 bg-[#5e6553]/60 rounded-xl text-center border border-oliveSoft/30">
-            <span class="text-xs text-oliveSoft italic">Exact home coordinates will be transmitted via SMS before the date!</span>
+          <div class="p-3 bg-darkSage/60 rounded-xl text-center border border-sageGreen/30">
+            <span class="text-xs text-softSage italic font-serif">Exact home coordinates will be transmitted via SMS before the date!</span>
           </div>
         </div>
       </div>
 
-      <!-- Traveling from Abroad Card (Without Header Flight Icon) -->
-      <div class="mt-10 bg-cardBg rounded-3xl p-6 sm:p-8 border border-oliveSoft/40 shadow-sm text-left text-[#fffaf2]">
+      <!-- Traveling from Abroad Card -->
+      <div class="mt-10 bg-richSage rounded-3xl p-6 sm:p-8 border border-sageGreen/40 shadow-sm text-left text-softSage">
         <div class="mb-6">
-          <h3 class="font-serif text-xl sm:text-2xl text-[#fffaf2] font-semibold leading-tight">Traveling from another galaxy</h3>
-          <p class="text-[11px] sm:text-xs uppercase tracking-wider text-oliveSoft font-semibold mt-1">Transit intel &amp; victory tips for our traveling allies</p>
+          <h3 class="font-serif text-xl sm:text-2xl text-softSage font-semibold leading-tight">Traveling from another galaxy</h3>
+          <p class="text-[11px] sm:text-xs uppercase tracking-wider text-sageGreen font-semibold mt-1 font-sans">Transit intel &amp; victory tips for our traveling allies</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm text-[#fffaf2]/90 leading-relaxed">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm text-softSage/90 leading-relaxed font-sans">
           <!-- Airports -->
-          <div class="p-4 rounded-2xl bg-[#5e6553]/60 border border-oliveSoft/30 shadow-sm">
-            <h4 class="font-serif text-sm font-semibold text-[#fffaf2] mb-2 flex items-center gap-2">
-              <i class="fa-solid fa-plane text-oliveSoft text-xs"></i> Recommended Airports
+          <div class="p-4 rounded-2xl bg-darkSage/60 border border-sageGreen/30 shadow-sm">
+            <h4 class="font-serif text-sm font-semibold text-softSage mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-plane text-sageGreen text-xs"></i> Recommended Airports
             </h4>
             <p>
-              <strong class="text-oliveSoft">Amsterdam Schiphol (AMS)</strong> has direct flights from Sweden &amp; Turkey, with frequent trains to Venray (~1.5–2 hrs). 
+              <strong class="text-softSage font-semibold">Amsterdam Schiphol (AMS)</strong> has direct flights from Sweden &amp; Turkey, with frequent trains to Venray (~1.5–2 hrs). 
               <br><br>
-              <strong class="text-oliveSoft">Düsseldorf (DUS)</strong> in Germany is also very close with direct flights (~1 hr drive / train).
+              <strong class="text-softSage font-semibold">Düsseldorf (DUS)</strong> in Germany is also very close with direct flights (~1 hr drive / train).
             </p>
           </div>
 
           <!-- Trains -->
-          <div class="p-4 rounded-2xl bg-[#5e6553]/60 border border-oliveSoft/30 shadow-sm">
-            <h4 class="font-serif text-sm font-semibold text-[#fffaf2] mb-2 flex items-center gap-2">
-              <i class="fa-solid fa-train text-oliveSoft text-xs"></i> Trains &amp; Transport
+          <div class="p-4 rounded-2xl bg-darkSage/60 border border-sageGreen/30 shadow-sm">
+            <h4 class="font-serif text-sm font-semibold text-softSage mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-train text-sageGreen text-xs"></i> Trains &amp; Transport
             </h4>
             <p>
-              The Dutch rail network (NS.nl) is seamless — simply tap in and out with your contactless debit or credit card. Regular trains run directly to <strong class="text-oliveSoft">Venray Station</strong>.
+              The Dutch rail network (NS.nl) is seamless — simply tap in and out with your contactless debit or credit card. Regular trains run directly to <strong class="text-softSage font-semibold">Venray Station</strong>.
             </p>
           </div>
 
           <!-- Where to Stay -->
-          <div class="p-4 rounded-2xl bg-[#5e6553]/60 border border-oliveSoft/30 shadow-sm">
-            <h4 class="font-serif text-sm font-semibold text-[#fffaf2] mb-2 flex items-center gap-2">
-              <i class="fa-solid fa-hotel text-oliveSoft text-xs"></i> Where to Stay
+          <div class="p-4 rounded-2xl bg-darkSage/60 border border-sageGreen/30 shadow-sm">
+            <h4 class="font-serif text-sm font-semibold text-softSage mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-hotel text-sageGreen text-xs"></i> Where to Stay
             </h4>
             <p>
-              We recommend staying in or near <strong class="text-oliveSoft">Venray</strong> (e.g. <em>Hotel Asteria</em>, <em>Hotel Hulsman</em>, or local B&amp;Bs). 
+              We recommend staying in or near <strong class="text-softSage font-semibold">Venray</strong> (e.g. <em>Hotel Asteria</em>, <em>Hotel Hulsman</em>, or local B&amp;Bs). 
               <br><br>
               Let us know if you want to coordinate carpools or rides from the airport with fellow allies!
             </p>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      
-  <!-- Q&A SECTION -->
-  <section id="qa" class="py-20 px-6 bg-[#fffaf2] border-t border-oliveSoft/30">
+  <!-- Q&A SECTION (Noto Serif Headings) -->
+  <section id="qa" class="reveal py-20 px-6 bg-softSage border-t border-sageGreen/40">
     <div class="max-w-3xl mx-auto">
       <div class="text-center mb-14">
-        <span class="text-xs uppercase tracking-[0.25em] text-olivePrimary font-bold">Good to Know</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-olivePrimary mt-2 font-semibold">Questions &amp; Answers</h2>
+        <span class="text-xs uppercase tracking-[0.25em] text-darkSage font-bold">Good to Know</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-richSage mt-2 font-semibold">Questions &amp; Answers</h2>
       </div>
 
       <div class="space-y-4">
         <!-- QA Item 1 -->
-        <div class="bg-cardBg rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm text-[#fffaf2]">
-          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-[#fffaf2] font-semibold flex items-center justify-between focus:outline-none">
+        <div class="bg-richSage rounded-2xl border border-sageGreen/40 overflow-hidden transition shadow-sm text-softSage">
+          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-softSage font-semibold flex items-center justify-between focus:outline-none">
             <span>What should I wear?</span>
-            <i class="fa-solid fa-chevron-down text-sm text-oliveSoft transition-transform duration-300"></i>
+            <i class="fa-solid fa-chevron-down text-sm text-sageGreen transition-transform duration-300"></i>
           </button>
-          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-[#fffaf2]/90 leading-relaxed">
+          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-softSage/90 leading-relaxed font-sans">
             <div class="pb-5">
               Wear whatever makes you feel great and festive! Keep in mind we’ll be strolling along wooded park trails at Odapark, so we recommend swapping sharp stilettos for block heels, wedges, or comfortable dress shoes.
             </div>
@@ -409,12 +427,12 @@
         </div>
 
         <!-- QA Item 2 -->
-        <div class="bg-cardBg rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm text-[#fffaf2]">
-          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-[#fffaf2] font-semibold flex items-center justify-between focus:outline-none">
+        <div class="bg-richSage rounded-2xl border border-sageGreen/40 overflow-hidden transition shadow-sm text-softSage">
+          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-softSage font-semibold flex items-center justify-between focus:outline-none">
             <span>How do we get between the park and your place?</span>
-            <i class="fa-solid fa-chevron-down text-sm text-oliveSoft transition-transform duration-300"></i>
+            <i class="fa-solid fa-chevron-down text-sm text-sageGreen transition-transform duration-300"></i>
           </button>
-          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-[#fffaf2]/90 leading-relaxed">
+          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-softSage/90 leading-relaxed font-sans">
             <div class="pb-5">
               It’s an easy, short trip between the two spots. Depending on the weather and what you feel like, you can drive, bike Dutch-style, or share a ride. Free parking is available at both locations.
             </div>
@@ -422,25 +440,25 @@
         </div>
 
         <!-- QA Item 3 -->
-        <div class="bg-cardBg rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm text-[#fffaf2]">
-          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-[#fffaf2] font-semibold flex items-center justify-between focus:outline-none">
+        <div class="bg-richSage rounded-2xl border border-sageGreen/40 overflow-hidden transition shadow-sm text-softSage">
+          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-softSage font-semibold flex items-center justify-between focus:outline-none">
             <span>What if it rains?</span>
-            <i class="fa-solid fa-chevron-down text-sm text-oliveSoft transition-transform duration-300"></i>
+            <i class="fa-solid fa-chevron-down text-sm text-sageGreen transition-transform duration-300"></i>
           </button>
-          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-[#fffaf2]/90 leading-relaxed">
+          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-softSage/90 leading-relaxed font-sans">
             <div class="pb-5">
               Dutch weather likes to keep everyone on their toes! If showers roll in, we will move smoothly under the covered veranda and warm rooms of Odapark Theehuis so everything stays cozy and dry.
             </div>
           </div>
         </div>
 
-        <!-- QA Item 4 (Original Jedi Cats) -->
-        <div class="bg-cardBg rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm text-[#fffaf2]">
-          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-[#fffaf2] font-semibold flex items-center justify-between focus:outline-none">
+        <!-- QA Item 4 -->
+        <div class="bg-richSage rounded-2xl border border-sageGreen/40 overflow-hidden transition shadow-sm text-softSage">
+          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-softSage font-semibold flex items-center justify-between focus:outline-none">
             <span>Can we interact with the feline Jedi Council?</span>
-            <i class="fa-solid fa-chevron-down text-sm text-oliveSoft transition-transform duration-300"></i>
+            <i class="fa-solid fa-chevron-down text-sm text-sageGreen transition-transform duration-300"></i>
           </button>
-          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-[#fffaf2]/90 leading-relaxed">
+          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-softSage/90 leading-relaxed font-sans">
             <div class="pb-5">
               Yes, absolutely! Stitch will be actively greeting and inspecting all incoming allies at the door, while Obi will join the party once he spots the crowd with his Jedi senses. If cats take down your defenses, be sure to take an allergy booster before docking at our place.
             </div>
@@ -448,12 +466,12 @@
         </div>
 
         <!-- QA Item 5 -->
-        <div class="bg-cardBg rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm text-[#fffaf2]">
-          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-[#fffaf2] font-semibold flex items-center justify-between focus:outline-none">
+        <div class="bg-richSage rounded-2xl border border-sageGreen/40 overflow-hidden transition shadow-sm text-softSage">
+          <button class="qa-toggle w-full px-6 py-5 text-left font-serif text-xl text-softSage font-semibold flex items-center justify-between focus:outline-none">
             <span>What about wedding gifts?</span>
-            <i class="fa-solid fa-chevron-down text-sm text-oliveSoft transition-transform duration-300"></i>
+            <i class="fa-solid fa-chevron-down text-sm text-sageGreen transition-transform duration-300"></i>
           </button>
-          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-[#fffaf2]/90 leading-relaxed">
+          <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-softSage/90 leading-relaxed font-sans">
             <div class="pb-5">
               Making the journey to celebrate with us is the greatest gift of all! If you’d still like to contribute something extra, a small contribution toward our honeymoon fund would mean the world to us.
             </div>
@@ -463,36 +481,36 @@
     </div>
   </section>
 
-  <!-- PHOTO GALLERY SECTION -->
-  <section id="gallery" class="py-20 px-6 bg-[#fffaf2] border-t border-oliveSoft/30">
+  <!-- PHOTO GALLERY SECTION (Noto Serif Headings) -->
+  <section id="gallery" class="reveal py-20 px-6 bg-softSage border-t border-sageGreen/40">
     <div class="max-w-3xl mx-auto text-center">
-      <span class="text-xs uppercase tracking-[0.25em] text-olivePrimary font-bold">Capture The Memories</span>
-      <h2 class="font-serif text-3xl sm:text-4xl text-olivePrimary mt-2 mb-4 font-semibold">Shared Photo Library</h2>
-      <p class="text-oliveSoft text-sm max-w-lg mx-auto mb-10">
+      <span class="text-xs uppercase tracking-[0.25em] text-darkSage font-bold">Capture The Memories</span>
+      <h2 class="font-serif text-3xl sm:text-4xl text-richSage mt-2 mb-4 font-semibold">Shared Photo Library</h2>
+      <p class="text-darkSage text-sm max-w-lg mx-auto mb-10 font-sans">
         We would love to see our celebration through your eyes. Drop your favorite candid moments, videos, and party selfies straight into our rebel databank.
       </p>
 
-      <div class="bg-cardBg rounded-3xl p-8 sm:p-10 border border-oliveSoft/40 shadow-lg text-[#fffaf2] flex flex-col items-center">
-        <div class="w-14 h-14 rounded-2xl bg-[#5e6553]/70 flex items-center justify-center text-oliveSoft text-2xl mb-6 border border-oliveSoft/30">
+      <div class="bg-richSage rounded-3xl p-8 sm:p-10 border border-sageGreen/40 shadow-lg text-softSage flex flex-col items-center">
+        <div class="w-14 h-14 rounded-2xl bg-darkSage flex items-center justify-center text-sageGreen text-2xl mb-6 border border-sageGreen/30">
           <i class="fa-solid fa-camera-retro"></i>
         </div>
 
-        <h3 class="font-serif text-2xl sm:text-3xl text-[#fffaf2] font-semibold mb-3">Our Shared Album</h3>
-        <p class="text-sm text-[#fffaf2]/90 max-w-md mx-auto mb-8 leading-relaxed">
+        <h3 class="font-serif text-2xl sm:text-3xl text-softSage font-semibold mb-3">Our Shared Album</h3>
+        <p class="text-sm text-softSage/90 max-w-md mx-auto mb-8 leading-relaxed font-sans">
           Whether it is a snapshot of our forest vows, a selfie with a frikandel, or covert footage of our cat Jedis, every transmission matters to the alliance. May the candid shots be ever in your favor!
         </p>
 
-        <!-- Google Photos Shared Album Link -->
+        <!-- Google Photos Album Link -->
         <a 
           href="https://photos.app.goo.gl/PrcVVhtKX8FyqceC9" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#5e6553] text-[#fffaf2] font-semibold hover:bg-oliveDark border border-oliveSoft/40 transition shadow-md hover:shadow-lg text-sm tracking-wider uppercase"
+          class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-darkSage text-softSage font-semibold hover:bg-richSage border border-sageGreen/40 transition shadow-md hover:shadow-lg text-sm tracking-wider uppercase font-sans"
         >
-          <i class="fa-solid fa-images text-oliveSoft text-lg"></i> Open Album
+          <i class="fa-solid fa-images text-sageGreen text-lg"></i> Open Album
         </a>
 
-        <p class="text-xs text-oliveSoft mt-6 italic">
+        <p class="text-xs text-sageGreen mt-6 italic font-sans">
           Works in any browser; iPhone, Android, and PC guests can view and upload photos directly.
         </p>
       </div>
@@ -500,73 +518,73 @@
   </section>
 
   <!-- COUNTDOWN (BEFORE RSVP) -->
-  <section class="py-12 px-6 bg-[#fffaf2] border-t border-oliveSoft/30">
-    <div class="w-full max-w-xs mx-auto bg-cardBg/95 text-[#fffaf2] border border-oliveSoft/30 rounded-2xl px-4 py-3 shadow-sm">
-      <p class="text-[10px] uppercase tracking-[0.2em] text-oliveSoft font-semibold mb-2 text-center">Countdown</p>
+  <section class="reveal py-12 px-6 bg-softSage border-t border-sageGreen/40">
+    <div class="w-full max-w-xs mx-auto bg-richSage text-softSage border border-sageGreen/40 rounded-2xl px-4 py-3 shadow-sm font-sans">
+      <p class="text-[10px] uppercase tracking-[0.2em] text-sageGreen font-semibold mb-2 text-center">Countdown</p>
       <div class="grid grid-cols-4 gap-2 text-center" id="countdownGrid">
-        <div class="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl bg-[#5e6553]/60 border border-oliveSoft/20">
-          <span id="days" class="font-serif text-xl sm:text-2xl text-[#fffaf2] font-semibold leading-tight">--</span>
-          <span class="text-[9px] uppercase tracking-wider text-oliveSoft mt-0.5">Days</span>
+        <div class="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl bg-darkSage/70 border border-sageGreen/20">
+          <span id="days" class="font-serif text-xl sm:text-2xl text-softSage font-semibold leading-tight">--</span>
+          <span class="text-[9px] uppercase tracking-wider text-sageGreen mt-0.5">Days</span>
         </div>
-        <div class="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl bg-[#5e6553]/60 border border-oliveSoft/20">
-          <span id="hours" class="font-serif text-xl sm:text-2xl text-[#fffaf2] font-semibold leading-tight">--</span>
-          <span class="text-[9px] uppercase tracking-wider text-oliveSoft mt-0.5">Hours</span>
+        <div class="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl bg-darkSage/70 border border-sageGreen/20">
+          <span id="hours" class="font-serif text-xl sm:text-2xl text-softSage font-semibold leading-tight">--</span>
+          <span class="text-[9px] uppercase tracking-wider text-sageGreen mt-0.5">Hours</span>
         </div>
-        <div class="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl bg-[#5e6553]/60 border border-oliveSoft/20">
-          <span id="minutes" class="font-serif text-xl sm:text-2xl text-[#fffaf2] font-semibold leading-tight">--</span>
-          <span class="text-[9px] uppercase tracking-wider text-oliveSoft mt-0.5">Mins</span>
+        <div class="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl bg-darkSage/70 border border-sageGreen/20">
+          <span id="minutes" class="font-serif text-xl sm:text-2xl text-softSage font-semibold leading-tight">--</span>
+          <span class="text-[9px] uppercase tracking-wider text-sageGreen mt-0.5">Mins</span>
         </div>
-        <div class="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl bg-[#5e6553]/60 border border-oliveSoft/20">
-          <span id="seconds" class="font-serif text-xl sm:text-2xl text-[#fffaf2] font-semibold leading-tight">--</span>
-          <span class="text-[9px] uppercase tracking-wider text-oliveSoft mt-0.5">Secs</span>
+        <div class="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl bg-darkSage/70 border border-sageGreen/20">
+          <span id="seconds" class="font-serif text-xl sm:text-2xl text-softSage font-semibold leading-tight">--</span>
+          <span class="text-[9px] uppercase tracking-wider text-sageGreen mt-0.5">Secs</span>
         </div>
       </div>
     </div>
   </section>
   
-  <!-- RSVP SECTION -->
-  <section id="rsvp" class="py-20 px-6 bg-[#fffaf2] border-t border-oliveSoft/30">
+  <!-- RSVP SECTION (Noto Serif Headings) -->
+  <section id="rsvp" class="reveal py-20 px-6 bg-softSage border-t border-sageGreen/40">
     <div class="max-w-2xl mx-auto">
       <div class="text-center mb-12">
-        <span class="text-xs uppercase tracking-[0.25em] text-olivePrimary font-bold">The Empire Demands Your Presence</span>
-        <h2 class="font-serif text-4xl text-olivePrimary mt-2 font-semibold">RSVP</h2>
-        <p class="text-oliveSoft text-sm mt-2">Please confirm your attendance by 1 June 2027 so we can prepare for the party!</p>
+        <span class="text-xs uppercase tracking-[0.25em] text-darkSage font-bold">The Empire Demands Your Presence</span>
+        <h2 class="font-serif text-4xl text-richSage mt-2 font-semibold">RSVP</h2>
+        <p class="text-darkSage text-sm mt-2 font-sans">Please confirm your attendance by 1 June 2027 so we can prepare for the party!</p>
       </div>
 
-      <div class="bg-cardBg rounded-3xl p-8 sm:p-10 border border-oliveSoft/40 shadow-lg text-[#fffaf2]">
+      <div class="bg-richSage rounded-3xl p-8 sm:p-10 border border-sageGreen/40 shadow-lg text-softSage font-sans">
         <form id="rsvpForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
           
-          <!-- Web3Forms Access Key -->
+          <!-- Web3Forms Key -->
           <input type="hidden" name="access_key" value="87dd05f4-c7a7-4c46-9880-f5dc478156c0">
           <input type="hidden" name="subject" value="New Wedding RSVP Submission!">
 
-          <!-- Full Name -->
+          <!-- Name -->
           <div>
-            <label for="fullName" class="block text-xs uppercase tracking-wider font-semibold text-[#fffaf2] mb-2">Your Name *</label>
+            <label for="fullName" class="block text-xs uppercase tracking-wider font-semibold text-softSage mb-2">Your Name *</label>
             <input 
               type="text" 
               name="Name"
               id="fullName" 
               required 
               placeholder="e.g., Sarah &amp; Mark" 
-              class="w-full px-4 py-3 rounded-xl border border-oliveSoft/40 bg-[#5e6553]/70 focus:outline-none focus:border-oliveSoft focus:ring-1 focus:ring-oliveSoft text-sm text-[#fffaf2] placeholder-oliveSoft/60"
+              class="w-full px-4 py-3 rounded-xl border border-sageGreen/40 bg-darkSage/70 focus:outline-none focus:border-sageGreen focus:ring-1 focus:ring-sageGreen text-sm text-softSage placeholder-sageGreen/70"
             >
           </div>
 
-                    <!-- Attendance Selection (Clean mobile vertical stack) -->
+          <!-- Attendance Selection (Clean Mobile Stack) -->
           <div>
-            <label class="block text-xs uppercase tracking-wider font-semibold text-[#fffaf2] mb-2.5">Will you be attending? *</label>
+            <label class="block text-xs uppercase tracking-wider font-semibold text-softSage mb-2.5">Will you be attending? *</label>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <label class="flex items-center gap-3.5 p-4 rounded-xl border border-oliveSoft/40 bg-[#5e6553]/70 cursor-pointer hover:bg-[#5e6553] transition shadow-sm">
-                <input type="radio" name="Attending" value="Joyfully Accepts" checked class="text-oliveSoft focus:ring-oliveSoft w-4 h-4 shrink-0">
-                <span class="text-xs sm:text-sm font-medium text-[#fffaf2] leading-snug">
+              <label class="flex items-center gap-3.5 p-4 rounded-xl border border-sageGreen/40 bg-darkSage/70 cursor-pointer hover:bg-darkSage transition shadow-sm">
+                <input type="radio" name="Attending" value="Joyfully Accepts" checked class="text-sageGreen focus:ring-sageGreen w-4 h-4 shrink-0">
+                <span class="text-xs sm:text-sm font-medium text-softSage leading-snug">
                   I will be there. The Force is strong with this gathering.
                 </span>
               </label>
               
-              <label class="flex items-center gap-3.5 p-4 rounded-xl border border-oliveSoft/40 bg-[#5e6553]/70 cursor-pointer hover:bg-[#5e6553] transition shadow-sm">
-                <input type="radio" name="Attending" value="Regretfully Declines" class="text-oliveSoft focus:ring-oliveSoft w-4 h-4 shrink-0">
-                <span class="text-xs sm:text-sm font-medium text-[#fffaf2] leading-snug">
+              <label class="flex items-center gap-3.5 p-4 rounded-xl border border-sageGreen/40 bg-darkSage/70 cursor-pointer hover:bg-darkSage transition shadow-sm">
+                <input type="radio" name="Attending" value="Regretfully Declines" class="text-sageGreen focus:ring-sageGreen w-4 h-4 shrink-0">
+                <span class="text-xs sm:text-sm font-medium text-softSage leading-snug">
                   Respectfully declining from an undisclosed rebel base.
                 </span>
               </label>
@@ -575,78 +593,78 @@
 
           <!-- Plus One Question -->
           <div>
-            <label class="block text-xs uppercase tracking-wider font-semibold text-[#fffaf2] mb-2">Bringing a plus one? *</label>
+            <label class="block text-xs uppercase tracking-wider font-semibold text-softSage mb-2">Bringing a plus one? *</label>
             <div class="grid grid-cols-2 gap-4 mb-3">
-              <label class="flex items-center gap-3 p-3.5 rounded-xl border border-oliveSoft/40 bg-[#5e6553]/60 cursor-pointer hover:bg-[#5e6553] transition">
-                <input type="radio" name="Has_Plus_One" value="Yes" id="plusOneYes" class="text-oliveSoft focus:ring-oliveSoft">
-                <span class="text-sm font-medium text-[#fffaf2]">Yes</span>
+              <label class="flex items-center gap-3.5 p-3.5 rounded-xl border border-sageGreen/40 bg-darkSage/60 cursor-pointer hover:bg-darkSage transition">
+                <input type="radio" name="Has_Plus_One" value="Yes" id="plusOneYes" class="text-sageGreen focus:ring-sageGreen">
+                <span class="text-sm font-medium text-softSage">Yes</span>
               </label>
-              <label class="flex items-center gap-3 p-3.5 rounded-xl border border-oliveSoft/40 bg-[#5e6553]/60 cursor-pointer hover:bg-[#5e6553] transition">
-                <input type="radio" name="Has_Plus_One" value="No" id="plusOneNo" checked class="text-oliveSoft focus:ring-oliveSoft">
-                <span class="text-sm font-medium text-[#fffaf2]">No</span>
+              <label class="flex items-center gap-3.5 p-3.5 rounded-xl border border-sageGreen/40 bg-darkSage/60 cursor-pointer hover:bg-darkSage transition">
+                <input type="radio" name="Has_Plus_One" value="No" id="plusOneNo" checked class="text-sageGreen focus:ring-sageGreen">
+                <span class="text-sm font-medium text-softSage">No</span>
               </label>
             </div>
           </div>
 
           <!-- Plus One Name -->
           <div id="plusOneNameContainer" class="hidden transition-all duration-300">
-            <label for="plusOneName" class="block text-xs uppercase tracking-wider font-semibold text-[#fffaf2] mb-2">Name of your Plus One *</label>
+            <label for="plusOneName" class="block text-xs uppercase tracking-wider font-semibold text-softSage mb-2">Name of your Plus One *</label>
             <input 
               type="text" 
               name="Plus_One_Name"
               id="plusOneName" 
               placeholder="e.g., Alex Johnson" 
-              class="w-full px-4 py-3 rounded-xl border border-oliveSoft/40 bg-[#5e6553]/70 focus:outline-none focus:border-oliveSoft focus:ring-1 focus:ring-oliveSoft text-sm text-[#fffaf2] placeholder-oliveSoft/60"
+              class="w-full px-4 py-3 rounded-xl border border-sageGreen/40 bg-darkSage/70 focus:outline-none focus:border-sageGreen focus:ring-1 focus:ring-sageGreen text-sm text-softSage placeholder-sageGreen/70"
             >
           </div>
 
           <!-- Song Request -->
           <div>
-            <label for="songRequest" class="block text-xs uppercase tracking-wider font-semibold text-[#fffaf2] mb-2">Song Request</label>
+            <label for="songRequest" class="block text-xs uppercase tracking-wider font-semibold text-softSage mb-2">Song Request</label>
             <input 
               type="text" 
               name="Song_Request"
               id="songRequest" 
               placeholder="A song that will get you out on the dance floor" 
-              class="w-full px-4 py-3 rounded-xl border border-oliveSoft/40 bg-[#5e6553]/70 focus:outline-none focus:border-oliveSoft focus:ring-1 focus:ring-oliveSoft text-sm text-[#fffaf2] placeholder-oliveSoft/60"
+              class="w-full px-4 py-3 rounded-xl border border-sageGreen/40 bg-darkSage/70 focus:outline-none focus:border-sageGreen focus:ring-1 focus:ring-sageGreen text-sm text-softSage placeholder-sageGreen/70"
             >
           </div>
 
           <!-- Message -->
           <div>
-            <label for="message" class="block text-xs uppercase tracking-wider font-semibold text-[#fffaf2] mb-2">A Note for Us</label>
+            <label for="message" class="block text-xs uppercase tracking-wider font-semibold text-softSage mb-2">A Note for Us</label>
             <textarea 
               name="Message"
               id="message" 
               rows="3" 
               placeholder="Leave some love or advice..." 
-              class="w-full px-4 py-3 rounded-xl border border-oliveSoft/40 bg-[#5e6553]/70 focus:outline-none focus:border-oliveSoft focus:ring-1 focus:ring-oliveSoft text-sm text-[#fffaf2] placeholder-oliveSoft/60"
+              class="w-full px-4 py-3 rounded-xl border border-sageGreen/40 bg-darkSage/70 focus:outline-none focus:border-sageGreen focus:ring-1 focus:ring-sageGreen text-sm text-softSage placeholder-sageGreen/70"
             ></textarea>
           </div>
 
           <button 
             type="submit" 
-            class="w-full py-4 rounded-xl bg-[#5e6553] text-[#fffaf2] font-semibold hover:bg-oliveDark transition shadow-md text-sm uppercase tracking-wider border border-oliveSoft/40"
+            class="w-full py-4 rounded-xl bg-darkSage text-softSage font-semibold hover:bg-richSage transition shadow-md text-sm uppercase tracking-wider border border-sageGreen/40"
           >
             Send RSVP
           </button>
         </form>
 
         <div id="rsvpSuccess" class="hidden text-center py-8">
-          <div class="w-16 h-16 bg-[#5e6553] text-[#fffaf2] rounded-full flex items-center justify-center mx-auto text-2xl mb-4 border border-oliveSoft/40">
-            <i class="fa-solid fa-heart text-oliveSoft"></i>
+          <div class="w-16 h-16 bg-darkSage text-softSage rounded-full flex items-center justify-center mx-auto text-2xl mb-4 border border-sageGreen/40">
+            <i class="fa-solid fa-heart text-sageGreen"></i>
           </div>
-          <h3 class="font-serif text-3xl text-[#fffaf2] font-semibold mb-2">Thank you!</h3>
-          <p class="text-oliveSoft text-sm">We got your RSVP! Your spot is secured, drinks and snacks are accounted for, and we can't wait to celebrate together.</p>
+          <h3 class="font-serif text-3xl text-softSage font-semibold mb-2">Thank you!</h3>
+          <p class="text-softSage/90 text-sm">We got your RSVP! Your spot is secured, drinks and snacks are accounted for, and we can't wait to celebrate together.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-12 px-6 text-center text-xs text-olivePrimary uppercase tracking-widest border-t border-oliveSoft/40">
-    <p class="font-script text-2xl text-olivePrimary lowercase mb-2">Damlanur &amp; Luka</p>
-    <p class="text-oliveSoft">27 August 2027 · Venray</p>
+  <footer class="py-12 px-6 text-center text-xs text-richSage uppercase tracking-widest border-t border-sageGreen/40">
+    <p class="font-script text-2xl text-richSage lowercase mb-2">Damlanur &amp; Luka</p>
+    <p class="text-darkSage font-sans">27 August 2027 · Venray</p>
   </footer>
 
   <!-- JAVASCRIPT LOGIC -->
@@ -674,7 +692,7 @@
       if (!grid) return;
 
       if (diff <= 0) {
-        grid.innerHTML = '<div class="col-span-4 text-center font-serif text-2xl text-olivePrimary font-semibold">Today is the day! 💍</div>';
+        grid.innerHTML = '<div class="col-span-4 text-center font-serif text-2xl text-richSage font-semibold">Today is the day! 💍</div>';
         return;
       }
 
@@ -770,6 +788,19 @@
         }
       });
     }
+
+    // 6. Scroll Reveal Observer
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealElements.forEach(el => revealObserver.observe(el));
   </script>
 </body>
 </html>
