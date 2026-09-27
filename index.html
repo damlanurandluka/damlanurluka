@@ -744,17 +744,20 @@
       });
     });
 
-    // 4. Plus One Toggle Logic
+      // 4. Plus One Toggle Logic
     const plusOneYes = document.getElementById('plusOneYes');
     const plusOneNo = document.getElementById('plusOneNo');
-    const plusOneContainer = document.getElementById('plusOneNameContainer');
+    const plusOneContainer = document.getElementById('plusOneContainer');
     const plusOneInput = document.getElementById('plusOneName');
 
     if (plusOneYes && plusOneNo && plusOneContainer && plusOneInput) {
+      plusOneInput.disabled = true;
+
       plusOneYes.addEventListener('change', () => {
         if (plusOneYes.checked) {
           plusOneContainer.classList.remove('hidden');
           plusOneInput.required = true;
+          plusOneInput.disabled = false;
         }
       });
 
@@ -762,10 +765,12 @@
         if (plusOneNo.checked) {
           plusOneContainer.classList.add('hidden');
           plusOneInput.required = false;
+          plusOneInput.disabled = true;
           plusOneInput.value = '';
         }
       });
     }
+
 
     // 5. RSVP Form Submission via Web3Forms API
     const rsvpForm = document.getElementById('rsvpForm');
