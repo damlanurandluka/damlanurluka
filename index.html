@@ -260,7 +260,7 @@
               <!-- Obi -->
               <div class="relative group overflow-hidden rounded-xl border border-oliveSoft/40 bg-[#5e6553]/60 p-2 flex flex-col items-center justify-between">
                 <img 
-                  src="IMG_7811.jpeg" 
+                  src="obi.jpeg" 
                   alt="Obi the Jedi Cat" 
                   class="w-full aspect-square object-cover rounded-lg shadow-sm group-hover:scale-105 transition-transform duration-300"
                   onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=400&q=80';"
@@ -582,15 +582,43 @@
       </div>
 
       <div class="space-y-4">
-        <!-- QA Item 1 -->
+        <!-- QA Item 1: Dress Code with Single Toggle Button -->
         <div class="bg-cardBg rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm text-[#fffaf2]">
           <button class="qa-toggle w-full px-6 py-5 text-left text-xl text-[#fffaf2] font-semibold flex items-center justify-between focus:outline-none">
             <span>What should I wear?</span>
             <i class="fa-solid fa-chevron-down text-sm text-oliveSoft transition-transform duration-300"></i>
           </button>
+          
           <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-[#fffaf2]/90 leading-relaxed font-sans">
-            <div class="pb-5">
-              Wear whatever makes you feel great and festive! Keep in mind we’ll be strolling along wooded park trails at Odapark, so we recommend swapping sharp stilettos for block heels, wedges, or comfortable dress shoes.
+            <div class="pb-6 space-y-4">
+              <p>
+                <strong>We would love to see you in colors and comfy clothes for the summer, like satin, linen, etc.! Feel free to wear whatever makes you feel good and ready to celebrate with us.
+              </p>
+
+              <!-- Single Toggle Button -->
+              <div class="pt-1">
+                <button 
+                  type="button" 
+                  id="dresscodeToggleBtn"
+                  class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#5e6553] hover:bg-oliveDark border border-oliveSoft/40 text-xs uppercase tracking-wider text-[#fffaf2] font-semibold transition shadow-sm"
+                >
+                  <i class="fa-solid fa-shirt text-oliveSoft"></i>
+                  <span id="dresscodeBtnText">See colors</span>
+                </button>
+              </div>
+
+              <!-- Dress Code Container (Square) -->
+              <div id="dresscodeContainer" class="hidden overflow-hidden rounded-2xl border border-oliveSoft/40 bg-[#5e6553]/40 p-3 shadow-inner transition-all duration-300">
+                <img 
+                  src="dresscode.jpeg" 
+                  alt="Wedding Guest Dress Code - Satin and Linen" 
+                  class="w-full h-auto max-w-sm rounded-xl object-contain mx-auto aspect-square shadow"
+                />
+              </div>
+
+              <p class="text-xs text-oliveSoft italic font-serif">
+                <i class="fa-solid fa-shoe-prints mr-1"></i> Footwear note: Since we'll be strolling along wooded park trails at Odapark, block heels, wedges, dress flats, or clean loafers are much friendlier on grass and gravel than sharp stilettos!
+              </p>
             </div>
           </div>
         </div>
@@ -719,6 +747,31 @@
         }
       });
     });
+// Toggle Handler for "See Colors" Button
+    const dresscodeBtn = document.getElementById('dresscodeToggleBtn');
+    const dresscodeContainer = document.getElementById('dresscodeContainer');
+    const dresscodeBtnText = document.getElementById('dresscodeBtnText');
+
+    if (dresscodeBtn && dresscodeContainer && dresscodeBtnText) {
+      dresscodeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isHidden = dresscodeContainer.classList.contains('hidden');
+        
+        if (isHidden) {
+          dresscodeContainer.classList.remove('hidden');
+          dresscodeBtnText.textContent = 'Hide Colors';
+        } else {
+          dresscodeContainer.classList.add('hidden');
+          dresscodeBtnText.textContent = 'See Colors';
+        }
+
+        // Dynamically adjust accordion height so the image does not clip
+        const faqContent = dresscodeBtn.closest('.qa-content');
+        if (faqContent) {
+          faqContent.style.maxHeight = faqContent.scrollHeight + 'px';
+        }
+      });
+    }
 
     // 4. Plus One Toggle Logic
     const plusOneYes = document.getElementById('plusOneYes');
