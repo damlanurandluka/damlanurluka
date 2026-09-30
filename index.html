@@ -565,7 +565,7 @@
     </div>
   </section>
 
-  <!-- Q&A SECTION (Placed at the End) -->
+<!-- Q&A SECTION (Placed at the End) -->
   <section id="qa" class="py-20 px-6 bg-softSage border-t border-sageGreen/40">
     <div class="max-w-3xl mx-auto">
       <div class="text-center mb-14">
@@ -573,19 +573,20 @@
         <h2 class="text-3xl sm:text-4xl text-richSage mt-2 font-semibold">Questions &amp; Answers</h2>
       </div>
 
-   <div class="space-y-6 sm:space-y-7">
+      <!-- Kartlar arasındaki dikey mesafeyi artıran yapı -->
+      <div class="flex flex-col gap-6 sm:gap-7">
      
         <!-- QA Item 1: Dress Code with Single Toggle Button -->
-        <div class="bg-cardBg rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm text-[#fffaf2]">
-          <button class="qa-toggle w-full px-6 py-5 text-left text-xl text-[#fffaf2] font-semibold flex items-center justify-between focus:outline-none">
+        <div class="bg-cardBg rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm hover:shadow-md text-[#fffaf2]">
+          <button class="qa-toggle w-full px-6 py-6 text-left text-xl text-[#fffaf2] font-semibold flex items-center justify-between focus:outline-none">
             <span>What should I wear?</span>
             <i class="fa-solid fa-chevron-down text-sm text-oliveSoft transition-transform duration-300"></i>
           </button>
           
           <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-[#fffaf2]/90 leading-relaxed font-sans">
-            <div class="pb-6 space-y-4">
+            <div class="pb-8 space-y-6 pt-2 border-t border-oliveSoft/20">
               <p>
-                <strong>We would love to see you in colors and comfy clothes for the summer, like satin, linen, etc.! Feel free to wear whatever makes you feel good and ready to celebrate with us.
+                We would love to see you in colors and comfy clothes for the summer, like satin, linen, etc.! Feel free to wear whatever makes you feel good and ready to celebrate with us.
               </p>
 
               <!-- Single Toggle Button -->
@@ -601,7 +602,7 @@
               </div>
 
               <!-- Dress Code Container (Square) -->
-              <div id="dresscodeContainer" class="hidden overflow-hidden rounded-2xl border border-oliveSoft/40 bg-[#5e6553]/40 p-3 shadow-inner transition-all duration-300">
+              <div id="dresscodeContainer" class="hidden overflow-hidden rounded-2xl border border-oliveSoft/40 bg-[#5e6553]/40 p-3 shadow-inner transition-all duration-300 mx-auto">
                 <img 
                   src="dresscode.jpeg" 
                   alt="Wedding Guest Dress Code - Satin and Linen" 
@@ -609,60 +610,62 @@
                 />
               </div>
 
-              <p class="text-xs text-oliveSoft italic font-serif">
-                <i class="fa-solid fa-shoe-prints mr-1"></i> Footwear note: Since we'll be strolling along wooded park trails at Odapark, block heels, wedges, dress flats, or clean loafers are much friendlier on grass and gravel than sharp stilettos!
-              </p>
+              <div class="pt-2 border-t border-oliveSoft/20">
+                <p class="text-xs text-oliveSoft italic font-serif">
+                  <i class="fa-solid fa-shoe-prints mr-1"></i> Footwear note: Since we'll be strolling along wooded park trails at Odapark, block heels, wedges, dress flats, or clean loafers are much friendlier on grass and gravel than sharp stilettos!
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- QA Item 2 -->
-        <div class="bg-cardBg rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm text-[#fffaf2]">
-          <button class="qa-toggle w-full px-6 py-5 text-left text-xl text-[#fffaf2] font-semibold flex items-center justify-between focus:outline-none">
+        <div class="bg-cardBg rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm hover:shadow-md text-[#fffaf2]">
+          <button class="qa-toggle w-full px-6 py-6 text-left text-xl text-[#fffaf2] font-semibold flex items-center justify-between focus:outline-none">
             <span>How do we get between the park and your place?</span>
             <i class="fa-solid fa-chevron-down text-sm text-oliveSoft transition-transform duration-300"></i>
           </button>
           <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-[#fffaf2]/90 leading-relaxed font-sans">
-            <div class="pb-5">
+            <div class="pb-6 pt-2 border-t border-oliveSoft/20">
               It’s an easy, short trip between the two spots. Depending on the weather and what you feel like, you can drive, bike Dutch-style, or share a ride. Free parking is available at both locations.
             </div>
           </div>
         </div>
 
         <!-- QA Item 3 -->
-        <div class="bg-cardBg rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm text-[#fffaf2]">
-          <button class="qa-toggle w-full px-6 py-5 text-left text-xl text-[#fffaf2] font-semibold flex items-center justify-between focus:outline-none">
+        <div class="bg-cardBg rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm hover:shadow-md text-[#fffaf2]">
+          <button class="qa-toggle w-full px-6 py-6 text-left text-xl text-[#fffaf2] font-semibold flex items-center justify-between focus:outline-none">
             <span>What if it rains?</span>
             <i class="fa-solid fa-chevron-down text-sm text-oliveSoft transition-transform duration-300"></i>
           </button>
           <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-[#fffaf2]/90 leading-relaxed font-sans">
-            <div class="pb-5">
+            <div class="pb-6 pt-2 border-t border-oliveSoft/20">
               Dutch weather likes to keep everyone on their toes! If showers roll in, we will move smoothly under the covered veranda and warm rooms of Odapark Theehuis so everything stays cozy and dry.
             </div>
           </div>
         </div>
 
         <!-- QA Item 4 -->
-        <div class="bg-cardBg rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm text-[#fffaf2]">
-          <button class="qa-toggle w-full px-6 py-5 text-left text-xl text-[#fffaf2] font-semibold flex items-center justify-between focus:outline-none">
+        <div class="bg-cardBg rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm hover:shadow-md text-[#fffaf2]">
+          <button class="qa-toggle w-full px-6 py-6 text-left text-xl text-[#fffaf2] font-semibold flex items-center justify-between focus:outline-none">
             <span>Can we interact with the feline Jedi Council?</span>
             <i class="fa-solid fa-chevron-down text-sm text-oliveSoft transition-transform duration-300"></i>
           </button>
           <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-[#fffaf2]/90 leading-relaxed font-sans">
-            <div class="pb-5">
+            <div class="pb-6 pt-2 border-t border-oliveSoft/20">
               Yes, absolutely! Stitch will be actively greeting and inspecting all incoming allies at the door, while Obi will join the party once he spots the crowd with his Jedi senses. If cats take down your defenses, be sure to take an allergy booster before docking at our place.
             </div>
           </div>
         </div>
 
         <!-- QA Item 5 -->
-        <div class="bg-cardBg rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm text-[#fffaf2]">
-          <button class="qa-toggle w-full px-6 py-5 text-left text-xl text-[#fffaf2] font-semibold flex items-center justify-between focus:outline-none">
+        <div class="bg-cardBg rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm hover:shadow-md text-[#fffaf2]">
+          <button class="qa-toggle w-full px-6 py-6 text-left text-xl text-[#fffaf2] font-semibold flex items-center justify-between focus:outline-none">
             <span>What about wedding gifts?</span>
             <i class="fa-solid fa-chevron-down text-sm text-oliveSoft transition-transform duration-300"></i>
           </button>
           <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-[#fffaf2]/90 leading-relaxed font-sans">
-            <div class="pb-5">
+            <div class="pb-6 pt-2 border-t border-oliveSoft/20">
               Making the journey to celebrate with us is the greatest gift of all! If you’d still like to contribute something extra, a small contribution toward our honeymoon fund would mean the world to us.
             </div>
           </div>
@@ -671,6 +674,7 @@
     </div>
   </section>
 
+  
   <!-- FOOTER -->
   <footer class="py-12 px-6 text-center text-xs text-richSage uppercase tracking-widest border-t border-sageGreen/40">
     <p class="font-script text-2xl text-richSage lowercase mb-2">Damlanur &amp; Luka</p>
