@@ -66,7 +66,46 @@
   </style>
 </head>
 <body class="bg-softSage text-darkSage font-serif antialiased selection:bg-cardBg selection:text-[#fffaf2]">
+<body class="bg-softSage font-sans antialiased text-darkSage min-h-screen">
 
+  <!-- ================= PASTE HERE (START) ================= -->
+  <!-- REBEL GATEKEEPER LOCK OVERLAY -->
+  <div id="gatekeeper" class="fixed inset-0 z-50 flex items-center justify-center bg-softSage px-4">
+    <div class="max-w-md w-full bg-cardBg rounded-3xl p-8 border border-oliveSoft/40 shadow-2xl text-center text-[#fffaf2]">
+      <div class="mb-4">
+        <i class="fa-solid fa-shield-halved text-4xl text-oliveSoft"></i>
+      </div>
+      <span class="font-starwars text-xs tracking-[0.2em] lowercase text-oliveSoft mb-2 block">
+        restricted transmission
+      </span>
+      <h2 class="text-2xl font-serif font-bold text-[#fffaf2] mb-3">Allied Security Clearance</h2>
+      <p class="text-sm text-[#fffaf2]/80 font-sans mb-6">
+        Please enter the secret clearance code to view mission details.
+      </p>
+
+      <form id="gatekeeperForm" class="space-y-4">
+        <input 
+          type="password" 
+          id="gatekeeperInput" 
+          placeholder="Enter Secret Passcode" 
+          class="w-full px-4 py-3 rounded-xl bg-[#5e6553]/60 border border-oliveSoft/40 text-center text-lg tracking-widest text-[#fffaf2] placeholder-[#fffaf2]/50 focus:outline-none focus:border-oliveSoft"
+          required
+        />
+        <p id="gatekeeperError" class="text-xs text-rose-300 font-sans hidden">
+          Incorrect passcode. Access denied.
+        </p>
+        <button 
+          type="submit" 
+          class="w-full py-3 rounded-full bg-[#5e6553] hover:bg-oliveDark border border-oliveSoft/40 text-xs uppercase tracking-wider font-semibold transition shadow-md"
+        >
+          Unlock Coordinates
+        </button>
+      </form>
+    </div>
+  </div>
+  <!-- ================= PASTE HERE (END) ================= -->
+
+  <!-- (Your existing navigation, header, story, and Q&A follow right below) -->
   <!-- NAVBAR -->
   <header class="fixed top-0 left-0 right-0 z-50 bg-softSage/90 backdrop-blur-md border-b border-sageGreen/40 transition-all duration-300" id="mainHeader">
     <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -832,5 +871,45 @@
       });
     }
   </script>
+</body>
+</html>
+<!-- ================= PASTE HERE (START) ================= -->
+  <script>
+    (function() {
+      // Change your password here (keep it lowercase):
+      const SECRET_CODE = "roda1964"; 
+
+      const gatekeeper = document.getElementById("gatekeeper");
+      const form = document.getElementById("gatekeeperForm");
+      const input = document.getElementById("gatekeeperInput");
+      const errorMsg = document.getElementById("gatekeeperError");
+
+      // Check if the user already unlocked the site during this browser session
+      if (sessionStorage.getItem("rebel_access") === "granted") {
+        gatekeeper.style.display = "none";
+      }
+
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const entered = input.value.trim().toLowerCase();
+
+        if (entered === SECRET_CODE) {
+          sessionStorage.setItem("rebel_access", "granted");
+          // Smooth fade out
+          gatekeeper.style.transition = "opacity 0.4s ease";
+          gatekeeper.style.opacity = "0";
+          setTimeout(() => {
+            gatekeeper.style.display = "none";
+          }, 400);
+        } else {
+          errorMsg.classList.remove("hidden");
+          input.value = "";
+          input.focus();
+        }
+      });
+    })();
+  </script>
+  <!-- ================= PASTE HERE (END) ================= -->
+
 </body>
 </html>
