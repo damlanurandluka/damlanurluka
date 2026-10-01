@@ -68,9 +68,10 @@
 <body class="bg-softSage text-darkSage font-serif antialiased selection:bg-cardBg selection:text-[#fffaf2]">
 <body class="bg-softSage font-sans antialiased text-darkSage min-h-screen">
 
-  <!-- ================= PASTE HERE (START) ================= -->
-  <!-- REBEL GATEKEEPER LOCK OVERLAY -->
-  <div id="gatekeeper" class="fixed inset-0 z-50 flex items-center justify-center bg-softSage px-4">
+<body class="bg-softSage font-sans antialiased text-darkSage min-h-screen">
+
+  <!-- REBEL GATEKEEPER LOCK OVERLAY (Full screen lock) -->
+  <div id="gatekeeper" class="fixed inset-0 z-[9999] flex items-center justify-center bg-softSage px-4">
     <div class="max-w-md w-full bg-cardBg rounded-3xl p-8 border border-oliveSoft/40 shadow-2xl text-center text-[#fffaf2]">
       <div class="mb-4">
         <i class="fa-solid fa-shield-halved text-4xl text-oliveSoft"></i>
@@ -103,7 +104,14 @@
       </form>
     </div>
   </div>
-  <!-- ================= PASTE HERE (END) ================= -->
+
+  <!-- WRAP ALL SITE CONTENT HERE (Starts hidden so nothing shows or scrolls) -->
+  <div id="siteContent" class="hidden">
+    
+    <!-- YOUR NAV BAR GOES HERE -->
+    <!-- YOUR HERO / STORY / SCHEDULE / Q&A GOES HERE -->
+
+  </div> <!-- END OF #siteContent -->
 
   <!-- (Your existing navigation, header, story, and Q&A follow right below) -->
   <!-- NAVBAR -->
@@ -204,15 +212,14 @@
         </div>
 
         <!-- Action Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 font-sans">
-          <a href="#rsvp" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-cardBg text-[#fffaf2] font-semibold hover:bg-oliveDark transition shadow-md hover:shadow-lg text-xs uppercase tracking-wider text-center border border-oliveSoft/30">
-            Confirm Your Attendance
-          </a>
-          <a href="#timeline" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-softSage text-richSage border-2 border-cardBg hover:bg-cardBg hover:text-[#fffaf2] transition text-xs uppercase tracking-wider text-center font-semibold shadow-sm">
-            View The Master Plan
-          </a>
-        </div>
-      </div>
+        <div class="flex flex-wrap justify-center gap-4 pt-4">
+  <a href="#rsvp" class="px-6 py-3 rounded-full bg-oliveDark text-[#fffaf2] text-xs font-semibold uppercase tracking-wider shadow-sm hover:opacity-95 transition">
+    Confirm Your Attendance
+  </a>
+  <a href="#qa" class="px-6 py-3 rounded-full border border-oliveDark/40 text-richSage text-xs font-semibold uppercase tracking-wider hover:bg-oliveSoft/20 transition">
+    Questions &amp; Answers
+  </a>
+</div>
 
     </div>
   </section>
@@ -874,41 +881,44 @@
 </body>
 </html>
 <!-- ================= PASTE HERE (START) ================= -->
-  <script>
-    (function() {
-      // Change your password here (keep it lowercase):
-      const SECRET_CODE = "roda1964"; 
+ <script>
+  (function() {
+    const SECRET_CODE = "roda1964"; // Your passcode (lowercase)
 
-      const gatekeeper = document.getElementById("gatekeeper");
-      const form = document.getElementById("gatekeeperForm");
-      const input = document.getElementById("gatekeeperInput");
-      const errorMsg = document.getElementById("gatekeeperError");
+    const gatekeeper = document.getElementById("gatekeeper");
+    const siteContent = document.getElementById("siteContent");
+    const form = document.getElementById("gatekeeperForm");
+    const input = document.getElementById("gatekeeperInput");
+    const errorMsg = document.getElementById("gatekeeperError");
 
-      // Check if the user already unlocked the site during this browser session
-      if (sessionStorage.getItem("rebel_access") === "granted") {
-        gatekeeper.style.display = "none";
+    function unlockSite() {
+      gatekeeper.style.display = "none";
+      siteContent.classList.remove("hidden");
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    // Check if already authenticated this session
+    if (sessionStorage.getItem("rebel_access") === "granted") {
+      unlockSite();
+    } else {
+      // Lock scroll while gatekeeper is active
+      document.body.classList.add("overflow-hidden");
+    }
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      if (input.value.trim().toLowerCase() === SECRET_CODE) {
+        sessionStorage.setItem("rebel_access", "granted");
+        unlockSite();
+      } else {
+        errorMsg.classList.remove("hidden");
+        input.value = "";
+        input.focus();
       }
+    });
+  })();
+</script>
 
-      form.addEventListener("submit", function(e) {
-        e.preventDefault();
-        const entered = input.value.trim().toLowerCase();
-
-        if (entered === SECRET_CODE) {
-          sessionStorage.setItem("rebel_access", "granted");
-          // Smooth fade out
-          gatekeeper.style.transition = "opacity 0.4s ease";
-          gatekeeper.style.opacity = "0";
-          setTimeout(() => {
-            gatekeeper.style.display = "none";
-          }, 400);
-        } else {
-          errorMsg.classList.remove("hidden");
-          input.value = "";
-          input.focus();
-        }
-      });
-    })();
-  </script>
   <!-- ================= PASTE HERE (END) ================= -->
 
 </body>
