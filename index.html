@@ -493,7 +493,7 @@
       <div class="bg-cardBg rounded-3xl p-8 sm:p-10 border border-oliveSoft/40 shadow-lg text-[#fffaf2]">
         <form id="rsvpForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
           
-          <!-- Web3Forms Key & Settings (Restored Original Active Key) -->
+          <!-- Web3Forms Key & Settings -->
           <input type="hidden" name="access_key" value="87dd05f4-c7a7-4c46-9880-f5dc478156c0">
           <input type="hidden" name="subject" value="New Wedding RSVP Submission!">
           <input type="hidden" name="from_name" value="Wedding Website RSVP">
@@ -546,7 +546,7 @@
             </div>
           </div>
 
-          <!-- Plus One Details & Disclaimer (Expands on "Yes") -->
+          <!-- Plus One Details & Disclaimer -->
           <div id="plusOneContainer" class="hidden space-y-3 transition-all duration-300">
             <div>
               <label for="plusOneName" class="block text-xs uppercase tracking-wider font-semibold text-[#fffaf2] mb-2 font-sans">Name of your Plus One *</label>
@@ -559,7 +559,6 @@
               >
             </div>
             
-            <!-- Friendly Disclaimer Note -->
             <div class="p-3.5 rounded-xl bg-[#5e6553]/60 border border-oliveSoft/30 text-xs text-oliveSoft leading-relaxed font-sans">
               <span class="font-semibold text-[#fffaf2] block mb-1">
                 <i class="fa-solid fa-circle-info mr-1 text-oliveSoft"></i> Note on Plus Ones:
@@ -567,84 +566,84 @@
               Because we are keeping our celebration intimate, if we haven’t had the chance to meet or get to know your plus one yet, they are very welcome to join us for the friethuis dinner and party! We just kindly ask that they take care of their own food and drink tab. Thank you so much for understanding!
             </div>
           </div>
-<!-- Dietary Preferences Field -->
-<div class="space-y-4 text-left">
-  <label class="block text-xs font-semibold uppercase tracking-wider text-[#fffaf2]/90">
-    Dietary Preference <span class="text-rose-300">*</span>
-  </label>
-  
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-    <!-- Option: Vegetarian / Vegan -->
-    <label class="flex items-center gap-3 p-3.5 rounded-xl bg-[#5e6553]/50 border border-oliveSoft/30 cursor-pointer hover:bg-[#5e6553]/70 transition">
-      <input 
-        type="radio" 
-        name="dietary_preference" 
-        value="Vegetarian/Vegan" 
-        class="accent-[#9aa88a] w-4 h-4 cursor-pointer"
-        onchange="toggleMeatOptions(false)"
-        required
-      />
-      <span class="text-sm text-[#fffaf2]">Vegetarian / Vegan</span>
-    </label>
 
-    <!-- Option: Meat Eater -->
-    <label class="flex items-center gap-3 p-3.5 rounded-xl bg-[#5e6553]/50 border border-oliveSoft/30 cursor-pointer hover:bg-[#5e6553]/70 transition">
-      <input 
-        type="radio" 
-        name="dietary_preference" 
-        value="Meat Eater" 
-        class="accent-[#9aa88a] w-4 h-4 cursor-pointer"
-        onchange="toggleMeatOptions(true)"
-        required
-      />
-      <span class="text-sm text-[#fffaf2]">Meat Eater</span>
-    </label>
-  </div>
+          <!-- Dietary Preferences Field -->
+          <div class="space-y-4 text-left">
+            <label class="block text-xs font-semibold uppercase tracking-wider text-[#fffaf2]/90 font-sans">
+              Dietary Preference <span class="text-rose-300">*</span>
+            </label>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <!-- Option: Vegetarian / Vegan -->
+              <label class="flex items-center gap-3 p-3.5 rounded-xl bg-[#5e6553]/50 border border-oliveSoft/30 cursor-pointer hover:bg-[#5e6553]/70 transition">
+                <input 
+                  type="radio" 
+                  name="dietary_preference" 
+                  value="Vegetarian/Vegan" 
+                  class="accent-[#9aa88a] w-4 h-4 cursor-pointer"
+                  onchange="toggleMeatOptions(false)"
+                  required
+                />
+                <span class="text-sm text-[#fffaf2]">Vegetarian / Vegan</span>
+              </label>
 
-  <!-- Meat Sub-Selection (Strictly 1 choice) -->
-  <div id="meatDetails" class="hidden p-4 rounded-xl bg-[#4d5343]/60 border border-oliveSoft/40 space-y-2">
-    <p class="text-xs text-[#fffaf2]/80 font-medium">Select your meat preference <span class="text-rose-300">*</span>:</p>
-    <div class="flex flex-wrap gap-4 pt-1">
-      <label class="flex items-center gap-2 cursor-pointer text-sm text-[#fffaf2]">
-        <input 
-          type="radio" 
-          name="meat_specific" 
-          value="Cow and Chicken" 
-          class="accent-[#9aa88a] w-4 h-4 cursor-pointer"
-        />
-        I only eat cow and chicken.
-      </label>
-      <label class="flex items-center gap-2 cursor-pointer text-sm text-[#fffaf2]">
-        <input 
-          type="radio" 
-          name="meat_specific" 
-          value="All meat" 
-          class="accent-[#9aa88a] w-4 h-4 cursor-pointer"
-        />
-        I eat all meat.
-      </label>
-    </div>
-  </div>
-</div>
+              <!-- Option: Meat Eater -->
+              <label class="flex items-center gap-3 p-3.5 rounded-xl bg-[#5e6553]/50 border border-oliveSoft/30 cursor-pointer hover:bg-[#5e6553]/70 transition">
+                <input 
+                  type="radio" 
+                  name="dietary_preference" 
+                  value="Meat Eater" 
+                  class="accent-[#9aa88a] w-4 h-4 cursor-pointer"
+                  onchange="toggleMeatOptions(true)"
+                  required
+                />
+                <span class="text-sm text-[#fffaf2]">Meat Eater</span>
+              </label>
+            </div>
 
-  <!-- Written Allergies Field -->
-  <div class="space-y-1.5 pt-1">
-    <label for="allergies" class="block text-xs font-semibold uppercase tracking-wider text-[#fffaf2]/90">
-      Allergies &amp; Intolerances
-    </label>
-    <input 
-      type="text" 
-      id="allergies" 
-      name="allergies" 
-      placeholder="e.g. Gluten, nuts, lactose (or write 'None')" 
-      class="w-full px-4 py-3 rounded-xl bg-[#5e6553]/50 border border-oliveSoft/30 text-sm text-[#fffaf2] placeholder-[#fffaf2]/50 focus:outline-none focus:border-oliveSoft transition"
-    />
-  </div>
-</div>
+            <!-- Meat Sub-Selection (Strictly 1 choice) -->
+            <div id="meatDetails" class="hidden p-4 rounded-xl bg-[#4d5343]/60 border border-oliveSoft/40 space-y-2">
+              <p class="text-xs text-[#fffaf2]/80 font-medium">Select your meat preference <span class="text-rose-300">*</span>:</p>
+              <div class="flex flex-wrap gap-4 pt-1">
+                <label class="flex items-center gap-2 cursor-pointer text-sm text-[#fffaf2]">
+                  <input 
+                    type="radio" 
+                    name="meat_specific" 
+                    value="Cow and Chicken" 
+                    class="accent-[#9aa88a] w-4 h-4 cursor-pointer"
+                  />
+                  I only eat cow and chicken.
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer text-sm text-[#fffaf2]">
+                  <input 
+                    type="radio" 
+                    name="meat_specific" 
+                    value="All meat" 
+                    class="accent-[#9aa88a] w-4 h-4 cursor-pointer"
+                  />
+                  I eat all meat.
+                </label>
+              </div>
+            </div>
+
+            <!-- Written Allergies Field -->
+            <div class="space-y-1.5 pt-1">
+              <label for="allergies" class="block text-xs font-semibold uppercase tracking-wider text-[#fffaf2]/90 font-sans">
+                Allergies &amp; Intolerances
+              </label>
+              <input 
+                type="text" 
+                id="allergies" 
+                name="allergies" 
+                placeholder="e.g. Gluten, nuts, lactose (or write 'None')" 
+                class="w-full px-4 py-3 rounded-xl bg-[#5e6553]/50 border border-oliveSoft/30 text-sm text-[#fffaf2] placeholder-oliveSoft/60 focus:outline-none focus:border-oliveSoft transition"
+              />
+            </div>
+          </div>
 
           <!-- Song Request -->
           <div>
-            <label for="songRequest" class="block text-xs uppercase tracking-wider font-semibold text-softSage mb-2 font-sans">Song Request</label>
+            <label for="songRequest" class="block text-xs uppercase tracking-wider font-semibold text-[#fffaf2] mb-2 font-sans">Song Request</label>
             <input 
               type="text" 
               name="Song_Request"
