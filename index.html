@@ -65,40 +65,63 @@
     }
   </style>
 </head>
-<body class="bg-softSage font-sans antialiased text-darkSage min-h-screen">
-
-  <!-- REBEL GATEKEEPER LOCK OVERLAY (Full screen lock) -->
-  <div id="gatekeeper" class="fixed inset-0 z-[9999] flex items-center justify-center bg-softSage px-4">
-    <div class="max-w-md w-full bg-cardBg rounded-3xl p-8 border border-oliveSoft/40 shadow-2xl text-center text-[#fffaf2]">
-      <div class="mb-4">
-        <i class="fa-solid fa-shield-halved text-4xl text-oliveSoft"></i>
+<body class="bg-softSage font-sans antialiased text-darkSage min-h-  <!-- ENVELOPE GATEKEEPER LOCK OVERLAY -->
+  <div id="gatekeeper" class="fixed inset-0 z-[9999] flex items-center justify-center bg-[#c9d4c2] px-4 overflow-hidden transition-opacity duration-700">
+    
+    <!-- Outer Envelope Container -->
+    <div id="envelopeWrapper" class="relative w-full max-w-md perspective transition-transform duration-700">
+      
+      <!-- Top Envelope Flap -->
+      <div id="envelopeFlap" class="w-0 h-0 mx-auto border-l-[180px] sm:border-l-[210px] border-l-transparent border-r-[180px] sm:border-r-[210px] border-r-transparent border-t-[130px] border-t-[#6b7560] origin-top transition-transform duration-700 ease-in-out relative z-30 drop-shadow-md">
+        <!-- Wax Seal Icon sitting on flap point -->
+        <div class="absolute -top-[145px] left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[#8f9b80] border-2 border-[#fffaf2]/70 flex items-center justify-center text-xs font-serif font-bold text-[#fffaf2] shadow-lg">
+          D&amp;L
+        </div>
       </div>
-      <span class="font-starwars text-xs tracking-[0.2em] lowercase text-oliveSoft mb-2 block">
-        restricted transmission
-      </span>
-      <h2 class="text-2xl font-serif font-bold text-[#fffaf2] mb-3">Allied Security Clearance</h2>
-      <p class="text-sm text-[#fffaf2]/80 font-sans mb-6">
-        Please enter the secret clearance code to view mission details.
-      </p>
 
-      <form id="gatekeeperForm" class="space-y-4">
-        <input 
-          type="password" 
-          id="gatekeeperInput" 
-          placeholder="Enter Secret Passcode" 
-          class="w-full px-4 py-3 rounded-xl bg-[#5e6553]/60 border border-oliveSoft/40 text-center text-lg tracking-widest text-[#fffaf2] placeholder-[#fffaf2]/50 focus:outline-none focus:border-oliveSoft"
-          required
-        />
-        <p id="gatekeeperError" class="text-xs text-rose-300 font-sans hidden">
-          Incorrect passcode. Access denied.
-        </p>
-        <button 
-          type="submit" 
-          class="w-full py-3 rounded-full bg-[#5e6553] hover:bg-oliveDark border border-oliveSoft/40 text-xs uppercase tracking-wider font-semibold transition shadow-md"
-        >
-          Unlock Coordinates
-        </button>
-      </form>
+      <!-- Letter Body / Main Pocket -->
+      <div class="relative bg-cardBg rounded-3xl p-7 sm:p-9 border-2 border-oliveSoft/50 shadow-2xl text-center text-[#fffaf2] -mt-16 z-20 overflow-hidden">
+        
+        <!-- Subtle Envelope Liner Stitching -->
+        <div class="absolute inset-2 rounded-2xl border border-dashed border-oliveSoft/30 pointer-events-none"></div>
+
+        <div class="relative z-10 pt-4">
+          <span class="font-starwars text-[11px] tracking-[0.25em] lowercase text-oliveSoft mb-1 block">
+            restricted transmission
+          </span>
+          <h2 class="text-3xl font-serif text-[#fffaf2] font-normal mb-1">
+            An Invitation For You
+          </h2>
+          <p class="text-xs text-[#fffaf2]/80 font-sans mb-6">
+            Enter the clearance passcode to break the seal and view the coordinates.
+          </p>
+
+          <form id="gatekeeperForm" class="space-y-4">
+            <div class="relative">
+              <input 
+                type="password" 
+                id="gatekeeperInput" 
+                placeholder="Enter Passcode" 
+                class="w-full px-4 py-3.5 rounded-xl bg-[#5e6553]/70 border border-oliveSoft/50 text-center text-base tracking-widest text-[#fffaf2] placeholder-[#fffaf2]/50 focus:outline-none focus:border-oliveSoft focus:ring-1 focus:ring-oliveSoft font-mono"
+                required
+                autocomplete="off"
+              />
+            </div>
+            
+            <p id="gatekeeperError" class="text-xs text-rose-300 font-sans hidden">
+              Incorrect passcode. The seal remains unbroken.
+            </p>
+
+            <button 
+              type="submit" 
+              class="w-full py-3.5 rounded-full bg-[#5e6553] hover:bg-oliveDark border border-oliveSoft/40 text-xs uppercase tracking-widest font-semibold transition shadow-md hover:shadow-lg text-[#fffaf2]"
+            >
+              Open Invitation
+            </button>
+          </form>
+        </div>
+
+      </div>
     </div>
   </div>
 
