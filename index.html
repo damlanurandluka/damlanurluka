@@ -65,72 +65,77 @@
     }
   </style>
 </head>
-    <!-- FULL ENVELOPE GATEKEEPER LOCK SCREEN -->
-  <div id="gatekeeper" class="fixed inset-0 z-[9999] flex flex-col justify-between bg-[#c8d4c0] overflow-hidden transition-opacity duration-700 select-none">
+     <!-- LUXURY SCALLOPED ENVELOPE GATEKEEPER -->
+  <div id="gatekeeper" class="fixed inset-0 z-[9999] flex flex-col justify-between bg-[#9da88a] overflow-hidden transition-opacity duration-700 select-none">
     
-    <!-- Top Flap of the Envelope -->
-    <div id="envelopeFlap" class="relative w-full z-40 origin-top transition-transform duration-700 ease-in-out drop-shadow-xl">
-      <!-- Angled SVG Envelope Flap spanning full width -->
-      <svg viewBox="0 0 1000 380" preserveAspectRatio="none" class="w-full h-32 sm:h-44 fill-[#657059] block">
-        <polygon points="0,0 1000,0 500,380" />
-      </svg>
+    <!-- TOP SCALLOPED FLAP -->
+    <div id="envelopeFlap" class="relative w-full z-40 transition-transform duration-700 ease-in-out origin-top drop-shadow-[0_12px_24px_rgba(0,0,0,0.18)]">
       
-      <!-- Wax Seal Stamp centered right at the apex of the flap -->
-      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#828f75] border-[3px] border-[#ede8dd] shadow-2xl flex items-center justify-center text-xs sm:text-sm font-serif font-bold text-[#fffaf2] tracking-wider">
-        D&amp;L
+      <!-- Scalloped Curvature Flap -->
+      <svg viewBox="0 0 1200 480" preserveAspectRatio="none" class="w-full h-56 sm:h-72 md:h-80 fill-[#a8b495] block filter brightness-105">
+        <!-- Smooth scalloped envelope curve -->
+        <path d="M 0,0 L 1200,0 L 1200,160 C 1050,160 980,240 850,240 C 730,240 680,440 600,440 C 520,440 470,240 350,240 C 220,240 150,160 0,160 Z" />
+      </svg>
+
+      <!-- Embossed Names & Text on the Flap -->
+      <div class="absolute inset-x-0 top-8 sm:top-12 flex flex-col items-center justify-center text-center px-4 pointer-events-none">
+        <span class="text-[9px] sm:text-[10px] tracking-[0.35em] uppercase text-[#fffaf2]/80 font-sans font-semibold drop-shadow-sm mb-1">
+          A Secret Transmission From
+        </span>
+        <h2 class="font-script text-4xl sm:text-6xl text-[#fffaf2] tracking-wide drop-shadow-sm leading-tight">
+          Damlanur &amp; Luka
+        </h2>
       </div>
-    </div>
 
-    <!-- Letter Card / Passport Slip Tucked Inside -->
-    <div id="envelopeWrapper" class="relative w-full max-w-sm sm:max-w-md mx-auto px-5 z-20 my-auto transition-all duration-700">
-      <div class="bg-cardBg rounded-3xl p-6 sm:p-8 pt-10 border border-oliveSoft/40 shadow-2xl text-center text-[#fffaf2] relative overflow-hidden">
-        
-        <!-- Subtle Inner Card Stitching -->
-        <div class="absolute inset-2.5 rounded-2xl border border-dashed border-oliveSoft/30 pointer-events-none"></div>
-
-        <div class="relative z-10 space-y-2">
-          <span class="font-starwars text-[11px] tracking-[0.25em] lowercase text-oliveSoft block">
-            restricted transmission
-          </span>
-          
-          <h2 class="text-2xl sm:text-3xl font-serif text-[#fffaf2] font-normal">
-            An Invitation For You
-          </h2>
-          
-          <p class="text-xs text-[#fffaf2]/80 font-sans max-w-xs mx-auto pb-2 leading-relaxed">
-            Enter the clearance passcode to break the seal and reveal mission coordinates.
-          </p>
-
-          <form id="gatekeeperForm" class="space-y-3.5 pt-1">
-            <input 
-              type="password" 
-              id="gatekeeperInput" 
-              placeholder="Enter Passcode" 
-              class="w-full px-4 py-3 rounded-xl bg-[#5e6553]/70 border border-oliveSoft/50 text-center text-sm tracking-widest text-[#fffaf2] placeholder-[#fffaf2]/50 focus:outline-none focus:border-oliveSoft font-mono"
-              required
-              autocomplete="off"
-            />
-            
-            <p id="gatekeeperError" class="text-xs text-rose-300 font-sans hidden">
-              Incorrect passcode. The seal remains unbroken.
-            </p>
-
-            <button 
-              type="submit" 
-              class="w-full py-3.5 rounded-full bg-[#5e6553] hover:bg-oliveDark border border-oliveSoft/40 text-xs uppercase tracking-widest font-semibold transition shadow-md hover:shadow-lg text-[#fffaf2]"
-            >
-              Open Invitation
-            </button>
-          </form>
+      <!-- Centered 3D Oval Cameo Wax Seal -->
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-50">
+        <div class="w-16 h-22 sm:w-20 sm:h-28 rounded-[50%] bg-[#faf6ee] border-4 border-[#eee7d8] shadow-[0_8px_20px_rgba(0,0,0,0.22),inset_0_2px_6px_rgba(255,255,255,0.9),inset_0_-3px_6px_rgba(0,0,0,0.12)] flex flex-col items-center justify-center text-center p-2 cursor-default">
+          <div class="w-12 h-18 sm:w-16 sm:h-22 rounded-[50%] border border-[#d8d0be]/60 flex flex-col items-center justify-center shadow-inner">
+            <span class="font-serif italic text-base sm:text-lg text-[#889476] font-bold leading-none">D&amp;L</span>
+            <span class="text-[7px] uppercase tracking-widest text-[#9ca78b] mt-1 font-sans font-semibold">1962</span>
+          </div>
         </div>
-
       </div>
+
     </div>
 
-    <!-- Lower Pocket V-folds forming the envelope body -->
-    <div class="relative w-full z-30 pointer-events-none">
-      <svg viewBox="0 0 1000 240" preserveAspectRatio="none" class="w-full h-24 sm:h-32 fill-[#56604b] block drop-shadow-[0_-8px_16px_rgba(0,0,0,0.15)]">
-        <polygon points="0,240 1000,240 1000,0 500,160 0,0" />
+    <!-- LOWER BODY OF ENVELOPE (Holds Passcode Slip) -->
+    <div id="envelopeWrapper" class="relative w-full max-w-sm sm:max-w-md mx-auto px-6 z-30 pt-16 sm:pt-20 pb-10 text-center transition-all duration-700">
+      
+      <p class="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-[#fffaf2]/90 font-sans font-semibold mb-4 drop-shadow-sm">
+        Break the seal to open
+      </p>
+
+      <form id="gatekeeperForm" class="space-y-3.5 max-w-xs mx-auto">
+        <div class="relative">
+          <input 
+            type="password" 
+            id="gatekeeperInput" 
+            placeholder="Enter Passcode" 
+            class="w-full px-5 py-3 rounded-full bg-[#f4f7f0]/90 border border-white/60 text-center text-sm tracking-widest text-[#2f382a] placeholder-[#5e6553]/60 focus:outline-none focus:ring-2 focus:ring-[#5e6553] shadow-md font-mono"
+            required
+            autocomplete="off"
+          />
+        </div>
+        
+        <p id="gatekeeperError" class="text-xs text-rose-200 font-sans font-medium drop-shadow-sm hidden">
+          Incorrect passcode. Access denied.
+        </p>
+
+        <button 
+          type="submit" 
+          class="w-full py-3 rounded-full bg-[#5e6553] hover:bg-[#4d5343] border border-[#a6b89a]/50 text-[11px] uppercase tracking-[0.2em] font-semibold transition-all shadow-lg text-[#fffaf2]"
+        >
+          Open The Invitation
+        </button>
+      </form>
+
+    </div>
+
+    <!-- ENVELOPE BOTTOM DIAGONAL CREASE -->
+    <div class="relative w-full z-20 pointer-events-none -mt-16">
+      <svg viewBox="0 0 1200 200" preserveAspectRatio="none" class="w-full h-20 sm:h-28 fill-[#949f81] block opacity-60">
+        <polygon points="0,200 1200,200 600,0" />
       </svg>
     </div>
 
