@@ -65,81 +65,83 @@
     }
   </style>
 </head>
-     <!-- LUXURY SCALLOPED ENVELOPE GATEKEEPER -->
-  <div id="gatekeeper" class="fixed inset-0 z-[9999] flex flex-col justify-between bg-[#9da88a] overflow-hidden transition-opacity duration-700 select-none">
+  <!-- LUXURY STATIONERY ENVELOPE GATEKEEPER -->
+  <div id="gatekeeper" class="fixed inset-0 z-[9999] flex items-center justify-center bg-[#dbe2d4] px-4 overflow-hidden transition-all duration-700 select-none">
     
-    <!-- TOP SCALLOPED FLAP -->
-    <div id="envelopeFlap" class="relative w-full z-40 transition-transform duration-700 ease-in-out origin-top drop-shadow-[0_12px_24px_rgba(0,0,0,0.18)]">
+    <!-- Realistic Envelope Card Container (Aspect Ratio 4:3) -->
+    <div class="relative w-full max-w-[420px] aspect-[4/3] transition-transform duration-700" id="envelopeContainer">
       
-      <!-- Scalloped Curvature Flap -->
-      <svg viewBox="0 0 1200 480" preserveAspectRatio="none" class="w-full h-56 sm:h-72 md:h-80 fill-[#a8b495] block filter brightness-105">
-        <!-- Smooth scalloped envelope curve -->
-        <path d="M 0,0 L 1200,0 L 1200,160 C 1050,160 980,240 850,240 C 730,240 680,440 600,440 C 520,440 470,240 350,240 C 220,240 150,160 0,160 Z" />
-      </svg>
+      <!-- Back Lining of Envelope -->
+      <div class="absolute inset-0 bg-[#8c977d] rounded-2xl shadow-2xl border border-[#7a856c]"></div>
 
-      <!-- Embossed Names & Text on the Flap -->
-      <div class="absolute inset-x-0 top-8 sm:top-12 flex flex-col items-center justify-center text-center px-4 pointer-events-none">
-        <span class="text-[9px] sm:text-[10px] tracking-[0.35em] uppercase text-[#fffaf2]/80 font-sans font-semibold drop-shadow-sm mb-1">
-          A Secret Transmission From
-        </span>
-        <h2 class="font-script text-4xl sm:text-6xl text-[#fffaf2] tracking-wide drop-shadow-sm leading-tight">
-          Damlanur &amp; Luka
-        </h2>
-      </div>
-
-      <!-- Centered 3D Oval Cameo Wax Seal -->
-      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-50">
-        <div class="w-16 h-22 sm:w-20 sm:h-28 rounded-[50%] bg-[#faf6ee] border-4 border-[#eee7d8] shadow-[0_8px_20px_rgba(0,0,0,0.22),inset_0_2px_6px_rgba(255,255,255,0.9),inset_0_-3px_6px_rgba(0,0,0,0.12)] flex flex-col items-center justify-center text-center p-2 cursor-default">
-          <div class="w-12 h-18 sm:w-16 sm:h-22 rounded-[50%] border border-[#d8d0be]/60 flex flex-col items-center justify-center shadow-inner">
-            <span class="font-serif italic text-base sm:text-lg text-[#889476] font-bold leading-none">D&amp;L</span>
-            <span class="text-[7px] uppercase tracking-widest text-[#9ca78b] mt-1 font-sans font-semibold">1962</span>
-          </div>
+      <!-- SLIDING INNER CARD (Passcode Prompt) -->
+      <div id="letterCard" class="absolute inset-x-4 top-4 bottom-4 bg-[#fbf9f5] rounded-xl p-6 text-center flex flex-col justify-between shadow-md transition-all duration-700 ease-out z-10 translate-y-0 opacity-0 pointer-events-none border border-[#e5dfd3]">
+        <div class="space-y-1">
+          <span class="font-starwars text-[10px] tracking-[0.25em] lowercase text-[#6e7861] block">restricted transmission</span>
+          <h3 class="font-serif text-2xl text-[#2c3e2a] font-normal">Allied Clearance</h3>
+          <p class="text-[11px] text-[#5e6553] font-sans">Enter the passcode from your invitation card</p>
         </div>
-      </div>
 
-    </div>
-
-    <!-- LOWER BODY OF ENVELOPE (Holds Passcode Slip) -->
-    <div id="envelopeWrapper" class="relative w-full max-w-sm sm:max-w-md mx-auto px-6 z-30 pt-16 sm:pt-20 pb-10 text-center transition-all duration-700">
-      
-      <p class="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-[#fffaf2]/90 font-sans font-semibold mb-4 drop-shadow-sm">
-        Break the seal to open
-      </p>
-
-      <form id="gatekeeperForm" class="space-y-3.5 max-w-xs mx-auto">
-        <div class="relative">
+        <form id="gatekeeperForm" class="space-y-2.5 my-auto">
           <input 
             type="password" 
             id="gatekeeperInput" 
             placeholder="Enter Passcode" 
-            class="w-full px-5 py-3 rounded-full bg-[#f4f7f0]/90 border border-white/60 text-center text-sm tracking-widest text-[#2f382a] placeholder-[#5e6553]/60 focus:outline-none focus:ring-2 focus:ring-[#5e6553] shadow-md font-mono"
+            class="w-full px-4 py-2.5 rounded-full bg-[#f0ede6] border border-[#d6cfc0] text-center text-sm tracking-widest text-[#2c3e2a] placeholder-[#8c977d] focus:outline-none focus:ring-1 focus:ring-[#6e7861] font-mono shadow-inner"
             required
             autocomplete="off"
           />
+          <p id="gatekeeperError" class="text-[11px] text-rose-500 font-sans hidden">
+            Incorrect passcode. Access denied.
+          </p>
+          <button 
+            type="submit" 
+            class="w-full py-2.5 rounded-full bg-[#5e6553] hover:bg-[#434b3c] text-xs uppercase tracking-widest font-semibold text-[#fffaf2] transition shadow"
+          >
+            Enter Mission
+          </button>
+        </form>
+
+        <p class="text-[10px] text-[#8c977d] font-sans">Damlanur &amp; Luka · 27 August 2027</p>
+      </div>
+
+      <!-- FRONT POCKET (Left & Right Folds) -->
+      <div class="absolute inset-0 z-20 pointer-events-none overflow-hidden rounded-2xl">
+        <svg viewBox="0 0 400 300" preserveAspectRatio="none" class="w-full h-full fill-[#98a388] drop-shadow-md">
+          <!-- Left diagonal, Right diagonal, Bottom Fold -->
+          <polygon points="0,0 200,160 0,300" fill="#939f83" />
+          <polygon points="400,0 200,160 400,300" fill="#939f83" />
+          <polygon points="0,300 400,300 200,140" fill="#8c977d" />
+        </svg>
+      </div>
+
+      <!-- TOP FOLDING FLAP (Flips Open) -->
+      <div id="envelopeFlap" class="absolute inset-x-0 top-0 h-1/2 z-30 origin-top transition-all duration-700 ease-in-out cursor-pointer group">
+        <svg viewBox="0 0 400 150" preserveAspectRatio="none" class="w-full h-full fill-[#a3af92] drop-shadow-[0_8px_14px_rgba(0,0,0,0.18)]">
+          <polygon points="0,0 400,0 200,150" />
+        </svg>
+
+        <!-- Couple Names Embossed on the Flap -->
+        <div class="absolute inset-x-0 top-3 text-center pointer-events-none">
+          <p class="text-[8px] uppercase tracking-[0.3em] text-[#fffaf2]/80 font-sans font-semibold">An invitation from</p>
+          <p class="font-script text-2xl sm:text-3xl text-[#fffaf2] drop-shadow-sm leading-tight">Damlanur &amp; Luka</p>
         </div>
-        
-        <p id="gatekeeperError" class="text-xs text-rose-200 font-sans font-medium drop-shadow-sm hidden">
-          Incorrect passcode. Access denied.
-        </p>
 
-        <button 
-          type="submit" 
-          class="w-full py-3 rounded-full bg-[#5e6553] hover:bg-[#4d5343] border border-[#a6b89a]/50 text-[11px] uppercase tracking-[0.2em] font-semibold transition-all shadow-lg text-[#fffaf2]"
-        >
-          Open The Invitation
-        </button>
-      </form>
+        <!-- 3D CAMEO WAX SEAL (Click to Open) -->
+        <div id="waxSealBtn" class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 transition-transform group-hover:scale-105 active:scale-95 duration-200">
+          <div class="w-13 h-17 sm:w-14 sm:h-18 rounded-[50%] bg-[#faf6ee] border-2 border-[#eee6d6] shadow-[0_6px_16px_rgba(0,0,0,0.25),inset_0_2px_4px_rgba(255,255,255,0.9),inset_0_-2px_4px_rgba(0,0,0,0.1)] flex items-center justify-center p-1.5 cursor-pointer">
+            <div class="w-full h-full rounded-[50%] border border-[#d8d0be]/60 flex flex-col items-center justify-center shadow-inner">
+              <span class="font-serif italic text-xs text-[#7e8772] font-bold leading-none">D&amp;L</span>
+              <span class="text-[6px] tracking-widest uppercase text-[#9ca78b] mt-0.5 font-semibold">1962</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    </div>
-
-    <!-- ENVELOPE BOTTOM DIAGONAL CREASE -->
-    <div class="relative w-full z-20 pointer-events-none -mt-16">
-      <svg viewBox="0 0 1200 200" preserveAspectRatio="none" class="w-full h-20 sm:h-28 fill-[#949f81] block opacity-60">
-        <polygon points="0,200 1200,200 600,0" />
-      </svg>
-    </div>
-
-  </div>
+      <!-- Bottom Tap Hint -->
+      <div id="openHint" class="absolute -bottom-8 inset-x-0 text-center transition-opacity duration-300">
+        <span class="text-[11px] uppercase tracking-[0.2em] text-[#5e6553] font-semibold cursor-pointer hover:underline">
+          Tap
 
   <!-- WRAP ALL SITE CONTENT HERE (Starts hidden so nothing shows or scrolls) -->
   <div id="siteContent" class="hidden">
@@ -970,56 +972,67 @@
         }
       });
     }
-
-     // 7. Gatekeeper Envelope Unlock Logic
+    // 7. Stationery Envelope Unlock Logic
     (function() {
       const SECRET_CODE = "roda1962";
 
       const gatekeeper = document.getElementById("gatekeeper");
+      const envelopeContainer = document.getElementById("envelopeContainer");
       const envelopeFlap = document.getElementById("envelopeFlap");
-      const envelopeWrapper = document.getElementById("envelopeWrapper");
+      const letterCard = document.getElementById("letterCard");
+      const waxSealBtn = document.getElementById("waxSealBtn");
+      const openHint = document.getElementById("openHint");
       const siteContent = document.getElementById("siteContent");
       const form = document.getElementById("gatekeeperForm");
       const input = document.getElementById("gatekeeperInput");
       const errorMsg = document.getElementById("gatekeeperError");
 
-      function revealSiteDirectly() {
+      function unlockDirectly() {
         gatekeeper.style.display = "none";
         siteContent.classList.remove("hidden");
         document.body.classList.remove("overflow-hidden");
       }
 
-      function animateAndUnlock() {
-        // 1. Flip open the envelope flap
-        if (envelopeFlap) {
-          envelopeFlap.style.transform = "rotateX(180deg)";
-        }
-        
-        // 2. Float envelope up & fade overlay smoothly
-        setTimeout(() => {
-          if (envelopeWrapper) {
-            envelopeWrapper.style.transform = "translateY(-40px) scale(0.96)";
-          }
-          gatekeeper.classList.add("opacity-0");
-        }, 350);
-
-        // 3. Show full site
-        setTimeout(() => {
-          revealSiteDirectly();
-        }, 850);
-      }
-
+      // Check if unlocked earlier in this session
       if (sessionStorage.getItem("rebel_access") === "granted") {
-        revealSiteDirectly();
+        unlockDirectly();
       } else {
         document.body.classList.add("overflow-hidden");
       }
 
+      // Step A: Tap envelope/seal to slide out letter card
+      function openEnvelope() {
+        // 1. Flip the flap open
+        envelopeFlap.style.transform = "rotateX(180deg) translateY(10px)";
+        envelopeFlap.style.zIndex = "5";
+        if (waxSealBtn) waxSealBtn.style.opacity = "0";
+        if (openHint) openHint.style.opacity = "0";
+
+        // 2. Slide letter card out
+        setTimeout(() => {
+          letterCard.classList.remove("opacity-0", "pointer-events-none");
+          letterCard.style.transform = "translateY(-75px)";
+          letterCard.style.zIndex = "40";
+          input.focus();
+        }, 300);
+      }
+
+      envelopeFlap.addEventListener("click", openEnvelope);
+      if (openHint) openHint.addEventListener("click", openEnvelope);
+
+      // Step B: Submit Passcode
       form.addEventListener("submit", function(e) {
         e.preventDefault();
         if (input.value.trim().toLowerCase() === SECRET_CODE) {
           sessionStorage.setItem("rebel_access", "granted");
-          animateAndUnlock();
+          
+          // Smooth fade away into site
+          envelopeContainer.style.transform = "scale(0.92)";
+          gatekeeper.classList.add("opacity-0");
+
+          setTimeout(() => {
+            unlockDirectly();
+          }, 600);
         } else {
           errorMsg.classList.remove("hidden");
           input.value = "";
@@ -1027,6 +1040,75 @@
         }
       });
     })();
+    // 7. Stationery Envelope Unlock Logic
+    (function() {
+      const SECRET_CODE = "roda1962";
+
+      const gatekeeper = document.getElementById("gatekeeper");
+      const envelopeContainer = document.getElementById("envelopeContainer");
+      const envelopeFlap = document.getElementById("envelopeFlap");
+      const letterCard = document.getElementById("letterCard");
+      const waxSealBtn = document.getElementById("waxSealBtn");
+      const openHint = document.getElementById("openHint");
+      const siteContent = document.getElementById("siteContent");
+      const form = document.getElementById("gatekeeperForm");
+      const input = document.getElementById("gatekeeperInput");
+      const errorMsg = document.getElementById("gatekeeperError");
+
+      function unlockDirectly() {
+        gatekeeper.style.display = "none";
+        siteContent.classList.remove("hidden");
+        document.body.classList.remove("overflow-hidden");
+      }
+
+      // Check if unlocked earlier in this session
+      if (sessionStorage.getItem("rebel_access") === "granted") {
+        unlockDirectly();
+      } else {
+        document.body.classList.add("overflow-hidden");
+      }
+
+      // Step A: Tap envelope/seal to slide out letter card
+      function openEnvelope() {
+        // 1. Flip the flap open
+        envelopeFlap.style.transform = "rotateX(180deg) translateY(10px)";
+        envelopeFlap.style.zIndex = "5";
+        if (waxSealBtn) waxSealBtn.style.opacity = "0";
+        if (openHint) openHint.style.opacity = "0";
+
+        // 2. Slide letter card out
+        setTimeout(() => {
+          letterCard.classList.remove("opacity-0", "pointer-events-none");
+          letterCard.style.transform = "translateY(-75px)";
+          letterCard.style.zIndex = "40";
+          input.focus();
+        }, 300);
+      }
+
+      envelopeFlap.addEventListener("click", openEnvelope);
+      if (openHint) openHint.addEventListener("click", openEnvelope);
+
+      // Step B: Submit Passcode
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        if (input.value.trim().toLowerCase() === SECRET_CODE) {
+          sessionStorage.setItem("rebel_access", "granted");
+          
+          // Smooth fade away into site
+          envelopeContainer.style.transform = "scale(0.92)";
+          gatekeeper.classList.add("opacity-0");
+
+          setTimeout(() => {
+            unlockDirectly();
+          }, 600);
+        } else {
+          errorMsg.classList.remove("hidden");
+          input.value = "";
+          input.focus();
+        }
+      });
+    })();
+
     // ... all your JavaScript logic ...
   </script>
 </body>
