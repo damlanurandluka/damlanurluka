@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Damlanur &amp; Luka</title>
   
-  <!-- Fonts: Noto Serif, Noto Sans, Alex Brush -->
+  <!-- Fonts: Noto Serif, Noto Sans,  Alex Brush -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -115,23 +115,27 @@
         </svg>
       </div>
 
-      <!-- TOP FOLDING FLAP (Flips Open) -->
+           <!-- TOP FOLDING FLAP (Flips Open) -->
       <div id="envelopeFlap" class="absolute inset-x-0 top-0 h-1/2 z-30 origin-top transition-all duration-700 ease-in-out cursor-pointer group">
         <svg viewBox="0 0 400 150" preserveAspectRatio="none" class="w-full h-full fill-[#a3af92] drop-shadow-[0_8px_14px_rgba(0,0,0,0.18)]">
           <polygon points="0,0 400,0 200,150" />
         </svg>
 
-        <!-- Couple Names Embossed on the Flap -->
-        <div class="absolute inset-x-0 top-3 text-center pointer-events-none">
-          <p class="text-[8px] uppercase tracking-[0.3em] text-[#fffaf2]/80 font-sans font-semibold">An invitation from</p>
-          <p class="font-script text-2xl sm:text-3xl text-[#fffaf2] drop-shadow-sm leading-tight">Damlanur &amp; Luka</p>
+        <!-- Couple Names Embossed on the Flap in Alex Brush -->
+        <div class="absolute inset-x-0 top-2.5 text-center pointer-events-none">
+          <p class="text-[8px] uppercase tracking-[0.3em] text-[#fffaf2]/80 font-sans font-semibold drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)]">
+            A love letter from
+          </p>
+          <p class="font-script text-3xl sm:text-4xl text-[#fffaf2] tracking-wide leading-tight drop-shadow-[0_2px_3px_rgba(0,0,0,0.25)] filter select-none">
+            Damlanur &amp; Luka
+          </p>
         </div>
 
         <!-- 3D CAMEO WAX SEAL (Click to Open) -->
         <div id="waxSealBtn" class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 transition-transform group-hover:scale-105 active:scale-95 duration-200">
           <div class="w-13 h-17 sm:w-14 sm:h-18 rounded-[50%] bg-[#faf6ee] border-2 border-[#eee6d6] shadow-[0_6px_16px_rgba(0,0,0,0.25),inset_0_2px_4px_rgba(255,255,255,0.9),inset_0_-2px_4px_rgba(0,0,0,0.1)] flex items-center justify-center p-1.5 cursor-pointer">
             <div class="w-full h-full rounded-[50%] border border-[#d8d0be]/60 flex flex-col items-center justify-center shadow-inner">
-              <span class="font-serif italic text-xs text-[#7e8772] font-bold leading-none">D&amp;L</span>
+              <span class="font-script text-lg text-[#7e8772] font-normal leading-none">D&amp;L</span>
               <span class="text-[6px] tracking-widest uppercase text-[#9ca78b] mt-0.5 font-semibold">1962</span>
             </div>
           </div>
