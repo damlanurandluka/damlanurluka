@@ -65,28 +65,27 @@
     }
   </style>
 </head>
-  <!-- ENVELOPE GATEKEEPER LOCK OVERLAY -->
-  <div id="gatekeeper" class="fixed inset-0 z-[9999] flex items-center justify-center bg-softSage px-4 overflow-y-auto transition-opacity duration-700">
+    <!-- FULL ENVELOPE GATEKEEPER LOCK SCREEN -->
+  <div id="gatekeeper" class="fixed inset-0 z-[9999] flex flex-col justify-between bg-[#c8d4c0] overflow-hidden transition-opacity duration-700 select-none">
     
-    <!-- Outer Envelope Wrapper -->
-    <div id="envelopeWrapper" class="relative w-full max-w-sm sm:max-w-md my-auto transition-transform duration-700">
+    <!-- Top Flap of the Envelope -->
+    <div id="envelopeFlap" class="relative w-full z-40 origin-top transition-transform duration-700 ease-in-out drop-shadow-xl">
+      <!-- Angled SVG Envelope Flap spanning full width -->
+      <svg viewBox="0 0 1000 380" preserveAspectRatio="none" class="w-full h-32 sm:h-44 fill-[#657059] block">
+        <polygon points="0,0 1000,0 500,380" />
+      </svg>
       
-      <!-- Top Envelope Flap (Responsive SVG) -->
-      <div id="envelopeFlap" class="relative w-full z-30 transition-transform duration-700 origin-top drop-shadow-md -mb-1">
-        <svg viewBox="0 0 400 120" preserveAspectRatio="none" class="w-full h-20 sm:h-24 fill-[#6b7560]">
-          <polygon points="0,0 400,0 200,120" />
-        </svg>
-
-        <!-- Wax Seal Badge -->
-        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-11 h-11 rounded-full bg-[#8f9b80] border-2 border-[#fffaf2]/80 flex items-center justify-center font-serif font-bold text-xs text-[#fffaf2] shadow-lg">
-          D&amp;L
-        </div>
+      <!-- Wax Seal Stamp centered right at the apex of the flap -->
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#828f75] border-[3px] border-[#ede8dd] shadow-2xl flex items-center justify-center text-xs sm:text-sm font-serif font-bold text-[#fffaf2] tracking-wider">
+        D&amp;L
       </div>
+    </div>
 
-      <!-- Letter Body / Card -->
-      <div class="relative bg-cardBg rounded-3xl p-6 sm:p-8 pt-10 sm:pt-12 border border-oliveSoft/40 shadow-2xl text-center text-[#fffaf2] z-20 overflow-hidden">
+    <!-- Letter Card / Passport Slip Tucked Inside -->
+    <div id="envelopeWrapper" class="relative w-full max-w-sm sm:max-w-md mx-auto px-5 z-20 my-auto transition-all duration-700">
+      <div class="bg-cardBg rounded-3xl p-6 sm:p-8 pt-10 border border-oliveSoft/40 shadow-2xl text-center text-[#fffaf2] relative overflow-hidden">
         
-        <!-- Inner Letter Border Stitching -->
+        <!-- Subtle Inner Card Stitching -->
         <div class="absolute inset-2.5 rounded-2xl border border-dashed border-oliveSoft/30 pointer-events-none"></div>
 
         <div class="relative z-10 space-y-2">
@@ -98,11 +97,11 @@
             An Invitation For You
           </h2>
           
-          <p class="text-xs text-[#fffaf2]/80 font-sans max-w-xs mx-auto pb-3 leading-relaxed">
-            Enter the clearance passcode to break the seal and view mission coordinates.
+          <p class="text-xs text-[#fffaf2]/80 font-sans max-w-xs mx-auto pb-2 leading-relaxed">
+            Enter the clearance passcode to break the seal and reveal mission coordinates.
           </p>
 
-          <form id="gatekeeperForm" class="space-y-4 pt-1">
+          <form id="gatekeeperForm" class="space-y-3.5 pt-1">
             <input 
               type="password" 
               id="gatekeeperInput" 
@@ -118,7 +117,7 @@
 
             <button 
               type="submit" 
-              class="w-full py-3.5 rounded-full bg-[#5e6553] hover:bg-oliveDark border border-oliveSoft/40 text-xs uppercase tracking-widest font-semibold transition shadow-md text-[#fffaf2]"
+              class="w-full py-3.5 rounded-full bg-[#5e6553] hover:bg-oliveDark border border-oliveSoft/40 text-xs uppercase tracking-widest font-semibold transition shadow-md hover:shadow-lg text-[#fffaf2]"
             >
               Open Invitation
             </button>
@@ -127,6 +126,14 @@
 
       </div>
     </div>
+
+    <!-- Lower Pocket V-folds forming the envelope body -->
+    <div class="relative w-full z-30 pointer-events-none">
+      <svg viewBox="0 0 1000 240" preserveAspectRatio="none" class="w-full h-24 sm:h-32 fill-[#56604b] block drop-shadow-[0_-8px_16px_rgba(0,0,0,0.15)]">
+        <polygon points="0,240 1000,240 1000,0 500,160 0,0" />
+      </svg>
+    </div>
+
   </div>
 
   <!-- WRAP ALL SITE CONTENT HERE (Starts hidden so nothing shows or scrolls) -->
