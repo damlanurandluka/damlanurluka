@@ -65,17 +65,17 @@
     }
   </style>
 </head>
-  <!-- LUXURY STATIONERY ENVELOPE GATEKEEPER -->
+   <!-- LUXURY STATIONERY ENVELOPE GATEKEEPER -->
   <div id="gatekeeper" class="fixed inset-0 z-[9999] flex items-center justify-center bg-[#dbe2d4] px-4 overflow-hidden transition-all duration-700 select-none">
     
-    <!-- Realistic Envelope Card Container (Aspect Ratio 4:3) -->
-    <div class="relative w-full max-w-[420px] aspect-[4/3] transition-transform duration-700" id="envelopeContainer">
+    <!-- Entire Envelope acts as interactive button (cursor-pointer) -->
+    <div class="relative w-full max-w-[420px] aspect-[4/3] transition-transform duration-700 cursor-pointer" id="envelopeContainer">
       
       <!-- Back Lining of Envelope -->
       <div class="absolute inset-0 bg-[#8c977d] rounded-2xl shadow-2xl border border-[#7a856c]"></div>
 
-      <!-- SLIDING INNER CARD (Passcode Prompt) -->
-      <div id="letterCard" class="absolute inset-x-4 top-4 bottom-4 bg-[#fbf9f5] rounded-xl p-6 text-center flex flex-col justify-between shadow-md transition-all duration-700 ease-out z-10 translate-y-0 opacity-0 pointer-events-none border border-[#e5dfd3]">
+      <!-- SLIDING INNER CARD (Passcode Form) -->
+      <div id="letterCard" class="absolute inset-x-4 top-4 bottom-4 bg-[#fbf9f5] rounded-xl p-6 text-center flex flex-col justify-between shadow-md transition-all duration-700 ease-out z-10 translate-y-0 opacity-0 pointer-events-none border border-[#e5dfd3] cursor-default">
         <div class="space-y-1">
           <span class="font-starwars text-[10px] tracking-[0.25em] lowercase text-[#6e7861] block">restricted transmission</span>
           <h3 class="font-serif text-2xl text-[#2c3e2a] font-normal">Allied Clearance</h3>
@@ -105,55 +105,54 @@
         <p class="text-[10px] text-[#8c977d] font-sans">Damlanur &amp; Luka · 27 August 2027</p>
       </div>
 
-      <!-- FRONT POCKET (Left & Right Folds) -->
+      <!-- FRONT POCKET (Left, Right, and Bottom Folds) -->
       <div class="absolute inset-0 z-20 pointer-events-none overflow-hidden rounded-2xl">
         <svg viewBox="0 0 400 300" preserveAspectRatio="none" class="w-full h-full fill-[#98a388] drop-shadow-md">
-          <!-- Left diagonal, Right diagonal, Bottom Fold -->
           <polygon points="0,0 200,160 0,300" fill="#939f83" />
           <polygon points="400,0 200,160 400,300" fill="#939f83" />
           <polygon points="0,300 400,300 200,140" fill="#8c977d" />
         </svg>
       </div>
 
-           <!-- TOP FOLDING FLAP (Flips Open) -->
-      <div id="envelopeFlap" class="absolute inset-x-0 top-0 h-1/2 z-30 origin-top transition-all duration-700 ease-in-out cursor-pointer group">
+      <!-- TOP FOLDING FLAP -->
+      <div id="envelopeFlap" class="absolute inset-x-0 top-0 h-1/2 z-30 origin-top transition-all duration-700 ease-in-out pointer-events-none">
         <svg viewBox="0 0 400 150" preserveAspectRatio="none" class="w-full h-full fill-[#a3af92] drop-shadow-[0_8px_14px_rgba(0,0,0,0.18)]">
           <polygon points="0,0 400,0 200,150" />
         </svg>
 
-        <!-- Couple Names Embossed on the Flap in Alex Brush -->
-        <div class="absolute inset-x-0 top-2.5 text-center pointer-events-none">
-          <p class="text-[8px] uppercase tracking-[0.3em] text-[#fffaf2]/80 font-sans font-semibold drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)]">
-            A love letter from
-          </p>
-          <p class="font-script text-3xl sm:text-4xl text-[#fffaf2] tracking-wide leading-tight drop-shadow-[0_2px_3px_rgba(0,0,0,0.25)] filter select-none">
-            Damlanur &amp; Luka
+        <!-- Clean, Delicate Header (No Names) -->
+        <div class="absolute inset-x-0 top-6 text-center pointer-events-none">
+          <p class="text-[9px] sm:text-[10px] uppercase tracking-[0.35em] text-[#fffaf2]/85 font-sans font-light drop-shadow-sm">
+            A love letter
           </p>
         </div>
 
-                <!-- 3D MINIMALIST WAX SEAL (Click to Open) -->
-        <div id="waxSealBtn" class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 transition-transform group-hover:scale-105 active:scale-95 duration-200">
-          <div class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#fdfbf7] flex flex-col items-center justify-center cursor-pointer select-none shadow-[0_8px_18px_rgba(0,0,0,0.22),0_2px_4px_rgba(0,0,0,0.12),inset_0_3px_5px_rgba(255,255,255,0.95),inset_0_-3px_6px_rgba(0,0,0,0.12)] border border-[#ece4d4]">
-            
-            <!-- Pressed Wax Bevel Ring -->
-            <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full flex flex-col items-center justify-center border border-[#dfd6c4]/80 shadow-[inset_0_2px_4px_rgba(0,0,0,0.12),0_1px_1px_rgba(255,255,255,0.8)]">
-              <!-- Engraved Monogram with Inset Lighting -->
-              <span class="font-serif italic text-sm sm:text-base text-[#5e6553] font-bold leading-none drop-shadow-[0_1px_0_rgba(255,255,255,0.85)]">
+        <!-- 3D Cameo Wax Seal (Clean Monogram & Met Year) -->
+        <div id="waxSealBtn" class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 transition-all duration-300">
+          <div class="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#fdfbf7] flex flex-col items-center justify-center select-none shadow-[0_8px_18px_rgba(0,0,0,0.22),0_2px_4px_rgba(0,0,0,0.12),inset_0_3px_5px_rgba(255,255,255,0.95),inset_0_-3px_6px_rgba(0,0,0,0.12)] border border-[#ece4d4]">
+            <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-full flex flex-col items-center justify-center border border-[#dfd6c4]/80 shadow-[inset_0_2px_4px_rgba(0,0,0,0.12),0_1px_1px_rgba(255,255,255,0.8)]">
+              <span class="font-serif italic text-xs sm:text-sm text-[#5e6553] font-bold leading-none drop-shadow-[0_1px_0_rgba(255,255,255,0.85)]">
                 D&amp;L
               </span>
-              <span class="text-[8px] tracking-widest text-[#7a856c] mt-0.5 font-sans font-semibold drop-shadow-[0_1px_0_rgba(255,255,255,0.7)]">
+              <span class="text-[7px] tracking-widest text-[#7a856c] mt-0.5 font-sans font-medium drop-shadow-[0_1px_0_rgba(255,255,255,0.7)]">
                 2021
               </span>
             </div>
-
           </div>
         </div>
 
+      </div>
 
-      <!-- Bottom Tap Hint -->
-      <div id="openHint" class="absolute -bottom-8 inset-x-0 text-center transition-opacity duration-300">
-        <span class="text-[11px] uppercase tracking-[0.2em] text-[#5e6553] font-semibold cursor-pointer hover:underline">
-          Tap
+    </div>
+  </div>
+
+
+            <!-- SUBTLE BOTTOM TAP HINT -->
+      <div id="openHint" class="absolute -bottom-8 inset-x-0 text-center pointer-events-none transition-opacity duration-300">
+        <span class="text-[10px] tracking-[0.25em] uppercase text-[#5e6553]/80 font-sans font-medium">
+          Tap to open &darr;
+        </span>
+      </div>
 
   <!-- WRAP ALL SITE CONTENT HERE (Starts hidden so nothing shows or scrolls) -->
   <div id="siteContent" class="hidden">
@@ -984,7 +983,7 @@
         }
       });
     }
-    // 7. Stationery Envelope Unlock Logic
+     // 7. Stationery Envelope Unlock Logic
     (function() {
       const SECRET_CODE = "roda1962";
 
@@ -999,28 +998,32 @@
       const input = document.getElementById("gatekeeperInput");
       const errorMsg = document.getElementById("gatekeeperError");
 
+      let isOpen = false;
+
       function unlockDirectly() {
         gatekeeper.style.display = "none";
         siteContent.classList.remove("hidden");
         document.body.classList.remove("overflow-hidden");
       }
 
-      // Check if unlocked earlier in this session
       if (sessionStorage.getItem("rebel_access") === "granted") {
         unlockDirectly();
       } else {
         document.body.classList.add("overflow-hidden");
       }
 
-      // Step A: Tap envelope/seal to slide out letter card
+      // Tapping anywhere on the envelope triggers open
       function openEnvelope() {
-        // 1. Flip the flap open
+        if (isOpen) return;
+        isOpen = true;
+
+        // Flip flap open & fade seal and hint
         envelopeFlap.style.transform = "rotateX(180deg) translateY(10px)";
         envelopeFlap.style.zIndex = "5";
         if (waxSealBtn) waxSealBtn.style.opacity = "0";
         if (openHint) openHint.style.opacity = "0";
 
-        // 2. Slide letter card out
+        // Slide card out & focus input
         setTimeout(() => {
           letterCard.classList.remove("opacity-0", "pointer-events-none");
           letterCard.style.transform = "translateY(-75px)";
@@ -1029,84 +1032,18 @@
         }, 300);
       }
 
-      envelopeFlap.addEventListener("click", openEnvelope);
-      if (openHint) openHint.addEventListener("click", openEnvelope);
+      envelopeContainer.addEventListener("click", openEnvelope);
 
-      // Step B: Submit Passcode
-      form.addEventListener("submit", function(e) {
-        e.preventDefault();
-        if (input.value.trim().toLowerCase() === SECRET_CODE) {
-          sessionStorage.setItem("rebel_access", "granted");
-          
-          // Smooth fade away into site
-          envelopeContainer.style.transform = "scale(0.92)";
-          gatekeeper.classList.add("opacity-0");
-
-          setTimeout(() => {
-            unlockDirectly();
-          }, 600);
-        } else {
-          errorMsg.classList.remove("hidden");
-          input.value = "";
-          input.focus();
-        }
+      letterCard.addEventListener("click", function(e) {
+        e.stopPropagation();
       });
-    })();
-    // 7. Stationery Envelope Unlock Logic
-    (function() {
-      const SECRET_CODE = "roda1962";
 
-      const gatekeeper = document.getElementById("gatekeeper");
-      const envelopeContainer = document.getElementById("envelopeContainer");
-      const envelopeFlap = document.getElementById("envelopeFlap");
-      const letterCard = document.getElementById("letterCard");
-      const waxSealBtn = document.getElementById("waxSealBtn");
-      const openHint = document.getElementById("openHint");
-      const siteContent = document.getElementById("siteContent");
-      const form = document.getElementById("gatekeeperForm");
-      const input = document.getElementById("gatekeeperInput");
-      const errorMsg = document.getElementById("gatekeeperError");
-
-      function unlockDirectly() {
-        gatekeeper.style.display = "none";
-        siteContent.classList.remove("hidden");
-        document.body.classList.remove("overflow-hidden");
-      }
-
-      // Check if unlocked earlier in this session
-      if (sessionStorage.getItem("rebel_access") === "granted") {
-        unlockDirectly();
-      } else {
-        document.body.classList.add("overflow-hidden");
-      }
-
-      // Step A: Tap envelope/seal to slide out letter card
-      function openEnvelope() {
-        // 1. Flip the flap open
-        envelopeFlap.style.transform = "rotateX(180deg) translateY(10px)";
-        envelopeFlap.style.zIndex = "5";
-        if (waxSealBtn) waxSealBtn.style.opacity = "0";
-        if (openHint) openHint.style.opacity = "0";
-
-        // 2. Slide letter card out
-        setTimeout(() => {
-          letterCard.classList.remove("opacity-0", "pointer-events-none");
-          letterCard.style.transform = "translateY(-75px)";
-          letterCard.style.zIndex = "40";
-          input.focus();
-        }, 300);
-      }
-
-      envelopeFlap.addEventListener("click", openEnvelope);
-      if (openHint) openHint.addEventListener("click", openEnvelope);
-
-      // Step B: Submit Passcode
+      // Submit passcode
       form.addEventListener("submit", function(e) {
         e.preventDefault();
         if (input.value.trim().toLowerCase() === SECRET_CODE) {
           sessionStorage.setItem("rebel_access", "granted");
           
-          // Smooth fade away into site
           envelopeContainer.style.transform = "scale(0.92)";
           gatekeeper.classList.add("opacity-0");
 
