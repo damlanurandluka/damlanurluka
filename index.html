@@ -955,24 +955,46 @@
       });
     }
 
-    // 7. Gatekeeper Access Lock
+     // 7. Gatekeeper Envelope Unlock Logic
     (function() {
       const SECRET_CODE = "roda1962";
 
       const gatekeeper = document.getElementById("gatekeeper");
+      const envelopeFlap = document.getElementById("envelopeFlap");
+      const envelopeWrapper = document.getElementById("envelopeWrapper");
       const siteContent = document.getElementById("siteContent");
       const form = document.getElementById("gatekeeperForm");
       const input = document.getElementById("gatekeeperInput");
       const errorMsg = document.getElementById("gatekeeperError");
 
-      function unlockSite() {
+      function revealSiteDirectly() {
         gatekeeper.style.display = "none";
         siteContent.classList.remove("hidden");
         document.body.classList.remove("overflow-hidden");
       }
 
+      function animateAndUnlock() {
+        // 1. Flip open the envelope flap
+        if (envelopeFlap) {
+          envelopeFlap.style.transform = "rotateX(180deg)";
+        }
+        
+        // 2. Float envelope up & fade overlay smoothly
+        setTimeout(() => {
+          if (envelopeWrapper) {
+            envelopeWrapper.style.transform = "translateY(-40px) scale(0.96)";
+          }
+          gatekeeper.classList.add("opacity-0");
+        }, 350);
+
+        // 3. Show full site
+        setTimeout(() => {
+          revealSiteDirectly();
+        }, 850);
+      }
+
       if (sessionStorage.getItem("rebel_access") === "granted") {
-        unlockSite();
+        revealSiteDirectly();
       } else {
         document.body.classList.add("overflow-hidden");
       }
@@ -981,7 +1003,7 @@
         e.preventDefault();
         if (input.value.trim().toLowerCase() === SECRET_CODE) {
           sessionStorage.setItem("rebel_access", "granted");
-          unlockSite();
+          animateAndUnlock();
         } else {
           errorMsg.classList.remove("hidden");
           input.value = "";
@@ -989,4 +1011,8 @@
         }
       });
     })();
+    // ... all your JavaScript logic ...
   </script>
+</body>
+</html>
+
