@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Damlanur & Luka//Wedding Invitation//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wedding-damlanur-luka-20270827@github
+DTSTAMP:20261008T090000Z
+DTSTART:20270827T120000Z
+DTEND:20270827T230000Z
+SUMMARY:Damlanur & Luka's Wedding
+DESCRIPTION:Wedding ceremony at Odapark Theehuis\, followed by reception\, friethuis dinner\, and house party!
+LOCATION:Odapark Theehuis\, Merseloseweg 117\, 5801 CC Venray\, Netherlands
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR
