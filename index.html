@@ -461,57 +461,76 @@
           </div>
         </div>
 
-        <!-- Traveling from Abroad Card -->
-        <div class="mt-10 bg-cardBg rounded-3xl p-6 sm:p-8 border border-oliveSoft/40 shadow-sm text-left text-[#fffaf2]">
-          <div class="mb-6">
-            <h3 class="text-xl sm:text-2xl text-[#fffaf2] font-semibold leading-tight font-serif not-italic">Traveling from another galaxy</h3>
-            <p class="text-[11px] sm:text-xs uppercase tracking-wider text-oliveSoft font-semibold mt-1 font-sans">Transit intel &amp; master tips for our traveling allies</p>
+  <!-- Traveling from Abroad Card -->
+        <div class="mt-12 w-full bg-cardBg rounded-3xl p-6 sm:p-10 border border-oliveSoft/40 shadow-sm text-[#fffaf2]">
+          <div class="mb-6 text-left">
+            <h3 class="text-xl sm:text-2xl text-[#fffaf2] font-semibold leading-tight font-serif not-italic">
+              Traveling from another galaxy
+            </h3>
+            <p class="text-[11px] sm:text-xs uppercase tracking-wider text-oliveSoft font-semibold mt-1 font-sans">
+              Transit intel &amp; master tips for our traveling allies
+            </p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm text-[#fffaf2]/90 leading-relaxed font-sans">
-           <!-- Airports -->
-            <div class="p-4 rounded-2xl bg-[#5e6553]/60 border border-oliveSoft/30 shadow-sm">
-              <h4 class="font-serif not-italic text-sm font-semibold text-[#fffaf2] mb-2 flex items-center gap-2">
-                <i class="fa-solid fa-plane text-oliveSoft text-xs"></i> Recommended Airports
+          <!-- 3 Columns on desktop, clean left alignment -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 text-left font-sans">
+            <!-- 1. Airports -->
+            <div class="p-5 rounded-2xl bg-[#5e6553]/60 border border-oliveSoft/30 shadow-sm flex flex-col">
+              <h4 class="font-serif not-italic text-base font-semibold text-[#fffaf2] mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-plane text-oliveSoft text-sm"></i> Recommended Airports
               </h4>
-              <p>
-                <strong class="text-oliveSoft">Eindhoven (EIN)</strong> is the closest airport to Venray (~45-50 min drive/train) with frequent budget European flights.
-                <br><br>
-                <strong class="text-oliveSoft">Düsseldorf (DUS)</strong> in Germany is very close with direct flights from Sweden &amp; Turkey (~1-1.5 hr drive/train).
-                <br><br>
-                <strong class="text-oliveSoft">Amsterdam Schiphol (AMS)</strong> is the primary international hub with easy direct train links (~2-3 hrs).
-              </p>
-          <!-- Trains, Buses & Transit -->
-            <div class="p-4 rounded-2xl bg-[#5e6553]/60 border border-oliveSoft/30 shadow-sm">
-              <h4 class="font-serif not-italic text-sm font-semibold text-[#fffaf2] mb-2 flex items-center gap-2">
-                <i class="fa-solid fa-train text-oliveSoft text-xs"></i>
-                <i class="fa-solid fa-bus text-oliveSoft text-xs"></i> Trains, Buses &amp; Transit
-              </h4>
-              <p>
-                From <strong class="text-oliveSoft">Amsterdam Schiphol (AMS)</strong>, it is all trains directly from underneath the terminal: take an Intercity south toward Nijmegen, switch to the local train, and arrive straight at <strong class="text-oliveSoft">Venray Station</strong> .
-                <br><br>
-                From <strong class="text-oliveSoft">Eindhoven (EIN)</strong>, hop on Airport Bus 400 or 401 right outside arrivals to Eindhoven Centraal, then transfer to the connecting train toward Venray.
-                <br><br>
-                From <strong class="text-oliveSoft">Düsseldorf (DUS)</strong>, ride the SkyTrain/bus to Düsseldorf Flughafen station, catch the regional train across the border to Venlo, and connect directly to Venray.
-                <br><br>
-                Simply tap in and out of all Dutch trains and buses using a contactless debit or credit card, or check live connections on <strong class="text-oliveSoft">NS.nl</strong> and <strong class="text-oliveSoft">9292.nl</strong>.
-              </p>
-            </div>
-              
-  <!-- Where to Stay -->
-            <div class="p-4 rounded-2xl bg-[#5e6553]/60 border border-oliveSoft/30 shadow-sm">
-              <h4 class="font-serif not-italic text-sm font-semibold text-[#fffaf2] mb-2 flex items-center gap-2">
-                <i class="fa-solid fa-hotel text-oliveSoft text-xs"></i> Where to Stay
-              </h4>
-              <p>
-                We recommend staying in or near <strong class="text-oliveSoft">Venray</strong> (e.g. <em>Hotel Asteria</em>, <em>Hotel Hulsman</em>, or cozy local B&amp;Bs and Airbnbs).
-                <br><br>
-                Let us know if you want to coordinate carpools or rides from the airport with fellow allies!
-              </p>
+              <div class="text-xs sm:text-sm text-[#fffaf2]/90 leading-relaxed space-y-2.5">
+                <p>
+                  <strong class="text-oliveSoft">Eindhoven (EIN)</strong> is closest to Venray (~45–50 min drive/train) with frequent budget European flights.
+                </p>
+                <p>
+                  <strong class="text-oliveSoft">Düsseldorf (DUS)</strong> in Germany is very close with direct flights from Sweden &amp; Turkey (~1 hr drive/train).
+                </p>
+                <p>
+                  <strong class="text-oliveSoft">Amsterdam Schiphol (AMS)</strong> is the primary international hub with easy direct train links (~1.5–2 hrs).
+                </p>
+              </div>
             </div>
 
-    </section> 
+            <!-- 2. Trains & Buses -->
+            <div class="p-5 rounded-2xl bg-[#5e6553]/60 border border-oliveSoft/30 shadow-sm flex flex-col">
+              <h4 class="font-serif not-italic text-base font-semibold text-[#fffaf2] mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-train text-oliveSoft text-sm"></i>
+                <i class="fa-solid fa-bus text-oliveSoft text-sm"></i> Trains, Buses &amp; Transit
+              </h4>
+              <div class="text-xs sm:text-sm text-[#fffaf2]/90 leading-relaxed space-y-2.5">
+                <p>
+                  <strong class="text-oliveSoft">From Schiphol (AMS):</strong> Direct trains underneath the terminal—take an Intercity south toward Nijmegen, switch to the local Arriva train, and arrive straight at <strong class="text-oliveSoft">Venray Station</strong> .
+                </p>
+                <p>
+                  <strong class="text-oliveSoft">From Eindhoven (EIN):</strong> Airport Bus 400 or 401 outside arrivals to Eindhoven Centraal, then transfer to the connecting train toward Venray.
+                </p>
+                <p>
+                  <strong class="text-oliveSoft">From Düsseldorf (DUS):</strong> SkyTrain/bus to Düsseldorf Flughafen station, regional train across the border to Venlo, and connect directly to Venray.
+                </p>
+                <p class="pt-1 text-[11px] sm:text-xs text-oliveSoft italic">
+                  Tap in/out with contactless cards on all Dutch trains and buses. Plan journeys via NS.nl or 9292.nl.
+                </p>
+              </div>
+            </div>
 
+            <!-- 3. Where to Stay -->
+            <div class="p-5 rounded-2xl bg-[#5e6553]/60 border border-oliveSoft/30 shadow-sm flex flex-col">
+              <h4 class="font-serif not-italic text-base font-semibold text-[#fffaf2] mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-hotel text-oliveSoft text-sm"></i> Where to Stay
+              </h4>
+              <div class="text-xs sm:text-sm text-[#fffaf2]/90 leading-relaxed space-y-3">
+                <p>
+                  We recommend staying in or near <strong class="text-oliveSoft">Venray</strong> (e.g. <em>Hotel Asteria</em>, <em>Hotel Hulsman</em>, or cozy local B&amp;Bs and Airbnbs).
+                </p>
+                <p>
+                  Let us know if you want to coordinate carpools or rides from the airport with fellow allies!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+           </section>
 
     <!-- PHOTO GALLERY SECTION -->
     <section id="gallery" class="py-20 px-6 bg-transparent border-t border-sageGreen/40">
