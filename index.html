@@ -268,20 +268,31 @@
       </div>
     </section>
 
-
-    
-    <!-- TIMELINE -->
-    <section id="timeline" class="py-24 px-6 bg-transparent border-t border-sageGreen/40">
+<!-- TIMELINE SECTION -->
+    <section id="timeline" class="py-20 px-6 bg-transparent border-t border-sageGreen/40">
       <div class="max-w-3xl mx-auto">
-        <div class="text-center mb-16">
-          <span class="text-xs uppercase tracking-[0.25em] text-darkSage font-bold font-sans">Master Plan</span>
-               <h2 class="text-3xl sm:text-4xl text-richSage mt-2 font-semibold font-serif not-italic">The Timeline</h2>
+        
+        <!-- Header -->
+        <div class="text-center mb-10">
+          <span class="text-xs uppercase tracking-[0.25em] text-darkSage font-bold font-sans">The Master Plan</span>
+          <h2 class="text-3xl sm:text-4xl text-richSage mt-2 font-semibold font-serif not-italic">The Timeline</h2>
           <p class="text-darkSage text-xs sm:text-sm mt-2 font-sans">Welcome drinks served from 13:00 beneath the trees.</p>
         </div>
 
+        <!-- 1. LIGHTSABER MASTER PLAN POSTER CARD -->
+        <div class="relative w-full max-w-md mx-auto mb-16 shadow-xl rounded-3xl overflow-hidden border border-oliveSoft/40 bg-[#5e6553]/20 p-1.5">
+          <img 
+            src="timeplan.jpg" 
+            alt="Master Plan Timeline - Damlanur & Luka" 
+            class="w-full h-auto block rounded-2xl shadow-sm"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80';"
+          />
+        </div>
+
+        <!-- 2. DETAILED TIMELINE WITH CARDS & DESCRIPTIONS -->
         <div class="relative border-l-2 border-cardBg/60 ml-4 md:ml-32 space-y-12">
           
-          <!-- Timeline Item 1 -->
+          <!-- Timeline Item 1: Ceremony -->
           <div class="relative pl-8 sm:pl-10">
             <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cardBg border-4 border-softSage"></div>
             <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-xs sm:text-sm font-semibold tracking-wider text-richSage block uppercase font-sans">14:00</span>
@@ -296,7 +307,7 @@
             </div>
           </div>
 
-          <!-- Timeline Item 2 (Reception) -->
+          <!-- Timeline Item 2: Reception -->
           <div class="relative pl-8 sm:pl-10">
             <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cardBg border-4 border-softSage"></div>
             <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-xs sm:text-sm font-semibold tracking-wider text-richSage block uppercase font-sans">15:00</span>
@@ -311,7 +322,7 @@
             </div>
           </div>
 
-          <!-- Timeline Item 3 (Friethuis Dinner) -->
+          <!-- Timeline Item 3: Friethuis Dinner -->
           <div class="relative pl-8 sm:pl-10">
             <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cardBg border-4 border-softSage"></div>
             <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-xs sm:text-sm font-semibold tracking-wider text-richSage block uppercase font-sans">17:00</span>
@@ -326,7 +337,7 @@
             </div>
           </div> 
 
-          <!-- Timeline Item 4 (Backyard Party) -->
+          <!-- Timeline Item 4: Backyard Party -->
           <div class="relative pl-8 sm:pl-10">
             <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cardBg border-4 border-softSage"></div>
             <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-xs sm:text-sm font-semibold tracking-wider text-richSage block uppercase font-sans">18:00</span>
@@ -345,7 +356,7 @@
                 <span><strong>Cat Comfort Note:</strong> With the party in full swing, Obi &amp; Stitch will be safely resting away from the noise and crowds at their grandparents' house!</span>
               </div>
               
-              <!-- Cat Cards -->
+              <!-- Cat Cards (Obi & Stitch) -->
               <div class="grid grid-cols-2 gap-3 sm:gap-4 items-stretch font-sans">
                 <div class="relative group overflow-hidden rounded-xl border border-oliveSoft/40 bg-[#5e6553]/60 p-2 flex flex-col items-center justify-between">
                   <img 
@@ -371,10 +382,13 @@
                   </span>
                 </div>
               </div>
+
             </div>
           </div>
 
-        <!-- Add to Calendar Buttons -->
+        </div> <!-- End of timeline items -->
+
+        <!-- 3. ADD TO CALENDAR BUTTONS -->
         <div class="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4 font-sans">
           <!-- Google Calendar -->
           <a 
@@ -395,9 +409,11 @@
             <i class="fa-brands fa-apple text-oliveSoft"></i> Add to Apple / iCloud Calendar
           </a>
         </div>  
-      </div>
-    </section> 
 
+      </div>
+    </section>
+
+    
     <!-- VENUE & LOCATIONS -->
     <section id="venue" class="py-20 px-6 bg-transparent border-t border-sageGreen/40">
       <div class="max-w-5xl mx-auto">
