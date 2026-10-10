@@ -436,7 +436,7 @@
       </div>
     </section>
     
-    <!-- VENUE & LOCATIONS -->
+  Here is your updated Venue & Locations section, featuring Luthen Rael’s Fondor Haulcraft (the iconic Andor ship) seamlessly rendered as a crisp vector badge and blueprint accent directly on the "Traveling from another galaxy" card:   HTML    <!-- VENUE & LOCATIONS -->
     <section id="venue" class="py-20 px-6 bg-transparent border-t border-sageGreen/40">
       <div class="max-w-5xl mx-auto">
         
@@ -494,48 +494,81 @@
 
         </div>
 
-        <!-- Traveling from Abroad Card -->
-        <div class="mt-8 max-w-4xl mx-auto bg-cardBg rounded-3xl p-6 sm:p-8 border border-oliveSoft/40 shadow-sm text-[#fffaf2]">
-          <div class="mb-5 text-left">
-            <h3 class="text-xl sm:text-2xl text-[#fffaf2] font-semibold leading-tight font-serif not-italic">
-              Traveling from another galaxy
-            </h3>
-            </p>
+        <!-- TRAVELING FROM ANOTHER GALAXY (FEATURING ANDOR'S REBEL SHIP) -->
+        <div class="mt-8 max-w-4xl mx-auto bg-cardBg rounded-3xl p-6 sm:p-8 border border-oliveSoft/40 shadow-sm text-[#fffaf2] relative overflow-hidden">
+          
+          <!-- Background Blueprint Watermark of Andor's Fondor Haulcraft -->
+          <div class="absolute -right-8 -bottom-10 opacity-10 pointer-events-none hidden sm:block">
+            <svg width="220" height="220" viewBox="0 0 100 100" fill="none" stroke="#fffaf2" stroke-width="1.5">
+              <!-- Fondor Haulcraft Arrowhead Silhouette -->
+              <polygon points="50,5 92,78 50,66 8,78" />
+              <polygon points="50,22 75,70 50,62 25,70" />
+              <line x1="50" y1="5" x2="50" y2="65" />
+              <!-- Sub-light Engines -->
+              <rect x="42" y="66" width="16" height="8" rx="2" />
+              <line x1="28" y1="73" x2="18" y2="88" />
+              <line x1="72" y1="73" x2="82" y2="88" />
+            </svg>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-left font-sans">
+          <!-- Header with Ship Badge -->
+          <div class="mb-6 text-left flex items-start justify-between">
+            <div>
+              <div class="flex items-center gap-3 mb-1">
+                <!-- Andor Ship Badge Icon -->
+                <div class="w-8 h-8 rounded-xl bg-[#5e6553]/80 border border-oliveSoft/40 flex items-center justify-center shrink-0">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="text-oliveSoft">
+                    <!-- Stylized Fondor Arrowhead Craft -->
+                    <path d="M12 2L2 20l10-3 10 3L12 2zm0 4.5l6.5 11.5-6.5-2-6.5 2L12 6.5z"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl sm:text-2xl text-[#fffaf2] font-semibold leading-tight font-serif not-italic">
+                  Traveling from another galaxy
+                </h3>
+              </div>
+              <p class="text-[11px] uppercase tracking-wider text-oliveSoft font-semibold font-sans pl-11">
+                Rebel Transit &amp; Flight Coordinates
+              </p>
+            </div>
+            
+            <span class="hidden sm:inline-block px-3 py-1 rounded-full bg-[#5e6553]/60 border border-oliveSoft/30 text-[10px] font-mono tracking-widest text-oliveSoft uppercase">
+              Fondor Protocol
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-left font-sans relative z-10">
             <!-- 1. Airports -->
             <div class="p-4 rounded-2xl bg-[#5e6553]/60 border border-oliveSoft/30 shadow-sm flex flex-col">
               <h4 class="font-serif not-italic text-sm font-semibold text-[#fffaf2] mb-2.5 flex items-center gap-2">
-                <i class="fa-solid fa-plane text-oliveSoft text-xs"></i> Recommended Airports
+                <i class="fa-solid fa-plane-departure text-oliveSoft text-xs"></i> Landing Ports
               </h4>
               <div class="text-xs text-[#fffaf2]/90 leading-relaxed space-y-2">
                 <p>
-                  <strong class="text-oliveSoft">Eindhoven (EIN):</strong> Closest to Venray (~45–50 min drive/train) with frequent European flights.
+                  <strong class="text-oliveSoft">Eindhoven (EIN):</strong> Closest to Venray (~45–50 min drive/train) with frequent European flights[cite: 7].
                 </p>
                 <p>
-                  <strong class="text-oliveSoft">Düsseldorf (DUS):</strong> Direct flights from Sweden &amp; Turkey (~1 hr drive/train).
+                  <strong class="text-oliveSoft">Düsseldorf (DUS):</strong> Direct flights from Sweden &amp; Turkey (~1 hr drive/train)[cite: 7].
                 </p>
                 <p>
-                  <strong class="text-oliveSoft">Amsterdam (AMS):</strong> Major hub with direct trains (~1.5–2 hrs).
+                  <strong class="text-oliveSoft">Amsterdam (AMS):</strong> Major hub with direct trains (~1.5–2 hrs)[cite: 7].
                 </p>
               </div>
             </div>
 
-            <!-- 2. Trains & Buses -->
+            <!-- 2. Trains & Transit -->
             <div class="p-4 rounded-2xl bg-[#5e6553]/60 border border-oliveSoft/30 shadow-sm flex flex-col">
               <h4 class="font-serif not-italic text-sm font-semibold text-[#fffaf2] mb-2.5 flex items-center gap-2">
-                <i class="fa-solid fa-train text-oliveSoft text-xs"></i> Trains &amp; Transit
+                <i class="fa-solid fa-train text-oliveSoft text-xs"></i> Ground Shuttles
               </h4>
               <div class="text-xs text-[#fffaf2]/90 leading-relaxed space-y-2">
                 <p>
-                  <strong class="text-oliveSoft">From AMS:</strong> Direct train underneath terminal toward Nijmegen, switch to Arriva to <strong class="text-oliveSoft">Venray Station</strong>.
+                  <strong class="text-oliveSoft">From AMS:</strong> Direct train toward Nijmegen, switch to Arriva to <strong class="text-oliveSoft">Venray Station</strong>[cite: 7].
                 </p>
                 <p>
-                  <strong class="text-oliveSoft">From EIN:</strong> Bus 400/401 to Eindhoven Centraal, then train toward Venray.
+                  <strong class="text-oliveSoft">From EIN:</strong> Bus 400/401 to Eindhoven Centraal, then train toward Venray[cite: 7].
                 </p>
                 <p>
-                  <strong class="text-oliveSoft">From DUS:</strong> Train/bus to Venlo, then connect to Venray. Tap in/out with contactless cards on NS.nl &amp; 9292.nl.
+                  <strong class="text-oliveSoft">From DUS:</strong> Connect via Venlo to Venray. Tap contactless cards directly on NS.nl &amp; 9292.nl[cite: 7].
                 </p>
               </div>
             </div>
@@ -543,14 +576,14 @@
             <!-- 3. Where to Stay -->
             <div class="p-4 rounded-2xl bg-[#5e6553]/60 border border-oliveSoft/30 shadow-sm flex flex-col">
               <h4 class="font-serif not-italic text-sm font-semibold text-[#fffaf2] mb-2.5 flex items-center gap-2">
-                <i class="fa-solid fa-hotel text-oliveSoft text-xs"></i> Where to Stay
+                <i class="fa-solid fa-hotel text-oliveSoft text-xs"></i> Safehouses &amp; Base
               </h4>
               <div class="text-xs text-[#fffaf2]/90 leading-relaxed space-y-2">
                 <p>
-                  Stay in or near <strong class="text-oliveSoft">Venray</strong> (e.g. <em>Hotel Asteria</em>, <em>Hotel Hulsman</em>, or cozy local B&amp;Bs and Airbnbs).
+                  Stay in or near <strong class="text-oliveSoft">Venray</strong> (e.g. <em>Hotel Asteria</em>, <em>Hotel Hulsman</em>, or cozy local B&amp;Bs)[cite: 7].
                 </p>
                 <p class="pt-1 text-oliveSoft italic">
-                  Let us know if you want to coordinate airport carpools!
+                  Let us know if you want to coordinate airport carpools![cite: 7]
                 </p>
               </div>
             </div>
@@ -559,7 +592,7 @@
 
       </div>
     </section>
-
+    
     <!-- PHOTO GALLERY SECTION -->
     <section id="gallery" class="py-20 px-6 bg-transparent border-t border-sageGreen/40">
       <div class="max-w-3xl mx-auto text-center">
@@ -596,20 +629,54 @@
       </div>
     </section>
 
-<!-- RSVP SECTION -->
+<!-- RSVP SECTION (FEATURING THE DEATH STAR) -->
     <section id="rsvp" class="py-20 px-6 bg-transparent border-t border-sageGreen/40">
       <div class="max-w-2xl mx-auto">
-        <div class="text-center mb-12">
-          <span class="font-starwars text-xs sm:text-sm tracking-[0.25em] lowercase text-darkSage mb-3 block">
+        
+        <!-- Section Header with Death Star Emblem -->
+        <div class="text-center mb-12 flex flex-col items-center">
+          
+          <!-- Death Star Badge -->
+          <div class="w-14 h-14 rounded-full bg-[#5e6553]/70 border border-oliveSoft/40 flex items-center justify-center shadow-md mb-3 text-oliveSoft">
+            <svg viewBox="0 0 100 100" class="w-9 h-9 fill-current" aria-label="Imperial Death Star">
+              <!-- Outer Hull Silhouette -->
+              <circle cx="50" cy="50" r="46" fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-width="3" />
+              <!-- Superlaser Concave Dish -->
+              <circle cx="34" cy="32" r="13" fill="none" stroke="currentColor" stroke-width="2.5" />
+              <circle cx="34" cy="32" r="3.5" fill="currentColor" />
+              <!-- Equatorial Trench -->
+              <line x1="4" y1="50" x2="96" y2="50" stroke="#3E5236" stroke-width="3.5" />
+              <!-- Subtle Panel Detailing -->
+              <path d="M 12,30 A 46,46 0 0,0 88,30" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3,3" />
+              <path d="M 12,70 A 46,46 0 0,1 88,70" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3,3" />
+            </svg>
+          </div>
+
+          <span class="font-starwars text-xs sm:text-sm tracking-[0.25em] lowercase text-darkSage mb-2 block">
             the empire demands your presence
           </span>
           <h2 class="text-4xl text-richSage font-semibold font-serif not-italic">RSVP</h2>
-          <p class="text-darkSage text-sm mt-2 font-sans">
-            Please confirm your attendance by 1 June 2027, or bring your own chair and watch us eat Dutch fries from afar.
+          <p class="text-darkSage text-sm mt-2 font-sans max-w-md">
+            Please confirm your attendance by 1 June 2027, or bring your own chair and watch us eat Dutch fries from afar[cite: 7].
           </p>
         </div>
-        <div class="bg-cardBg rounded-3xl p-8 sm:p-10 border border-oliveSoft/40 shadow-lg text-[#fffaf2]">
-          <form id="rsvpForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+
+        <!-- RSVP Form Card with Death Star Blueprint Watermark -->
+        <div class="bg-cardBg rounded-3xl p-8 sm:p-10 border border-oliveSoft/40 shadow-lg text-[#fffaf2] relative overflow-hidden">
+          
+          <!-- Background Death Star Silhouette Watermark -->
+          <div class="absolute -right-16 -bottom-16 opacity-10 pointer-events-none select-none">
+            <svg width="280" height="280" viewBox="0 0 100 100" fill="none" stroke="#fffaf2">
+              <circle cx="50" cy="50" r="47" stroke-width="1.5" />
+              <circle cx="35" cy="32" r="14" stroke-width="1.5" />
+              <circle cx="35" cy="32" r="3" fill="#fffaf2" />
+              <line x1="3" y1="50" x2="97" y2="50" stroke-width="2.5" />
+              <line x1="10" y1="30" x2="90" y2="30" stroke-width="1" stroke-dasharray="2,2" />
+              <line x1="10" y1="70" x2="90" y2="70" stroke-width="1" stroke-dasharray="2,2" />
+            </svg>
+          </div>
+
+          <form id="rsvpForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6 relative z-10">
             
             <!-- Web3Forms Key & Settings -->
             <input type="hidden" name="access_key" value="87dd05f4-c7a7-4c46-9880-f5dc478156c0">
@@ -636,14 +703,14 @@
                 <label class="flex items-center gap-3.5 p-4 rounded-xl border border-oliveSoft/40 bg-[#5e6553]/70 cursor-pointer hover:bg-oliveDark transition shadow-sm font-sans">
                   <input type="radio" name="Attending" value="Yes, attending." checked class="accent-[#9aa88a] w-4 h-4 cursor-pointer shrink-0">
                   <span class="text-xs sm:text-sm font-medium text-[#fffaf2] leading-snug">
-                    I will be there. The Force is strong with this gathering.
+                    I will be there. The Force is strong with this gathering[cite: 7].
                   </span>
                 </label>
                 
                 <label class="flex items-center gap-3.5 p-4 rounded-xl border border-oliveSoft/40 bg-[#5e6553]/70 cursor-pointer hover:bg-oliveDark transition shadow-sm font-sans">
                   <input type="radio" name="Attending" value="No, cannot attend." class="accent-[#9aa88a] w-4 h-4 cursor-pointer shrink-0">
                   <span class="text-xs sm:text-sm font-medium text-[#fffaf2] leading-snug">
-                    Respectfully declining from an undisclosed rebel base.
+                    Respectfully declining from an undisclosed rebel base[cite: 7].
                   </span>
                 </label>
               </div>
@@ -803,7 +870,7 @@
               <i class="fa-solid fa-heart text-oliveSoft"></i>
             </div>
             <h3 class="text-3xl text-[#fffaf2] font-semibold mb-2 font-serif not-italic">Thank you!</h3>
-            <p class="text-oliveSoft text-sm font-sans">We got your RSVP! Your spot is secured, drinks and snacks are accounted for, and we can't wait to celebrate together.</p>
+            <p class="text-oliveSoft text-sm font-sans">We got your RSVP! Your spot is secured, drinks and snacks are accounted for, and we can't wait to celebrate together[cite: 7].</p>
           </div>
         </div>
       </div>
