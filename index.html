@@ -195,96 +195,81 @@
       </div>
     </header>
 
-    <!-- HERO & OUR STORY SECTION -->
-    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-6 overflow-hidden">
-      <div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
+  <!-- HERO & OUR STORY SECTION -->
+    <section id="hero" class="pt-28 pb-16 px-6 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
 
-        <!-- 1. BIG NAMES, DATE & ACTION BUTTONS FIRST -->
-        <div class="w-full max-w-2xl flex flex-col items-center mb-10">
-          <h1 class="tracking-wide mb-3 flex flex-col items-center leading-tight font-serif">
-            <span class="text-4xl sm:text-6xl lg:text-7xl font-normal not-italic text-richSage tracking-wider">
-              Damlanur
-            </span>
-            <span class="font-serif not-italic text-3xl sm:text-4xl text-darkSage my-1 sm:my-2 leading-none">
-              &amp;
-            </span>
-            <span class="text-4xl sm:text-6xl lg:text-7xl font-normal not-italic text-richSage tracking-wider">
-              Luka
-            </span>
-          </h1>
+        <!-- LEFT COLUMN: Names, Buttons, & Your Story -->
+        <div class="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
+          
+          <!-- Names & Date -->
+          <div>
+            <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl text-richSage leading-none tracking-wide">
+              Damlanur <span class="font-serif italic text-3xl sm:text-4xl text-darkSage block lg:inline my-1 lg:my-0">&amp;</span> Luka
+            </h1>
 
-          <p class="text-lg sm:text-xl text-richSage font-normal not-italic font-serif mb-2">
-            Friday, 27 August 2027 · 14:00
-          </p>
+            <p class="text-base sm:text-lg text-richSage font-serif mt-3">
+              Friday, 27 August 2027 &middot; 14:00
+            </p>
+            <p class="text-xs uppercase tracking-[0.25em] text-darkSage font-semibold mt-1 font-sans">
+              Bringing our forces together
+            </p>
+          </div>
 
-          <p class="text-xs sm:text-sm tracking-[0.25em] uppercase text-darkSage font-semibold mb-5 font-sans">
-            Bringing our forces together
-          </p>
-
-          <!-- Badges: Odapark Theehuis & Our Backyard -->
-          <div class="flex flex-wrap justify-center gap-3 mb-6 font-sans">
-            <a 
-              href="#venue" 
-              class="px-4 py-2 rounded-full bg-oliveDark text-oliveSoft text-xs tracking-wider uppercase font-semibold hover:opacity-90 transition shadow-sm flex items-center gap-2"
-            >
+          <!-- Venue Badges -->
+          <div class="flex flex-wrap justify-center lg:justify-start gap-3 font-sans">
+            <a href="#venue" class="px-4 py-1.5 rounded-full bg-oliveDark text-oliveSoft text-xs tracking-wider uppercase font-semibold hover:opacity-90 transition shadow-sm flex items-center gap-2">
               <i class="fa-solid fa-tree text-[11px]"></i> Odapark Theehuis
             </a>
-            <a 
-              href="#venue" 
-              class="px-4 py-2 rounded-full bg-oliveDark text-oliveSoft text-xs tracking-wider uppercase font-semibold hover:opacity-90 transition shadow-sm flex items-center gap-2"
-            >
+            <a href="#venue" class="px-4 py-1.5 rounded-full bg-oliveDark text-oliveSoft text-xs tracking-wider uppercase font-semibold hover:opacity-90 transition shadow-sm flex items-center gap-2">
               <i class="fa-solid fa-house text-[11px]"></i> Our Backyard
             </a>
           </div>
 
-          <!-- Buttons: RSVP & FAQ -->
-          <div class="flex flex-wrap justify-center gap-4 font-sans">
-            <a 
-              href="#rsvp" 
-              class="px-6 py-3 rounded-full bg-oliveDark text-[#fffaf2] text-xs font-semibold uppercase tracking-wider shadow-sm hover:opacity-95 transition"
-            >
+          <!-- Buttons -->
+          <div class="flex flex-wrap justify-center lg:justify-start gap-4 font-sans pt-1">
+            <a href="#rsvp" class="px-6 py-3 rounded-full bg-oliveDark text-[#fffaf2] text-xs font-semibold uppercase tracking-wider shadow-sm hover:opacity-95 transition">
               Confirm Your Attendance
             </a>
-            <a 
-              href="#qa" 
-              class="px-6 py-3 rounded-full border border-oliveDark/40 text-richSage text-xs font-semibold uppercase tracking-wider hover:bg-oliveSoft/20 transition"
-            >
+            <a href="#qa" class="px-6 py-3 rounded-full border border-oliveDark/40 text-richSage text-xs font-semibold uppercase tracking-wider hover:bg-oliveSoft/20 transition">
               Questions &amp; Answers
             </a>
           </div>
+
+          <!-- Subtle Divider -->
+          <div class="w-20 h-px bg-sageGreen/60 my-2"></div>
+
+          <!-- Story Text -->
+          <div class="space-y-3 text-sm sm:text-base leading-relaxed text-darkSage font-sans max-w-xl">
+            <p>
+              It started six years ago when our paths crossed in Sweden. Since then, we decided to join forces, graduate school, and narrowly dodge a one-way ticket to Azkaban by making the jump to build our new home in the Netherlands alongside our beloved cats, Obi and Stitch.
+            </p>
+            <p>
+              So, if you decide not to turn us in to the Ministry of Magic for the reward, you are warmly invited to join the celebration for our next chapter. We are happily skipping traditions and building our own way with an intimate ceremony under the trees. We just want to sign the papers, tie the knot, eat some fries, and gather our favorite people under the stars.
+            </p>
+          </div>
         </div>
 
-        <!-- Divider -->
-        <div class="w-24 h-px bg-sageGreen/50 mx-auto mb-10"></div>
+        <!-- RIGHT COLUMN: Poster Card -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-[340px] sm:max-w-[380px]">
+            <div class="overflow-hidden rounded-3xl p-2 bg-[#5e6553]/20 border border-oliveSoft/40 shadow-xl">
+              <img 
+                id="couplePhoto" 
+                src="damlaluka.JPG" 
+                alt="Damlanur &amp; Luka Wanted Wizards" 
+                class="w-full h-auto rounded-2xl block shadow-sm"
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80';"
+              />
+            </div>
+          </div>
+        </div>
 
-        <!-- 2. STAR WARS OPENING CRAWL -->
-        <span class="font-starwars text-xs sm:text-sm tracking-[0.2em] lowercase text-darkSage mb-6 block">
-          a long time ago in a galaxy far, far away...
-        </span>
-
-    <div class="relative w-full max-w-md mx-auto mb-10">
-      <div class="overflow-hidden rounded-3xl p-1 bg-[#5e6553]/20 border border-oliveSoft/40 shadow-xl">
-        <img 
-          id="couplePhoto" 
-          src="damlaluka.JPG" 
-          alt="Damlanur &amp; Luka Wanted Wizards" 
-          class="w-full h-auto rounded-2xl"
-          onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80';"
-        />
       </div>
-    </div>
+    </section>
 
-<!-- 3. OUR STORY -->
-    <div id="celebration" class="max-w-2xl mx-auto space-y-4 text-base sm:text-lg leading-relaxed text-darkSage text-center font-sans">
-      <p>
-        It started six years ago when our paths crossed in Sweden. Since then, we decided to join forces, graduate school, and narrowly dodge a one-way ticket to Azkaban by making the jump to build our new home in the Netherlands alongside our beloved cats, Obi and Stitch.
-      </p>
-      <p>
-        So, if you decide not to turn us in to the Ministry of Magic for the reward, you are warmly invited to join the celebration for our next chapter. We are happily skipping traditions building our way with an intimate ceremony under the trees. We just want to sign the papers, tie the knot, eat some fries, and gather our favorite people under the stars.
-      </p>
-    </div>
-  </div>
-</section>
+
+    
     <!-- TIMELINE -->
     <section id="timeline" class="py-24 px-6 bg-transparent border-t border-sageGreen/40">
       <div class="max-w-3xl mx-auto">
