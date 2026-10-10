@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Damlanur &amp; Luka</title>
   
-  <!-- Fonts: Cormorant Garamond (upright weights), Noto Sans, Alex Brush -->
+  <!-- Google Fonts: Cormorant Garamond, Noto Sans, Alex Brush, Cinzel Decorative & Michroma -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:wght@400;500;600;700&family=Michroma&family=Noto+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -34,6 +34,7 @@
             sans: ['"Noto Sans"', 'sans-serif'],
             script: ['"Alex Brush"', 'cursive'],
             starwars: ['"Star Jedi"', 'sans-serif'],
+            hungergames: ['"Cinzel Decorative"', '"Michroma"', 'serif'],
           }
         }
       }
@@ -128,7 +129,7 @@
         <!-- Clean Header -->
         <div class="absolute inset-x-0 top-6 text-center pointer-events-none">
           <p class="text-[9px] sm:text-[10px] uppercase tracking-[0.35em] text-[#fffaf2]/85 font-sans font-light drop-shadow-sm">
-     open to reveal 
+            open to reveal
           </p>
         </div>
 
@@ -194,108 +195,109 @@
       </div>
     </header>
 
-<!-- HERO & OUR STORY SECTION -->
-  <section id="hero" class="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-6 overflow-hidden">
-    <div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
+    <!-- HERO & OUR STORY SECTION -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-6 overflow-hidden">
+      <div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
 
-      <!-- 1. BIG NAMES, DATE & ACTION BUTTONS FIRST -->
-      <div class="w-full max-w-2xl flex flex-col items-center mb-10">
-        <h1 class="tracking-wide mb-3 flex flex-col items-center leading-tight font-serif">
-          <span class="text-4xl sm:text-6xl lg:text-7xl font-normal not-italic text-richSage tracking-wider">
-            Damlanur
-          </span>
-          <span class="font-serif not-italic text-3xl sm:text-4xl text-darkSage my-1 sm:my-2 leading-none">
-            &amp;
-          </span>
-          <span class="text-4xl sm:text-6xl lg:text-7xl font-normal not-italic text-richSage tracking-wider">
-            Luka
-          </span>
-        </h1>
+        <!-- 1. BIG NAMES, DATE & ACTION BUTTONS FIRST -->
+        <div class="w-full max-w-2xl flex flex-col items-center mb-10">
+          <h1 class="tracking-wide mb-3 flex flex-col items-center leading-tight font-serif">
+            <span class="text-4xl sm:text-6xl lg:text-7xl font-normal not-italic text-richSage tracking-wider">
+              Damlanur
+            </span>
+            <span class="font-serif not-italic text-3xl sm:text-4xl text-darkSage my-1 sm:my-2 leading-none">
+              &amp;
+            </span>
+            <span class="text-4xl sm:text-6xl lg:text-7xl font-normal not-italic text-richSage tracking-wider">
+              Luka
+            </span>
+          </h1>
 
-        <p class="text-lg sm:text-xl text-richSage font-normal not-italic font-serif mb-2">
-          Friday, 27 August 2027 · 14:00
-        </p>
+          <p class="text-lg sm:text-xl text-richSage font-normal not-italic font-serif mb-2">
+            Friday, 27 August 2027 · 14:00
+          </p>
 
-        <p class="text-xs sm:text-sm tracking-[0.25em] uppercase text-darkSage font-semibold mb-5 font-sans">
-          Bringing our forces together
-        </p>
+          <p class="text-xs sm:text-sm tracking-[0.25em] uppercase text-darkSage font-semibold mb-5 font-sans">
+            Bringing our forces together
+          </p>
 
-        <!-- Badges: Odapark Theehuis & Our Backyard -->
-        <div class="flex flex-wrap justify-center gap-3 mb-6 font-sans">
-          <a 
-            href="#venue" 
-            class="px-4 py-2 rounded-full bg-oliveDark text-oliveSoft text-xs tracking-wider uppercase font-semibold hover:opacity-90 transition shadow-sm flex items-center gap-2"
-          >
-            <i class="fa-solid fa-tree text-[11px]"></i> Odapark Theehuis
-          </a>
-          <a 
-            href="#venue" 
-            class="px-4 py-2 rounded-full bg-oliveDark text-oliveSoft text-xs tracking-wider uppercase font-semibold hover:opacity-90 transition shadow-sm flex items-center gap-2"
-          >
-            <i class="fa-solid fa-house text-[11px]"></i> Our Backyard
-          </a>
+          <!-- Badges: Odapark Theehuis & Our Backyard -->
+          <div class="flex flex-wrap justify-center gap-3 mb-6 font-sans">
+            <a 
+              href="#venue" 
+              class="px-4 py-2 rounded-full bg-oliveDark text-oliveSoft text-xs tracking-wider uppercase font-semibold hover:opacity-90 transition shadow-sm flex items-center gap-2"
+            >
+              <i class="fa-solid fa-tree text-[11px]"></i> Odapark Theehuis
+            </a>
+            <a 
+              href="#venue" 
+              class="px-4 py-2 rounded-full bg-oliveDark text-oliveSoft text-xs tracking-wider uppercase font-semibold hover:opacity-90 transition shadow-sm flex items-center gap-2"
+            >
+              <i class="fa-solid fa-house text-[11px]"></i> Our Backyard
+            </a>
+          </div>
+
+          <!-- Buttons: RSVP & FAQ -->
+          <div class="flex flex-wrap justify-center gap-4 font-sans">
+            <a 
+              href="#rsvp" 
+              class="px-6 py-3 rounded-full bg-oliveDark text-[#fffaf2] text-xs font-semibold uppercase tracking-wider shadow-sm hover:opacity-95 transition"
+            >
+              Confirm Your Attendance
+            </a>
+            <a 
+              href="#qa" 
+              class="px-6 py-3 rounded-full border border-oliveDark/40 text-richSage text-xs font-semibold uppercase tracking-wider hover:bg-oliveSoft/20 transition"
+            >
+              Questions &amp; Answers
+            </a>
+          </div>
         </div>
 
-        <!-- Buttons: RSVP & FAQ -->
-        <div class="flex flex-wrap justify-center gap-4 font-sans">
-          <a 
-            href="#rsvp" 
-            class="px-6 py-3 rounded-full bg-oliveDark text-[#fffaf2] text-xs font-semibold uppercase tracking-wider shadow-sm hover:opacity-95 transition"
-          >
-            Confirm Your Attendance
-          </a>
-          <a 
-            href="#qa" 
-            class="px-6 py-3 rounded-full border border-oliveDark/40 text-richSage text-xs font-semibold uppercase tracking-wider hover:bg-oliveSoft/20 transition"
-          >
-            Questions &amp; Answers
-          </a>
+        <!-- Divider -->
+        <div class="w-24 h-px bg-sageGreen/50 mx-auto mb-10"></div>
+
+        <!-- 2. STAR WARS OPENING CRAWL -->
+        <span class="font-starwars text-xs sm:text-sm tracking-[0.2em] lowercase text-darkSage mb-6 block">
+          a long time ago in a galaxy far, far away...
+        </span>
+
+        <!-- 3. PICTURE OF THE COUPLE -->
+        <div class="relative max-w-md mx-auto mb-8 group">
+          <div class="absolute -inset-2 bg-cardBg rounded-3xl blur-md opacity-30 group-hover:opacity-50 transition duration-500"></div>
+          <div class="relative overflow-hidden rounded-2xl border-4 border-cardBg shadow-lg bg-cardBg flex items-center justify-center p-2">
+            <img 
+              id="couplePhoto" 
+              src="IMG_5867.jpeg" 
+              alt="Damlanur &amp; Luka" 
+              class="w-full h-auto max-h-[500px] object-contain rounded-xl"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80';"
+            />
+          </div>
         </div>
-      </div>
 
-      <!-- Divider -->
-      <div class="w-24 h-px bg-sageGreen/50 mx-auto mb-10"></div>
-
-      <!-- 2. STAR WARS OPENING CRAWL -->
-      <span class="font-starwars text-xs sm:text-sm tracking-[0.2em] lowercase text-darkSage mb-6 block">
-        a long time ago in a galaxy far, far away...
-      </span>
-
-      <!-- 3. PICTURE OF THE COUPLE -->
-      <div class="relative max-w-md mx-auto mb-8 group">
-        <div class="absolute -inset-2 bg-cardBg rounded-3xl blur-md opacity-30 group-hover:opacity-50 transition duration-500"></div>
-        <div class="relative overflow-hidden rounded-2xl border-4 border-cardBg shadow-lg bg-cardBg flex items-center justify-center p-2">
-          <img 
-            id="couplePhoto" 
-            src="IMG_5867.jpeg" 
-            alt="Damlanur &amp; Luka" 
-            class="w-full h-auto max-h-[500px] object-contain rounded-xl"
-            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80';"
-          />
+        <!-- 4. OUR STORY -->
+        <div id="celebration" class="max-w-2xl mx-auto space-y-4 text-base sm:text-lg leading-relaxed text-darkSage text-center font-sans">
+          <p>
+            It started six years ago when two wandering rebels crossed paths in Sweden, decided to join forces, and eventually made the jump across galaxies to build a home base in the Netherlands alongside our Jedi cats Obi and Stitch.
+          </p>
+          <p>
+            Now, our alliance is officially ready for its next chapter. We're happily skipping traditions and crowded weddings. We just want to stand under the trees, say “we do,” eat frikandellen, and celebrate under the stars with our favorite people in the galaxy.
+          </p>
         </div>
+
       </div>
+    </section>
 
-      <!-- 4. OUR STORY -->
-      <div id="celebration" class="max-w-2xl mx-auto space-y-4 text-base sm:text-lg leading-relaxed text-darkSage text-center font-sans">
-        <p>
-          It started six years ago when two wandering rebels crossed paths in Sweden, decided to join forces, and eventually made the jump across galaxies to build a home base in the Netherlands alongside our Jedi cats Obi and Stitch.
-        </p>
-        <p>
-          Now, our alliance is officially ready for its next chapter. We're happily skipping traditions and crowded weddings. We just want to stand under the trees, say “we do,” eat frikandellen, and celebrate under the stars with our favorite people in the galaxy.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-    
-     <!-- TIMELINE -->
+    <!-- TIMELINE -->
     <section id="timeline" class="py-24 px-6 bg-transparent border-t border-sageGreen/40">
       <div class="max-w-3xl mx-auto">
         <div class="text-center mb-16">
           <span class="text-xs uppercase tracking-[0.25em] text-darkSage font-bold font-sans">The Master Plan</span>
-          <h2 class="text-3xl sm:text-4xl text-richSage mt-2 font-semibold font-serif not-italic">Welcome drinks served from 13:00 beneath the trees.</h2>
-          <p class="text-darkSage text-xs sm:text-sm mt-2 font-sans">May the odds (and Dutch weather) be ever in our favor.</p>
+          <h2 class="text-2xl sm:text-3xl text-richSage mt-2 font-bold tracking-[0.18em] uppercase not-italic font-hungergames">
+            May the odds (and Dutch weather) be ever in our favor.
+          </h2>
+          <p class="text-darkSage text-xs sm:text-sm mt-2 font-sans">Welcome drinks served from 13:00 beneath the trees.</p>
         </div>
 
         <div class="relative border-l-2 border-cardBg/60 ml-4 md:ml-32 space-y-12">
@@ -314,7 +316,8 @@
               </p>
             </div>
           </div>
-   <!-- Timeline Item 2 (Reception-->
+
+          <!-- Timeline Item 2 (Reception) -->
           <div class="relative pl-8 sm:pl-10">
             <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cardBg border-4 border-softSage"></div>
             <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-xs sm:text-sm font-semibold tracking-wider text-richSage block uppercase font-sans">15:00</span>
@@ -329,7 +332,7 @@
             </div>
           </div>
 
-<!-- Timeline Item 3 (Friethuis Dinner) -->
+          <!-- Timeline Item 3 (Friethuis Dinner) -->
           <div class="relative pl-8 sm:pl-10">
             <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cardBg border-4 border-softSage"></div>
             <span class="md:absolute md:-left-32 md:text-right md:w-24 top-0.5 text-xs sm:text-sm font-semibold tracking-wider text-richSage block uppercase font-sans">17:00</span>
@@ -337,7 +340,7 @@
               <h3 class="text-xl sm:text-2xl text-[#fffaf2] font-semibold flex items-center gap-2 font-serif not-italic">
                 <i class="fa-solid fa-heart text-oliveSoft text-sm"></i> Dinner
               </h3>
-              <p class="text-xs text-oliveSoft font-bold uppercase tracking-wider mt-1 mb-2 font-sans">Fritehuis, Near Our Home</p>
+              <p class="text-xs text-oliveSoft font-bold uppercase tracking-wider mt-1 mb-2 font-sans">Friethuis, Near Our Home</p>
               <p class="text-xs sm:text-sm text-[#fffaf2]/90 leading-relaxed font-sans">
                 The ultimate Dutch comfort feast! We skip traditional catering and gather at our local friethuis for fresh hot fries, frikandellen, bitterballen, and snacks before heading over to our garden.
               </p>
@@ -360,7 +363,7 @@
               <!-- Cat Note Badge -->
               <div class="mb-5 p-3 rounded-xl bg-[#5e6553]/40 border border-oliveSoft/30 text-xs text-[#fffaf2]/85 leading-relaxed font-sans flex items-start gap-2.5">
                 <i class="fa-solid fa-shield-cat text-oliveSoft text-sm mt-0.5"></i>
-                <span><strong>Cat Comfort Note:</strong> With the party in full swing, Obi &amp; Stitch will be safely resting away from the noise and crowds at their grandparents house!</span>
+                <span><strong>Cat Comfort Note:</strong> With the party in full swing, Obi &amp; Stitch will be safely resting away from the noise and crowds at their grandparents' house!</span>
               </div>
               
               <!-- Cat Cards -->
@@ -392,9 +395,9 @@
             </div>
           </div>
 
-       <!-- Add to Calendar Buttons (Fungerande Google + Apple) -->
+        <!-- Add to Calendar Buttons -->
         <div class="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4 font-sans">
-          <!-- Google Calendar (Fullt kodad länk) -->
+          <!-- Google Calendar -->
           <a 
             href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Damlanur%20%26%20Luka%27s%20Wedding&dates=20270827T120000Z/20270827T230000Z&details=Wedding%20ceremony%20at%20Odapark%20Theehuis%2C%20followed%20by%20reception%2C%20friethuis%20dinner%2C%20and%20house%20party!&location=Odapark%20Theehuis%2C%20Merseloseweg%20117%2C%205801%20CC%20Venray" 
             target="_blank" 
@@ -404,19 +407,19 @@
             <i class="fa-brands fa-google text-oliveSoft"></i> Add to Google Calendar
           </a>
 
-          <!-- Apple / iPhone / Outlook (Laddar ner wedding.ics) -->
+          <!-- Apple / iCloud / Outlook -->
           <a 
             href="wedding.ics" 
-            download="wedding.ics"
+            download="wedding.ics" 
             class="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-[#fffaf2] bg-cardBg border border-oliveSoft/50 hover:bg-oliveDark px-6 py-3 rounded-full transition shadow-sm w-full sm:w-auto justify-center"
           >
             <i class="fa-brands fa-apple text-oliveSoft"></i> Add to Apple / iCloud Calendar
           </a>
         </div>  
       </div>
-     </section> 
+    </section> 
 
-   <!-- VENUE & LOCATIONS -->
+    <!-- VENUE & LOCATIONS -->
     <section id="venue" class="py-20 px-6 bg-transparent border-t border-sageGreen/40">
       <div class="max-w-5xl mx-auto">
         
@@ -447,7 +450,7 @@
             <a 
               href="https://maps.google.com/?q=Odapark+Theehuis+Venray" 
               target="_blank" 
-              rel="noopener noreferrer"
+              rel="noopener noreferrer" 
               class="inline-flex items-center justify-center gap-2 text-xs uppercase tracking-wider font-semibold text-[#fffaf2] bg-[#5e6553] hover:bg-oliveDark py-3 px-6 rounded-full transition w-full border border-oliveSoft/40 font-sans"
             >
               <i class="fa-solid fa-location-crosshairs text-oliveSoft"></i> Plot Course on Google Maps
@@ -462,9 +465,9 @@
               </div>
               <h3 class="text-xl sm:text-2xl text-[#fffaf2] font-semibold mb-1 font-serif not-italic">Our Backyard</h3>
               <p class="text-xs font-mono text-oliveSoft tracking-wider mb-2">Encrypted Grid</p>
-              <p class="text-[11px] uppercase tracking-wider text-oliveSoft font-bold mb-3 font-sans">Stop 2 · Party (18:00 Onward)</p>
+              <p class="text-[11px] uppercase tracking-wider text-oliveSoft font-bold mb-3 font-sans">Stop 2 · Party (18:30 Onward)</p>
               <p class="text-xs sm:text-sm text-[#fffaf2]/90 leading-relaxed mb-6 font-sans">
-                After Odapark, we navigate by foot, bike, or car to our Jedi-guarded house for drinks and party!
+                After Odapark and dinner, we navigate by foot, bike, or car to our Jedi-guarded house for drinks and party!
               </p>
             </div>
             <div class="p-3.5 bg-[#5e6553]/60 rounded-xl text-center border border-oliveSoft/30">
@@ -472,11 +475,10 @@
             </div>
           </div>
 
-        </div> <!-- End of 2-card grid -->
+        </div>
 
-        <!-- Traveling from Abroad Card (Full Width Underneath, Compact Desktop Size) -->
+        <!-- Traveling from Abroad Card -->
         <div class="mt-8 max-w-4xl mx-auto bg-cardBg rounded-3xl p-6 sm:p-8 border border-oliveSoft/40 shadow-sm text-[#fffaf2]">
-          
           <div class="mb-5 text-left">
             <h3 class="text-xl sm:text-2xl text-[#fffaf2] font-semibold leading-tight font-serif not-italic">
               Traveling from another galaxy
@@ -537,12 +539,12 @@
                 </p>
               </div>
             </div>
-
           </div>
         </div>
 
       </div>
     </section>
+
     <!-- PHOTO GALLERY SECTION -->
     <section id="gallery" class="py-20 px-6 bg-transparent border-t border-sageGreen/40">
       <div class="max-w-3xl mx-auto text-center">
@@ -566,7 +568,7 @@
           <a 
             href="https://photos.app.goo.gl/PrcVVhtKX8FyqceC9" 
             target="_blank" 
-            rel="noopener noreferrer"
+            rel="noopener noreferrer" 
             class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#5e6553] text-[#fffaf2] font-semibold hover:bg-oliveDark border border-oliveSoft/40 transition shadow-md hover:shadow-lg text-xs uppercase tracking-wider font-sans"
           >
             <i class="fa-solid fa-images text-oliveSoft text-lg"></i> Open Album
@@ -629,7 +631,7 @@
               </div>
             </div>
 
-            <!-- Plus One Question (Matched to Dietary format & font) -->
+            <!-- Plus One Question -->
             <div>
               <label class="block text-xs uppercase tracking-wider font-semibold text-[#fffaf2]/90 mb-2 font-sans">
                 Bringing a plus one? <span class="text-rose-300">*</span>
@@ -833,7 +835,7 @@
                   >
                 </div>
 
-                <!-- Readable Footwear Note: Non-cursive Font-Sans -->
+                <!-- Readable Footwear Note -->
                 <div class="pt-3 border-t border-oliveSoft/20">
                   <p class="text-xs text-oliveSoft/90 font-sans tracking-wide leading-relaxed flex items-center gap-2">
                     <i class="fa-solid fa-shoe-prints text-[11px] shrink-0"></i>
@@ -852,7 +854,7 @@
             </button>
             <div class="qa-content max-h-0 overflow-hidden transition-all duration-300 px-6 text-sm text-[#fffaf2]/90 leading-relaxed font-sans">
               <div class="pb-6 pt-2 border-t border-oliveSoft/20">
-             The ceremony and reception take place at Odapark! Afterwards, we will head over to the friethuis near our place for dinner, followed by the evening party at our home in Leunen. It is a quick trip by car, shared ride, walk, or bike, and free parking is available at all locations.
+               The ceremony and reception take place at Odapark! Afterwards, we will head over to the friethuis near our place for dinner, followed by the evening party at our home in Leunen. It is a quick trip by car, shared ride, walk, or bike, and free parking is available at all locations.
               </div>
             </div>
           </div>
@@ -882,7 +884,6 @@
               </div>
             </div>
           </div>
-
 
           <!-- QA Item 5: Wedding Gifts -->
           <div class="bg-cardBg rounded-2xl border border-oliveSoft/40 overflow-hidden transition shadow-sm hover:shadow-md text-[#fffaf2]">
