@@ -194,97 +194,78 @@
       </div>
     </header>
 
-    <!-- HERO & OUR STORY SECTION -->
-    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-6 overflow-hidden">
-      <div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
+  <!-- HERO SECTION -->
+    <section id="hero" class="pt-28 pb-16 px-6 max-w-4xl mx-auto text-center">
+
+      <!-- 1. BIG NAMES FIRST -->
+      <div class="mb-4">
+        <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl text-[#2C3E2A] leading-tight tracking-tight">
+          Damlanur
+        </h1>
+        <span class="block font-serif italic text-2xl sm:text-3xl text-richSage my-1">&amp;</span>
+        <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl text-[#2C3E2A] leading-tight tracking-tight">
+          Luka
+        </h1>
         
-        <!-- 1. Star Wars Tagline -->
-        <span class="font-starwars text-xs sm:text-sm tracking-[0.2em] lowercase text-darkSage mb-6 block">
-          a long time ago in a galaxy far, far away...
+        <p class="font-serif italic text-base sm:text-lg text-richSage mt-4">
+          Friday, 27 August 2027 &middot; 14:00
+        </p>
+        <span class="block text-xs uppercase tracking-[0.25em] font-semibold text-richSage/80 mt-1 font-sans">
+          Bringing Our Forces Together
         </span>
 
-        <!-- 2. Picture of the Couple -->
-        <div class="relative max-w-md mx-auto mb-6 group">
-          <div class="absolute -inset-2 bg-cardBg rounded-3xl blur-md opacity-30 group-hover:opacity-50 transition duration-500"></div>
-          <div class="relative overflow-hidden rounded-2xl border-4 border-cardBg shadow-lg bg-cardBg flex items-center justify-center p-2">
-            <img 
-              id="couplePhoto" 
-              src="IMG_5867.jpeg" 
-              alt="Damlanur &amp; Luka" 
-              class="w-full h-auto max-h-[500px] object-contain rounded-xl"
-              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80';"
-            />
-          </div>
+        <!-- Location Badges & Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-3 mt-4">
+          <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-cardBg/90 text-[#fffaf2] text-xs font-semibold uppercase tracking-wider font-sans">
+            <i class="fa-solid fa-tree text-[11px]"></i> Odapark Theehuis
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-cardBg/90 text-[#fffaf2] text-xs font-semibold uppercase tracking-wider font-sans">
+            <i class="fa-solid fa-house text-[11px]"></i> Our Backyard
+          </span>
         </div>
 
-        <!-- 3. Our Story -->
-        <div id="celebration" class="max-w-2xl mx-auto space-y-4 text-base sm:text-lg leading-relaxed text-darkSage text-center mb-10 font-sans">
-          <p>
-            It started six years ago when two wandering rebels crossed paths in Sweden, decided to join forces, and eventually made the jump across galaxies to build a home base in the Netherlands alongside our Jedi cats Obi and Stitch.
-          </p>
-          <p>
-            Now, our alliance is officially ready for its next chapter. We're happily skipping traditions and crowded weddings. We just want to stand under the trees, say “we do,” eat frikandellen, and celebrate under the stars with our favorite people in the galaxy.
-          </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mt-6">
+          <a href="#rsvp" class="w-full sm:w-auto px-7 py-3 rounded-full bg-cardBg text-[#fffaf2] text-xs font-bold uppercase tracking-wider hover:bg-oliveDark transition shadow-sm font-sans">
+            Confirm Your Attendance
+          </a>
+          <a href="#qa" class="w-full sm:w-auto px-7 py-3 rounded-full border border-cardBg/60 text-cardBg text-xs font-bold uppercase tracking-wider hover:bg-cardBg hover:text-[#fffaf2] transition font-sans">
+            Questions &amp; Answers
+          </a>
         </div>
-
-  <!-- 4. Clean Names, Date, Badges & Action Buttons -->
-        <div class="pt-8 border-t border-sageGreen/50 w-full max-w-2xl flex flex-col items-center">
-          <h1 class="tracking-wide mb-3 flex flex-col items-center leading-tight font-serif">
-            <span class="text-4xl sm:text-6xl lg:text-7xl font-normal not-italic text-richSage tracking-wider">
-              Damlanur
-            </span>
-            <span class="font-serif not-italic text-3xl sm:text-4xl text-darkSage my-1 sm:my-2 leading-none">
-              &amp;
-            </span>
-            <span class="text-4xl sm:text-6xl lg:text-7xl font-normal not-italic text-richSage tracking-wider">
-              Luka
-            </span>
-          </h1>
-          
-          <p class="text-lg sm:text-xl text-richSage font-normal not-italic font-serif mb-2">
-            Friday, 27 August 2027 · 14:00
-          </p>
-          
-          <p class="text-xs sm:text-sm tracking-[0.25em] uppercase text-darkSage font-semibold mb-5 font-sans">
-            Bringing our forces together
-          </p>
-
-          <!-- Badges: Odapark Theehuis & Our Backyard -->
-          <div class="flex flex-wrap justify-center gap-3 mb-6 font-sans">
-            <a 
-              href="#venue" 
-              class="px-4 py-2 rounded-full bg-oliveDark text-oliveSoft text-xs tracking-wider uppercase font-semibold hover:opacity-90 transition shadow-sm flex items-center gap-2"
-            >
-              <i class="fa-solid fa-tree text-[11px]"></i> Odapark Theehuis
-            </a>
-            <a 
-              href="#venue" 
-              class="px-4 py-2 rounded-full bg-oliveDark text-oliveSoft text-xs tracking-wider uppercase font-semibold hover:opacity-90 transition shadow-sm flex items-center gap-2"
-            >
-              <i class="fa-solid fa-house text-[11px]"></i> Our Backyard
-            </a>
-          </div>
-
-          <!-- Buttons: RSVP & FAQ -->
-          <div class="flex flex-wrap justify-center gap-4 font-sans">
-            <a 
-              href="#rsvp" 
-              class="px-6 py-3 rounded-full bg-oliveDark text-[#fffaf2] text-xs font-semibold uppercase tracking-wider shadow-sm hover:opacity-95 transition"
-            >
-              Confirm Your Attendance
-            </a>
-            <a 
-              href="#qa" 
-              class="px-6 py-3 rounded-full border border-oliveDark/40 text-richSage text-xs font-semibold uppercase tracking-wider hover:bg-oliveSoft/20 transition"
-            >
-              Questions &amp; Answers
-            </a>
-          </div>
-        </div>
-
       </div>
-    </section>
 
+      <!-- Divider -->
+      <div class="w-24 h-px bg-sageGreen/60 mx-auto my-10"></div>
+
+      <!-- 2. STAR WARS INTRO LINE -->
+      <div class="mb-4">
+        <p class="font-serif italic text-xs sm:text-sm tracking-[0.25em] uppercase text-richSage/80">
+          A long time ago in a galaxy far, far away...
+        </p>
+      </div>
+
+      <!-- 3. PHOTO CARD -->
+      <div class="relative mx-auto max-w-lg mb-8">
+        <div class="rounded-3xl p-2 bg-[#5E6553]/30 border border-oliveSoft/40 shadow-md">
+          <img 
+            src="us.jpg" 
+            alt="Damlanur & Luka" 
+            class="w-full aspect-[4/3] object-cover rounded-2xl"
+          />
+        </div>
+      </div>
+
+      <!-- 4. YOUR STORY -->
+      <div class="max-w-2xl mx-auto text-darkSage/90 text-sm sm:text-base leading-relaxed space-y-4 font-sans">
+        <p>
+          It started six years ago when two wandering rebels crossed paths in Sweden, decided to join forces, and eventually made the jump across galaxies to build a home base in the Netherlands alongside our Jedi cats Obi and Stitch[cite: 16].
+        </p>
+        <p>
+          Now, our alliance is officially ready for its next chapter. We're happily skipping traditions and crowded weddings. We just want to stand under the trees, say &ldquo;we do,&rdquo; eat frikandellen, and celebrate under the stars with our favorite people in the galaxy[cite: 16].
+        </p>
+      </div>
+
+    </section>
      <!-- TIMELINE -->
     <section id="timeline" class="py-24 px-6 bg-transparent border-t border-sageGreen/40">
       <div class="max-w-3xl mx-auto">
